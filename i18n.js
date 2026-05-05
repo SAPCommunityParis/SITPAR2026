@@ -108,7 +108,7 @@ const i18n = {
     'footer-nav-label':     'NAVIGATION',
     'footer-contact-label': 'CONTACT',
 
-    'footer-desc':        'SAP Inside Track Paris · Édition n°01 · Vendredi 25 septembre 2026 · Levallois-Perret.',
+    'footer-desc':        'SAP Inside Track Paris 2026 · Édition n°01<br>Vendredi 25 septembre 2026 · Levallois-Perret.',
     'footer-nav-about':   'À propos',
     'footer-nav-tracks':  'Programme',
     'footer-nav-cfp':     'Call for Speakers',
@@ -227,7 +227,7 @@ const i18n = {
     'footer-nav-label':     'NAVIGATION',
     'footer-contact-label': 'CONTACT',
 
-    'footer-desc':        'SAP Inside Track Paris · Edition n°01 · Friday, September 25, 2026 · Levallois-Perret.',
+    'footer-desc':        'SAP Inside Track Paris 2026 · Edition n°01<br>Friday, September 25, 2026 · Levallois-Perret.',
     'footer-nav-about':   'About',
     'footer-nav-tracks':  'Schedule',
     'footer-nav-cfp':     'Call for Speakers',
