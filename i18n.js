@@ -7,7 +7,7 @@ const i18n = {
     'nav-venue':        'Lieu',
     'nav-sponsors':     'Sponsors',
     'nav-faq':          'FAQ',
-    'nav-register':     'Pré-inscription →',
+    'nav-register':     'Inscription →',
 
     'hero-meta':   'EDITION N°01 · COMMUNITY-DRIVEN · BY SAP PEOPLE FOR SAP PEOPLE',
     'hero-title':  'SAP Inside Track<br><em>Paris 2026.</em>',
@@ -126,7 +126,7 @@ const i18n = {
     'nav-venue':        'Venue',
     'nav-sponsors':     'Sponsors',
     'nav-faq':          'FAQ',
-    'nav-register':     'Pre-register →',
+    'nav-register':     'Register →',
 
     'hero-meta':   'EDITION N°01 · COMMUNITY-DRIVEN · BY SAP PEOPLE FOR SAP PEOPLE',
     'hero-title':  'SAP Inside Track<br><em>Paris 2026.</em>',
