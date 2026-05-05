@@ -691,7 +691,7 @@ img { display: block; max-width: 100%; }
   list-style: none;
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px;
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(15px, 1.6vw, 19px);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
