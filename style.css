@@ -52,8 +52,8 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.04em;
 }
 .nav-logo img {
-  height: 82px; width: auto;
-  max-width: 160px;
+  height: 100px; width: auto;
+  max-width: 200px;
   object-fit: contain;
   background: transparent;
   padding: 0;
