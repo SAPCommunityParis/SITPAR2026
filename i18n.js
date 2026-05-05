@@ -1,6 +1,6 @@
 const i18n = {
   fr: {
-    'nav-about':        'About',
+    'nav-about':        'À propos',
     'nav-tracks':       'Programme',
     'nav-speakers':     'Speakers',
     'nav-cfp':          'Call for Speakers',
