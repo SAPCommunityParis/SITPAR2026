@@ -1,3 +1,22 @@
+// ── Hamburger menu ──
+(function () {
+  const burger = document.querySelector('.nav-burger');
+  const links  = document.querySelector('.nav-links');
+  if (!burger || !links) return;
+
+  burger.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }));
+})();
+
 // ── Language switching ──
 let currentLang = localStorage.getItem('sit-lang') || 'fr';
 
