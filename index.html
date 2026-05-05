@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>SAP Inside Track Paris '26</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SAP Inside Track Paris — Première édition française. Vendredi 25 septembre 2026, chez SAP France, Levallois-Perret. 4 tracks, 80 participants, 100% community-driven.">
+<meta property="og:title" content="SAP Inside Track Paris '26">
+<meta property="og:description" content="La communauté SAP francophone se retrouve enfin chez elle. Une journée — quatre tracks — un seul endroit.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/sit-paris-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ───── NAV ───── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="SAP Inside Track Paris">
+      <img src="assets/sit-paris-logo.png" alt="SAP Inside Track Paris">
+    </a>
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav-about">About</a>
+      <a href="#tracks" data-i18n="nav-tracks">Programme</a>
+      <a href="#speakers" data-i18n="nav-speakers">Speakers</a>
+      <a href="#cfp" data-i18n="nav-cfp">Call for Speakers</a>
+      <a href="#venue" data-i18n="nav-venue">Lieu</a>
+      <a href="#sponsors" data-i18n="nav-sponsors">Sponsors</a>
+      <a href="#faq" data-i18n="nav-faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <span>·</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="#register" class="btn btn-primary btn-sm" data-i18n="nav-register">Pré-inscription →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ───── HERO ───── -->
+<section class="hero" id="register">
+  <div class="hero-strip">
+    <div class="hero-strip-track">
+      <span data-i18n="strip-1">PREMIÈRE ÉDITION FRANCE</span>
+      <span data-i18n="strip-2">25 SEPT. 2026</span>
+      <span data-i18n="strip-3">SAP FRANCE — LEVALLOIS</span>
+      <span data-i18n="strip-4">80 PLACES</span>
+      <span data-i18n="strip-5">4 TRACKS</span>
+      <span data-i18n="strip-6">BY THE COMMUNITY, FOR THE COMMUNITY</span>
+      <span data-i18n="strip-1">PREMIÈRE ÉDITION FRANCE</span>
+      <span data-i18n="strip-2">25 SEPT. 2026</span>
+      <span data-i18n="strip-3">SAP FRANCE — LEVALLOIS</span>
+      <span data-i18n="strip-4">80 PLACES</span>
+      <span data-i18n="strip-5">4 TRACKS</span>
+      <span data-i18n="strip-6">BY THE COMMUNITY, FOR THE COMMUNITY</span>
+    </div>
+  </div>
+
+  <div class="hero-main">
+    <div>
+      <div class="hero-meta">
+        <span class="dot"></span>
+        <span>EDITION N°01 · COMMUNITY-DRIVEN · BY SAP PEOPLE FOR SAP PEOPLE</span>
+      </div>
+      <h1 class="hero-title">
+        SAP Inside Track<br>
+        <em>Paris.</em>
+      </h1>
+      <p class="hero-tagline" data-i18n-html="hero-tagline">
+        La communauté SAP francophone se retrouve enfin chez elle. Une journée — quatre tracks — un seul endroit.
+        <strong>Vendredi 25 septembre 2026, chez SAP France.</strong>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#register" data-i18n="hero-cta1">→ M'inscrire à l'ouverture</a>
+        <a class="btn btn-lg" href="#cfp" data-i18n="hero-cta2">📣 Soumettre un talk</a>
+      </div>
+    </div>
+
+    <div class="terminal" aria-hidden="true">
+      <div class="terminal-bar">
+        <span class="led r"></span>
+        <span class="led y"></span>
+        <span class="led g"></span>
+        <span class="path">~/sit-paris-2026</span>
+      </div>
+      <div><span class="prompt">$</span> sit --version</div>
+      <div class="dim">→ paris/v1.0.0 · <span data-i18n="terminal-edition">première édition</span></div>
+      <div style="margin-top:10px"><span class="prompt">$</span> countdown --to 2026-09-25</div>
+      <div class="countdown">
+        <div class="cd-cell"><div class="n" data-cd="d">—</div><div class="l" data-i18n="cd-d">JOURS</div></div>
+        <div class="cd-cell"><div class="n" data-cd="h">—</div><div class="l" data-i18n="cd-h">HEURES</div></div>
+        <div class="cd-cell"><div class="n" data-cd="m">—</div><div class="l" data-i18n="cd-m">MIN</div></div>
+        <div class="cd-cell"><div class="n" data-cd="s">—</div><div class="l" data-i18n="cd-s">SEC</div></div>
+      </div>
+      <div><span class="prompt">$</span> tracks --list</div>
+      <div style="padding-left:14px">
+        <div><span class="arr">›</span> 01 App Dev &amp; Clean Core</div>
+        <div><span class="arr">›</span> 02 Data, Cloud &amp; Integration</div>
+        <div><span class="arr">›</span> 03 Business Processes</div>
+        <div><span class="arr">›</span> 04 Hands-on Labs</div>
+      </div>
+      <div style="margin-top:10px"><span class="prompt">$</span> register <span class="badge" data-i18n="terminal-soon">SOON</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── STATS BAR ───── -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="n">01</div><div class="l" data-i18n="stat-1">PREMIÈRE ÉDITION</div></div>
+    <div class="stat"><div class="n">04</div><div class="l" data-i18n="stat-2">TRACKS PARALLÈLES</div></div>
+    <div class="stat"><div class="n">80</div><div class="l" data-i18n="stat-3">PARTICIPANTS MAX</div></div>
+    <div class="stat"><div class="n">100%</div><div class="l" data-i18n="stat-4">COMMUNITY-DRIVEN</div></div>
+  </div>
+</section>
+
+<!-- ───── ABOUT ───── -->
+<section class="about" id="about">
+  <div class="section">
+    <div class="section-eyebrow" data-i18n="about-eyebrow">À propos</div>
+    <h2 class="section-title" data-i18n-html="about-title">Un Inside Track,<br><em>c'est quoi ?</em></h2>
+
+    <div class="about-grid" style="margin-top: 48px;">
+      <p class="about-lead" data-i18n-html="about-lead">
+        Un <em>SAP Inside Track</em> est un événement <strong>organisé par et pour la communauté SAP</strong> —
+        un concentré d'expertise terrain, sans marketing, sans pitch produit.
+      </p>
+      <div class="about-body">
+        <p data-i18n="about-p1">
+          Le format existe depuis plus de quinze ans dans toute l'Europe (Walldorf, Munich, Porto, Madrid, Hambourg…).
+          C'est la première fois qu'une édition voit le jour en France.
+        </p>
+        <p data-i18n="about-p2">
+          Quatre tracks parallèles, des talks de 30 minutes, des ateliers hands-on, et surtout
+          beaucoup de temps pour discuter entre pairs autour d'un café — ou d'un verre.
+        </p>
+        <p data-i18n-html="about-p3">
+          L'événement est <strong>communautaire</strong> : SAP France nous accueille gracieusement, mais le contenu et
+          la programmation sont entièrement entre les mains des organisateurs et des speakers de la communauté.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── TRACKS ───── -->
+<section class="section" id="tracks">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow" data-i18n="tracks-eyebrow">Programme</div>
+      <h2 class="section-title" data-i18n-html="tracks-title">Quatre tracks,<br><em>une journée.</em></h2>
+    </div>
+    <div class="section-sub" data-i18n="tracks-sub">Vendredi 25 septembre 2026 · 09h00 → 18h00 · 4 salles</div>
+  </div>
+
+  <div class="tracks-grid">
+    <div class="track">
+      <div class="track-head">
+        <div class="track-num">01</div>
+        <div>
+          <h3 class="track-title">App Dev &amp; Clean Core</h3>
+        </div>
+      </div>
+      <p class="track-desc" data-i18n="track1-desc">
+        ABAP Cloud, RAP, BTP, extensions side-by-side, gouvernance du Clean Core. Le track des développeurs qui veulent rester
+        proches du standard sans renoncer à la créativité.
+      </p>
+      <div class="track-tags">
+        <span class="tag">ABAP Cloud</span>
+        <span class="tag">RAP</span>
+        <span class="tag">BTP</span>
+        <span class="tag">Extensibility</span>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-head">
+        <div class="track-num">02</div>
+        <div>
+          <h3 class="track-title">Data, Cloud &amp; Integration</h3>
+        </div>
+      </div>
+      <p class="track-desc" data-i18n="track2-desc">
+        Datasphere, Integration Suite, AI Core, Joule, observabilité, archi event-driven. Les ponts entre SAP et le reste du monde.
+      </p>
+      <div class="track-tags">
+        <span class="tag">Datasphere</span>
+        <span class="tag">Integration Suite</span>
+        <span class="tag">AI Core</span>
+        <span class="tag">Joule</span>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-head">
+        <div class="track-num">03</div>
+        <div>
+          <h3 class="track-title">Business Processes</h3>
+        </div>
+      </div>
+      <p class="track-desc" data-i18n="track3-desc">
+        S/4HANA, Build Process Automation, Signavio, key user extensibility. Le track des consultants fonctionnels et key users
+        qui font tourner la machine.
+      </p>
+      <div class="track-tags">
+        <span class="tag">S/4HANA</span>
+        <span class="tag">Signavio</span>
+        <span class="tag">Build PA</span>
+        <span class="tag">Key user</span>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-head">
+        <div class="track-num">04</div>
+        <div>
+          <h3 class="track-title">Hands-on Labs</h3>
+        </div>
+      </div>
+      <p class="track-desc" data-i18n="track4-desc">
+        Sessions de 90 minutes, laptop ouvert. On code, on déploie, on intègre, on casse, on répare. Inscriptions sur place,
+        places limitées par session.
+      </p>
+      <div class="track-tags">
+        <span class="tag">90 min</span>
+        <span class="tag">Bring your laptop</span>
+        <span class="tag">Live coding</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider-glyph">◆ ◆ ◆</div>
+</section>
+
+<!-- ───── SPEAKERS WALL ───── -->
+<section class="section speakers-head" id="speakers">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow" data-i18n="speakers-eyebrow">Speakers</div>
+      <h2 class="section-title" data-i18n-html="speakers-title">Tu veux <em>parler ?</em><br>On t'attend.</h2>
+    </div>
+    <div class="section-sub" data-i18n="speakers-sub">Première édition — line-up à dévoiler progressivement.</div>
+  </div>
+
+  <div class="speakers-row">
+    <div class="speaker-cell">
+      <div class="speaker-avatar">?</div>
+      <div class="speaker-name-stub"></div>
+    </div>
+    <div class="speaker-cell">
+      <div class="speaker-avatar">?</div>
+      <div class="speaker-name-stub"></div>
+    </div>
+    <div class="speaker-cell">
+      <div class="speaker-avatar">?</div>
+      <div class="speaker-name-stub"></div>
+    </div>
+    <div class="speaker-cell">
+      <div class="speaker-avatar">?</div>
+      <div class="speaker-name-stub"></div>
+    </div>
+    <div class="speaker-cell">
+      <div class="speaker-avatar">?</div>
+      <div class="speaker-name-stub"></div>
+    </div>
+    <a class="speaker-cta" href="#cfp">
+      <div class="speaker-cta-title" data-i18n="speakers-cta-title">+ Toi ?</div>
+      <div class="speaker-cta-sub" data-i18n="speakers-cta-sub">Soumettre un talk →</div>
+    </a>
+  </div>
+</section>
+
+<!-- ───── CFP ───── -->
+<section class="cfp" id="cfp">
+  <div class="cfp-inner">
+    <div class="cfp-eyebrow">★ CALL FOR SPEAKERS ★</div>
+    <h2 class="cfp-title" data-i18n-html="cfp-title">
+      Tu as quelque chose<br>à <em>partager ?</em>
+    </h2>
+    <p class="cfp-sub" data-i18n="cfp-sub">
+      C'est la première édition française : on cherche des voix nouvelles, des retours d'expérience honnêtes,
+      des démos qui plantent (et qu'on répare en live), des idées un peu folles. Pas de buzzwords, pas de slideware.
+      Si c'est ta première prise de parole, c'est le moment idéal.
+    </p>
+    <a class="btn btn-gold btn-lg" href="#" data-i18n="cfp-cta">→ Soumettre un talk</a>
+
+    <div class="cfp-formats">
+      <div class="fmt"><div class="d">30 min</div><div class="l">TALK</div></div>
+      <div class="fmt"><div class="d">60 min</div><div class="l">DEEP DIVE</div></div>
+      <div class="fmt"><div class="d">90 min</div><div class="l">HANDS-ON</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── VENUE ───── -->
+<section class="section" id="venue">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow" data-i18n="venue-eyebrow">Le lieu</div>
+      <h2 class="section-title"><em>SAP</em> France.</h2>
+    </div>
+    <div class="section-sub" data-i18n="venue-sub">Levallois-Perret · Île-de-France</div>
+  </div>
+
+  <div class="venue-grid">
+    <div class="venue-img">
+      <iframe
+        title="Carte SAP France — Levallois-Perret"
+        loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=2.2780%2C48.8920%2C2.3000%2C48.9020&layer=mapnik&marker=48.8970%2C2.2890"
+      ></iframe>
+      <a class="venue-img-cap" target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=48.8970&mlon=2.2890#map=16/48.8970/2.2890">
+        <span class="pin"></span> <span data-i18n="venue-map-link">Voir sur OpenStreetMap →</span>
+      </a>
+    </div>
+    <div class="venue-info">
+      <p style="font-size:18px; line-height:1.5; margin:0;" data-i18n="venue-desc">
+        SAP France nous ouvre les portes de son campus : un auditorium principal, trois salles de breakout, un grand
+        espace networking et une terrasse pour la pause déjeuner. Tout sur place, accessible en transport.
+      </p>
+      <dl>
+        <dt data-i18n="venue-dt-address">Adresse</dt><dd>35 rue d'Alsace, 92300 Levallois-Perret</dd>
+        <dt data-i18n="venue-dt-metro">Métro</dt><dd data-i18n="venue-dd-metro">L3 · Anatole France · 4 min à pied</dd>
+        <dt data-i18n="venue-dt-rer">RER</dt><dd data-i18n="venue-dd-rer">RER C · Clichy-Levallois · 8 min</dd>
+        <dt data-i18n="venue-dt-bike">Vélo</dt><dd data-i18n="venue-dd-bike">Stations Vélib à proximité</dd>
+        <dt data-i18n="venue-dt-access">PMR</dt><dd data-i18n="venue-dd-access">Bâtiment entièrement accessible</dd>
+        <dt data-i18n="venue-dt-capacity">Capacité</dt><dd data-i18n="venue-dd-capacity">80 participants · audi + 3 salles</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ───── SPONSORS ───── -->
+<section class="sponsors" id="sponsors">
+  <div class="section" style="text-align:center;">
+    <div class="section-eyebrow" style="display:block;" data-i18n="sponsors-eyebrow">Sponsors</div>
+    <h2 class="section-title" style="max-width:none; margin: 0 auto;" data-i18n-html="sponsors-title">Ils rendent ça <em>possible.</em></h2>
+    <p style="max-width: 540px; margin: 20px auto 0; color: var(--muted); font-size: 16px; line-height: 1.5;" data-i18n="sponsors-desc">
+      Merci aux partenaires qui rendent cette première édition possible.
+    </p>
+
+    <div class="sponsor-grid-flat">
+      <div class="sponsor-slot">[logo]</div>
+      <div class="sponsor-slot">[logo]</div>
+      <div class="sponsor-slot">[logo]</div>
+      <div class="sponsor-slot">[logo]</div>
+      <div class="sponsor-slot">[logo]</div>
+      <div class="sponsor-slot">[logo]</div>
+      <div class="sponsor-slot">[logo]</div>
+      <div class="sponsor-slot">[logo]</div>
+    </div>
+
+    <div class="sponsor-cta">
+      <a class="btn" href="#" data-i18n="sponsors-cta">→ Devenir sponsor</a>
+      <span class="section-sub">Contact : sponsors@sitparis.fr</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───── FAQ ───── -->
+<section class="section" id="faq">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow" data-i18n="faq-eyebrow">Questions fréquentes</div>
+      <h2 class="section-title">FAQ.</h2>
+    </div>
+    <div class="section-sub" data-i18n="faq-contact">Une autre question ? hello@sitparis.fr</div>
+  </div>
+
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>
+        <span><span class="num">01</span><span data-i18n="faq-q1">C'est quoi exactement, un SAP Inside Track&nbsp;?</span></span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="ans" data-i18n="faq-a1">
+        Un événement organisé par la communauté, pour la communauté. Pas de marketing, pas de pitch produit :
+        des retours d'expérience, des démos, des ateliers techniques, et beaucoup d'échanges entre pairs.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span><span class="num">02</span><span data-i18n="faq-q2">Pourquoi « première édition » en 2026&nbsp;?</span></span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="ans" data-i18n="faq-a2">
+        Le format Inside Track existe depuis plus de quinze ans en Allemagne et essaime partout en Europe. Il manquait à
+        la France. On répare ça. C'est notre coup d'envoi.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span><span class="num">03</span><span data-i18n="faq-q3">C'est officiel ? C'est SAP qui organise&nbsp;?</span></span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="ans" data-i18n="faq-a3">
+        Non — c'est entièrement organisé par des bénévoles de la communauté SAP francophone. SAP France nous accueille
+        gracieusement dans ses locaux, mais ne pilote ni la programmation ni le contenu.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span><span class="num">04</span><span data-i18n="faq-q4">Combien ça coûte&nbsp;?</span></span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="ans" data-i18n="faq-a4">
+        Une participation symbolique pour couvrir les frais de bouche (café, déjeuner, apéro de clôture). Le montant
+        sera annoncé à l'ouverture des inscriptions.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span><span class="num">05</span><span data-i18n="faq-q5">Comment je peux être speaker&nbsp;?</span></span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="ans" data-i18n="faq-a5">
+        Le call for speakers est ouvert. Trois formats : talk (30 min), deep dive (60 min),
+        atelier hands-on (90 min). Soumets ton sujet, on revient vers toi sous 2 semaines.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span><span class="num">06</span><span data-i18n="faq-q6">Je suis junior / étudiant·e, c'est pour moi&nbsp;?</span></span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="ans" data-i18n="faq-a6">
+        Oui, absolument. C'est même un de nos publics prioritaires : si tu démarres dans l'écosystème SAP, c'est l'occasion
+        rêvée de rencontrer les gens qui font tourner la machine. Quelques places sont réservées aux étudiant·e·s.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        <span><span class="num">07</span><span data-i18n="faq-q7">Y a-t-il un code of conduct&nbsp;?</span></span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="ans" data-i18n="faq-a7">
+        Oui — nous adoptons le code de conduite de la SAP Community. Respect, écoute, bienveillance. Les organisateurs
+        sont identifiables le jour J et disponibles pour tout échange.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ───── FOOTER ───── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/sit-paris-logo.png" alt="SIT Paris">
+      <p data-i18n="footer-desc">SAP Inside Track Paris · Édition n°01 · Vendredi 25 septembre 2026 · Levallois-Perret.</p>
+    </div>
+    <div>
+      <h4>NAVIGATION</h4>
+      <ul>
+        <li><a href="#about" data-i18n="footer-nav-about">À propos</a></li>
+        <li><a href="#tracks" data-i18n="footer-nav-tracks">Programme</a></li>
+        <li><a href="#cfp" data-i18n="footer-nav-cfp">Call for Speakers</a></li>
+        <li><a href="#venue" data-i18n="footer-nav-venue">Lieu &amp; accès</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer-community">COMMUNAUTÉ</h4>
+      <ul>
+        <li><a href="#">#SITParis</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Mastodon</a></li>
+        <li><a href="https://community.sap.com">community.sap.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONTACT</h4>
+      <ul>
+        <li><a href="mailto:hello@sitparis.fr">hello@sitparis.fr</a></li>
+        <li><a href="mailto:speakers@sitparis.fr">speakers@sitparis.fr</a></li>
+        <li><a href="mailto:sponsors@sitparis.fr">sponsors@sitparis.fr</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer-copyright">© 2026 SAP Inside Track Paris · Organisé par la communauté</span>
+    <span data-i18n="footer-hosting">Hébergé sur GitHub Pages · Ouvert &amp; bénévole</span>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
