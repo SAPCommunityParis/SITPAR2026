@@ -19,7 +19,7 @@ const i18n = {
     'strip-5': '4 TRACKS',
     'strip-6': 'BY THE COMMUNITY, FOR THE COMMUNITY',
 
-    'hero-tagline':       'La communauté SAP francophone se retrouve enfin chez elle. Une journée, quatre tracks, un seul endroit.<br><strong>Vendredi 25 septembre 2026,<br>chez SAP France.</strong>',
+    'hero-tagline':       'La communauté SAP francophone se retrouve enfin chez elle.<br>Une journée, quatre tracks, un seul endroit.<br><strong>Vendredi 25 septembre 2026, chez SAP France.</strong>',
     'hero-cta1':          '→ M\'inscrire à l\'ouverture',
     'hero-cta2':          '📣 Soumettre un talk',
     'terminal-edition':   'première édition',
