@@ -80,7 +80,7 @@ const i18n = {
     'venue-dd-rer':       'RER C · Clichy-Levallois · 8 min',
     'venue-dd-bike':      'Stations Vélib à proximité',
     'venue-dd-access':    'Bâtiment entièrement accessible',
-    'venue-dd-capacity':  '80 participants · audi + 3 salles',
+    'venue-dd-capacity':  '80 participants',
 
     'sponsors-eyebrow': 'Sponsors',
     'sponsors-title':   'Ils rendent ça <em>possible.</em>',
@@ -199,7 +199,7 @@ const i18n = {
     'venue-dd-rer':       'RER C · Clichy-Levallois · 8 min',
     'venue-dd-bike':      'Vélib stations nearby',
     'venue-dd-access':    'Fully accessible building',
-    'venue-dd-capacity':  '80 attendees · auditorium + 3 rooms',
+    'venue-dd-capacity':  '80 attendees',
 
     'sponsors-eyebrow': 'Sponsors',
     'sponsors-title':   'They make it <em>possible.</em>',
