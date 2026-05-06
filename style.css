@@ -52,8 +52,8 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.04em;
 }
 .nav-logo img {
-  height: 100px; width: auto;
-  max-width: 200px;
+  height: 118px; width: auto;
+  max-width: 230px;
   object-fit: contain;
   background: transparent;
   padding: 0;
@@ -369,11 +369,21 @@ img { display: block; max-width: 100%; }
   width: 72%;
   height: 90%;
   background: url('assets/sit-paris-skyline.png') center bottom / contain no-repeat;
-  opacity: 0.07;
+  opacity: 0.11;
   pointer-events: none;
   z-index: 0;
 }
 .about .section { position: relative; z-index: 1; }
+
+@media (max-width: 900px) {
+  .about::after {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    opacity: 0.09;
+  }
+}
 .about-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -401,6 +411,9 @@ img { display: block; max-width: 100%; }
 .about-body p:last-child { margin: 0; }
 
 /* ───── tracks ───── */
+#tracks {
+  position: relative;
+}
 .tracks-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -462,7 +475,7 @@ img { display: block; max-width: 100%; }
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 18px;
-  align-items: stretch;
+  align-items: start;
 }
 @media (max-width: 900px) { .speakers-row { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 540px) { .speakers-row { grid-template-columns: repeat(2, 1fr); } }
@@ -470,8 +483,9 @@ img { display: block; max-width: 100%; }
   display: flex; flex-direction: column; align-items: center; gap: 10px;
 }
 .speaker-avatar {
-  aspect-ratio: 1;
-  width: 100%;
+  width: clamp(100px, 14vw, 168px);
+  height: clamp(100px, 14vw, 168px);
+  flex-shrink: 0;
   border-radius: 50%;
   border: 1.5px dashed var(--muted);
   background:
@@ -529,7 +543,6 @@ img.speaker-avatar {
   opacity: 1;
 }
 .speaker-cta {
-  aspect-ratio: 1;
   border-radius: 14px;
   background: var(--gold);
   color: var(--ink);
@@ -537,7 +550,8 @@ img.speaker-avatar {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   text-align: center;
-  padding: 16px;
+  padding: 20px 14px;
+  min-height: clamp(140px, 18vw, 175px);
   text-decoration: none;
   transition: transform .2s, box-shadow .2s;
   box-shadow: 0 0 0 0 var(--ink);
@@ -579,7 +593,7 @@ img.speaker-avatar {
 }
 .cfp::before { top: -100px; left: -100px; }
 .cfp::after { bottom: -100px; right: -100px; }
-.cfp-inner { position: relative; max-width: 980px; margin: 0 auto; }
+.cfp-inner { position: relative; max-width: 1100px; margin: 0 auto; }
 .cfp-eyebrow {
   font-family: var(--mono);
   font-size: 12px;
