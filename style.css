@@ -481,6 +481,25 @@ img { display: block; max-width: 100%; }
   background: var(--muted);
   opacity: 0.4;
 }
+.speaker-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+img.speaker-avatar {
+  object-fit: cover;
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-style: solid;
+}
+.sponsor-slot img {
+  max-width: 65%;
+  max-height: 55%;
+  object-fit: contain;
+  display: block;
+}
 .speaker-linkedin {
   width: 16px; height: 16px;
   color: #0a66c2;
