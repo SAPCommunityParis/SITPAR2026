@@ -3,20 +3,16 @@
   const btn  = document.getElementById('themeToggle');
   const root = document.documentElement;
 
-  /* Restore persisted theme (also applied before paint via inline <head> script) */
-  if (localStorage.getItem('sit-theme') === 'dark') {
-    root.setAttribute('data-theme', 'dark');
-  }
+  /* Always start in light mode – no localStorage restore */
+  root.removeAttribute('data-theme');
 
   if (!btn) return;
   btn.addEventListener('click', () => {
     const isDark = root.getAttribute('data-theme') === 'dark';
     if (isDark) {
       root.removeAttribute('data-theme');
-      localStorage.setItem('sit-theme', 'light');
     } else {
       root.setAttribute('data-theme', 'dark');
-      localStorage.setItem('sit-theme', 'dark');
     }
   });
 })();
@@ -41,7 +37,7 @@
 })();
 
 // ── Language switching ──
-let currentLang = localStorage.getItem('sit-lang') || 'fr';
+let currentLang = 'fr';
 
 function setLang(lang) {
   currentLang = lang;
@@ -61,7 +57,6 @@ function setLang(lang) {
   });
 
   document.documentElement.lang = lang;
-  localStorage.setItem('sit-lang', lang);
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {

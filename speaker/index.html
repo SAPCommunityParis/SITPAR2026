@@ -20,10 +20,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
-<script>
-  (function(){var t=localStorage.getItem('sit-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
-</script>
-
 <style>
   /* ── page hero ── */
   .sp-hero {
@@ -62,7 +58,7 @@
     line-height: 1.55; opacity: 0.82;
     max-width: 640px; margin: 0 auto 36px;
   }
-  [data-theme="dark"] .sp-hero { background: #060f1e; }
+  [data-theme="dark"] .sp-hero { background: #060f1e; color: #cdd9f0; }
   [data-theme="dark"] .sp-hero .btn-primary {
     background: var(--gold); color: #060f1e; border-color: var(--gold);
   }
@@ -269,7 +265,7 @@
     letter-spacing: 0.06em; opacity: 0.65;
   }
   .sp-date strong { display: block; color: var(--gold); opacity: 1; margin-bottom: 2px; font-size: 10px; letter-spacing: 0.12em; }
-  [data-theme="dark"] .sp-cta-block { background: #060f1e; }
+  [data-theme="dark"] .sp-cta-block { background: #060f1e; color: #cdd9f0; }
 </style>
 </head>
 <body>
@@ -564,7 +560,7 @@
 <script src="i18n.js"></script>
 <script>
 // ── Language switching ──
-let currentLang = localStorage.getItem('sit-lang') || 'fr';
+let currentLang = 'fr';
 
 function setLang(lang) {
   currentLang = lang;
@@ -582,7 +578,6 @@ function setLang(lang) {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
   document.documentElement.lang = lang;
-  localStorage.setItem('sit-lang', lang);
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -595,12 +590,13 @@ setLang(currentLang);
 (function () {
   const btn  = document.getElementById('themeToggle');
   const root = document.documentElement;
-  if (localStorage.getItem('sit-theme') === 'dark') root.setAttribute('data-theme', 'dark');
+  /* Always start in light mode */
+  root.removeAttribute('data-theme');
   if (!btn) return;
   btn.addEventListener('click', () => {
     const isDark = root.getAttribute('data-theme') === 'dark';
-    if (isDark) { root.removeAttribute('data-theme'); localStorage.setItem('sit-theme', 'light'); }
-    else { root.setAttribute('data-theme', 'dark'); localStorage.setItem('sit-theme', 'dark'); }
+    if (isDark) { root.removeAttribute('data-theme'); }
+    else { root.setAttribute('data-theme', 'dark'); }
   });
 })();
 
