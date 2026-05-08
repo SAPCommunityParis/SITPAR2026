@@ -62,8 +62,6 @@
     line-height: 1.55; opacity: 0.82;
     max-width: 640px; margin: 0 auto 36px;
   }
-  .sp-hero .btn { margin: 0 auto; }
-
   [data-theme="dark"] .sp-hero { background: #060f1e; }
   [data-theme="dark"] .sp-hero .btn-primary {
     background: var(--gold); color: #060f1e; border-color: var(--gold);
@@ -80,7 +78,6 @@
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
-  .sp-section-alt .sp-section { padding-top: clamp(56px, 7vw, 96px); }
   .sp-h2 {
     font-size: clamp(28px, 3.5vw, 48px);
     font-weight: 900; letter-spacing: -0.03em;
@@ -98,8 +95,6 @@
     font-weight: 700; margin-bottom: 16px;
   }
   .sp-eyebrow::before { content: "// "; opacity: 0.6; }
-
-  /* ── intro text block ── */
   .sp-intro {
     font-size: clamp(16px, 1.4vw, 19px);
     line-height: 1.65; max-width: 72ch;
@@ -117,7 +112,7 @@
   }
   [data-theme="dark"] .sp-callout { background: rgba(255,255,255,0.04); }
 
-  /* ── what we look for — 2-col table ── */
+  /* ── criteria table ── */
   .criteria-grid {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
@@ -146,7 +141,7 @@
   .criteria-cell strong { font-weight: 700; display: block; margin-bottom: 4px; }
   .criteria-cell span { color: var(--muted); font-size: 13px; }
 
-  /* ── not accepted list ── */
+  /* ── not accepted ── */
   .no-list {
     list-style: none; padding: 0; margin: 32px 0 0;
     display: grid; gap: 12px;
@@ -167,7 +162,7 @@
     font-family: var(--mono);
   }
 
-  /* ── format cards ── */
+  /* ── formats ── */
   .formats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -185,27 +180,21 @@
     transform: translateY(-3px);
     box-shadow: 0 12px 32px -12px rgba(15,42,82,0.15);
   }
-  .format-card .f-duration {
+  .f-duration {
     font-family: var(--mono);
     font-size: clamp(32px, 3.5vw, 48px);
     font-weight: 700; color: var(--gold);
     letter-spacing: -0.04em; line-height: 1;
   }
-  .format-card .f-name {
+  .f-name {
     font-size: 13px; font-weight: 800;
     text-transform: uppercase; letter-spacing: 0.06em;
     margin: 10px 0 14px; color: var(--ink);
   }
-  .format-card .f-desc {
-    font-size: 14px; color: var(--muted); line-height: 1.6;
-  }
-  [data-theme="dark"] .format-card .f-name { color: var(--ink); }
+  .f-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
 
   /* ── process steps ── */
-  .process-steps {
-    display: grid; gap: 12px; margin-top: 36px;
-    counter-reset: steps;
-  }
+  .process-steps { display: grid; gap: 12px; margin-top: 36px; }
   .process-step {
     display: flex; gap: 20px; align-items: flex-start;
     padding: 22px 24px;
@@ -240,10 +229,7 @@
     color: var(--gold); letter-spacing: 0.18em;
     font-weight: 700; margin-bottom: 14px; display: block;
   }
-  .benefit-card p {
-    font-size: 14px; color: var(--muted);
-    line-height: 1.65; margin: 0;
-  }
+  .benefit-card p { font-size: 14px; color: var(--muted); line-height: 1.65; margin: 0; }
 
   /* ── CTA block ── */
   .sp-cta-block {
@@ -269,69 +255,50 @@
     line-height: 1; margin: 0 0 16px;
   }
   .sp-cta-block h2 em { color: var(--gold); font-style: italic; }
-  .sp-cta-block p {
-    font-size: 15px; opacity: 0.75;
-    line-height: 1.6; margin: 0 0 32px;
-  }
+  .sp-cta-block p { font-size: 15px; opacity: 0.75; line-height: 1.6; margin: 0 0 32px; }
   .sp-cta-block .btn-primary {
     background: var(--gold); color: var(--ink); border-color: var(--gold);
   }
-  .sp-cta-block .btn-primary:hover {
-    background: #fff; border-color: #fff;
-  }
+  .sp-cta-block .btn-primary:hover { background: #fff; border-color: #fff; }
   .sp-dates {
     display: flex; gap: 24px; flex-wrap: wrap;
     justify-content: center; margin-top: 28px;
   }
   .sp-date {
     font-family: var(--mono); font-size: 11px;
-    letter-spacing: 0.06em; opacity: 0.6;
+    letter-spacing: 0.06em; opacity: 0.65;
   }
-  .sp-date strong { display: block; color: var(--gold); opacity: 1; margin-bottom: 2px; }
-
+  .sp-date strong { display: block; color: var(--gold); opacity: 1; margin-bottom: 2px; font-size: 10px; letter-spacing: 0.12em; }
   [data-theme="dark"] .sp-cta-block { background: #060f1e; }
-
-  /* ── back link ── */
-  .sp-back {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: var(--mono); font-size: 11px;
-    color: var(--muted); letter-spacing: 0.06em;
-    padding: 8px 0;
-    transition: color .15s;
-  }
-  .sp-back:hover { color: var(--ink); }
-  .sp-back-bar {
-    border-bottom: 1px solid var(--line);
-    padding: 0 var(--pad);
-  }
-  .sp-back-inner {
-    max-width: 1100px; margin: 0 auto;
-    padding: 14px 0;
-  }
 </style>
 </head>
 <body>
 
-<!-- ───── NAV (simplified) ───── -->
+<!-- ───── NAV ───── -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="../" class="nav-logo" aria-label="SAP Inside Track Paris">
       <img src="../assets/sit-paris-logo.png" alt="SAP Inside Track Paris">
     </a>
     <div class="nav-links">
-      <a href="../#about">À propos</a>
-      <a href="../#tracks">Programme</a>
-      <a href="../#speakers">Speakers</a>
-      <a href="../#venue">Lieu</a>
-      <a href="../#sponsors">Sponsors</a>
-      <a href="../#faq">FAQ</a>
+      <a href="../#about"    data-i18n="nav-about">À propos</a>
+      <a href="../#tracks"   data-i18n="nav-tracks">Programme</a>
+      <a href="../#speakers" data-i18n="nav-speakers">Speakers</a>
+      <a href="../#venue"    data-i18n="nav-venue">Lieu</a>
+      <a href="../#sponsors" data-i18n="nav-sponsors">Sponsors</a>
+      <a href="../#faq"      data-i18n="nav-faq">FAQ</a>
     </div>
     <div class="nav-cta">
+      <div class="lang">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <span>·</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Mode sombre">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
-      <a href="https://sessionize.com/sit-paris-2026" target="_blank" rel="noopener" class="btn btn-primary btn-sm">📣 Soumettre un talk</a>
+      <a href="https://sessionize.com/sit-paris-2026" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-i18n="nav-cta">📣 Soumettre un talk</a>
       <button class="nav-burger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -342,104 +309,86 @@
 <!-- ───── HERO ───── -->
 <section class="sp-hero">
   <div class="sp-hero-inner">
-    <div class="sp-hero-eyebrow">★ CALL FOR SPEAKERS · SAP INSIDE TRACK PARIS 2026 ★</div>
-    <h1>Parlez-nous de<br><em>votre terrain.</em></h1>
-    <p>Pas de comité politique. Pas de quota sponsor. Pas de slides validées par le marketing. Si vous avez vécu quelque chose d'intéressant sur un projet SAP, c'est exactement ce qu'on cherche.</p>
-    <a href="https://sessionize.com/sit-paris-2026" target="_blank" rel="noopener" class="btn btn-primary btn-lg">📣 Soumettre un talk →</a>
+    <div class="sp-hero-eyebrow" data-i18n="hero-eyebrow">★ CALL FOR SPEAKERS · SAP INSIDE TRACK PARIS 2026 ★</div>
+    <h1 data-i18n-html="hero-h1">Parlez-nous de<br><em>votre terrain.</em></h1>
+    <p data-i18n="hero-p">Pas de comité politique. Pas de quota sponsor. Pas de slides validées par le marketing. Si vous avez vécu quelque chose d'intéressant sur un projet SAP, c'est exactement ce qu'on cherche.</p>
+    <a href="https://sessionize.com/sit-paris-2026" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-i18n="hero-cta">📣 Soumettre un talk →</a>
   </div>
 </section>
 
 <!-- ───── POURQUOI PARLER ───── -->
 <div class="sp-section-alt">
 <section class="sp-section">
-  <div class="sp-eyebrow">Pourquoi parler ici</div>
-  <h2 class="sp-h2">Contribuer à quelque chose<br><em>de rare.</em></h2>
-  <div class="sp-intro" style="margin-top: 28px;">
-    <p>Les conférences SAP ne manquent pas. Mais la plupart demandent soit un budget, soit un badge éditeur, soit une présentation soigneusement validée par un service marketing.</p>
-    <p>SAP Inside Track Paris fonctionne différemment. Parler ici, c'est contribuer à un programme où les gens dans la salle font vraiment confiance au contenu.</p>
+  <div class="sp-eyebrow" data-i18n="why-eyebrow">Pourquoi parler ici</div>
+  <h2 class="sp-h2" data-i18n-html="why-h2">Contribuer à quelque chose<br><em>de rare.</em></h2>
+  <div class="sp-intro" style="margin-top:28px;">
+    <p data-i18n="why-p1">Les conférences SAP ne manquent pas. Mais la plupart demandent soit un budget, soit un badge éditeur, soit une présentation soigneusement validée par un service marketing.</p>
+    <p data-i18n="why-p2">SAP Inside Track Paris fonctionne différemment. Parler ici, c'est contribuer à un programme où les gens dans la salle font vraiment confiance au contenu.</p>
   </div>
-  <div class="sp-callout">
-    La question à se poser avant de soumettre : est-ce que quelqu'un dans la salle va repartir avec une idée qu'il peut appliquer dès la semaine suivante ?
-  </div>
+  <div class="sp-callout" data-i18n="why-callout">La question à se poser avant de soumettre : est-ce que quelqu'un dans la salle va repartir avec une idée qu'il peut appliquer dès la semaine suivante ?</div>
 </section>
 </div>
 
 <!-- ───── CE QU'ON CHERCHE ───── -->
 <section class="sp-section">
-  <div class="sp-eyebrow">Contenu</div>
-  <h2 class="sp-h2">Ce qu'on attend<br><em>d'un bon talk.</em></h2>
-  <p class="sp-lead" style="margin-top:12px;">Pas besoin d'être un expert reconnu ni d'avoir un parcours impressionnant. Ce qui compte, c'est la substance de ce que vous partagez.</p>
+  <div class="sp-eyebrow" data-i18n="what-eyebrow">Contenu</div>
+  <h2 class="sp-h2" data-i18n-html="what-h2">Ce qu'on attend<br><em>d'un bon talk.</em></h2>
+  <p class="sp-lead" style="margin-top:12px;" data-i18n="what-lead">Pas besoin d'être un expert reconnu ni d'avoir un parcours impressionnant. Ce qui compte, c'est la substance de ce que vous partagez.</p>
 
   <div class="criteria-grid">
-    <div class="criteria-hd">Ce qu'on cherche</div>
-    <div class="criteria-hd">Exemples concrets</div>
+    <div class="criteria-hd" data-i18n="what-hd1">Ce qu'on cherche</div>
+    <div class="criteria-hd" data-i18n="what-hd2">Exemples concrets</div>
 
-    <div class="criteria-cell">
-      <strong>Un vrai retour d'expérience projet</strong>
-    </div>
-    <div class="criteria-cell">
-      <span>Migration S/4HANA : ce qu'on referait différemment, gouvernance BTP en production, Clean Core sur un système de 15 ans</span>
-    </div>
+    <div class="criteria-cell"><strong data-i18n="what-r1a">Un vrai retour d'expérience projet</strong></div>
+    <div class="criteria-cell"><span data-i18n="what-r1b">Migration S/4HANA : ce qu'on referait différemment, gouvernance BTP en production, Clean Core sur un système de 15 ans</span></div>
 
-    <div class="criteria-cell">
-      <strong>Des décisions techniques expliquées</strong>
-    </div>
-    <div class="criteria-cell">
-      <span>Pourquoi on a choisi ce pattern d'intégration, comment on a structuré les autorisations, quel compromis on a fait sur l'extensibilité</span>
-    </div>
+    <div class="criteria-cell"><strong data-i18n="what-r2a">Des décisions techniques expliquées</strong></div>
+    <div class="criteria-cell"><span data-i18n="what-r2b">Pourquoi on a choisi ce pattern d'intégration, comment on a structuré les autorisations, quel compromis on a fait sur l'extensibilité</span></div>
 
-    <div class="criteria-cell">
-      <strong>Ce qui n'a pas marché</strong>
-    </div>
-    <div class="criteria-cell">
-      <span>Un go-live qui a dérapé, une estimation qui était fausse, une architecture qu'on a dû revoir</span>
-    </div>
+    <div class="criteria-cell"><strong data-i18n="what-r3a">Ce qui n'a pas marché</strong></div>
+    <div class="criteria-cell"><span data-i18n="what-r3b">Un go-live qui a dérapé, une estimation qui était fausse, une architecture qu'on a dû revoir</span></div>
 
-    <div class="criteria-cell">
-      <strong>Un savoir-faire rarement partagé</strong>
-    </div>
-    <div class="criteria-cell">
-      <span>Techniques ABAP peu documentées, approches de testing, méthodologies de delivery en contexte SAP</span>
-    </div>
+    <div class="criteria-cell"><strong data-i18n="what-r4a">Un savoir-faire rarement partagé</strong></div>
+    <div class="criteria-cell"><span data-i18n="what-r4b">Techniques ABAP peu documentées, approches de testing, méthodologies de delivery en contexte SAP</span></div>
   </div>
 </section>
 
 <!-- ───── CE QUI N'EST PAS ACCEPTÉ ───── -->
 <div class="sp-section-alt">
 <section class="sp-section">
-  <div class="sp-eyebrow">Ligne éditoriale</div>
-  <h2 class="sp-h2">Ce qui ne sera<br><em>pas accepté.</em></h2>
-  <p class="sp-lead" style="margin-top:12px;">Ces règles s'appliquent à tout le monde, sans exception — y compris aux speakers venus via un sponsor. C'est ce qui garantit la crédibilité du programme.</p>
+  <div class="sp-eyebrow" data-i18n="no-eyebrow">Ligne éditoriale</div>
+  <h2 class="sp-h2" data-i18n-html="no-h2">Ce qui ne sera<br><em>pas accepté.</em></h2>
+  <p class="sp-lead" style="margin-top:12px;" data-i18n="no-lead">Ces règles s'appliquent à tout le monde, sans exception — y compris aux speakers venus via un sponsor. C'est ce qui garantit la crédibilité du programme.</p>
   <ul class="no-list">
-    <li>Démos produit ou présentations de fonctionnalités</li>
-    <li>Talks commerciaux ou argumentaires de vente</li>
-    <li>Slides "vision" sans mise en œuvre réelle derrière</li>
-    <li>Contenus purement théoriques sans ancrage projet</li>
+    <li data-i18n="no-1">Démos produit ou présentations de fonctionnalités</li>
+    <li data-i18n="no-2">Talks commerciaux ou argumentaires de vente</li>
+    <li data-i18n="no-3">Slides « vision » sans mise en œuvre réelle derrière</li>
+    <li data-i18n="no-4">Contenus purement théoriques sans ancrage projet</li>
   </ul>
 </section>
 </div>
 
 <!-- ───── FORMATS ───── -->
 <section class="sp-section">
-  <div class="sp-eyebrow">Formats</div>
-  <h2 class="sp-h2">Trois formats,<br><em>un seul niveau d'exigence.</em></h2>
-  <p class="sp-lead" style="margin-top:12px;">Chaque session peut être animée en français ou en anglais selon la préférence du speaker. Un animateur sera présent pour faciliter les échanges et gérer le temps.</p>
+  <div class="sp-eyebrow" data-i18n="fmt-eyebrow">Formats</div>
+  <h2 class="sp-h2" data-i18n-html="fmt-h2">Trois formats,<br><em>un seul niveau d'exigence.</em></h2>
+  <p class="sp-lead" style="margin-top:12px;" data-i18n="fmt-lead">Chaque session peut être animée en français ou en anglais selon la préférence du speaker. Un animateur sera présent pour faciliter les échanges et gérer le temps.</p>
 
   <div class="formats-grid">
     <div class="format-card">
       <div class="f-duration">30 min</div>
-      <div class="f-name">Talk court</div>
-      <p class="f-desc">Un retour d'expérience ciblé, une technique précise, un apprentissage clé. Le format idéal pour une première prise de parole.</p>
+      <div class="f-name" data-i18n="fmt1-name">Talk court</div>
+      <p class="f-desc" data-i18n="fmt1-desc">Un retour d'expérience ciblé, une technique précise, un apprentissage clé. Le format idéal pour une première prise de parole.</p>
     </div>
     <div class="format-card">
       <div class="f-duration">60 min</div>
-      <div class="f-name">Talk long</div>
-      <p class="f-desc">Un sujet complexe, un REX de transformation, une comparaison d'approches. Pour aller plus loin et laisser du temps aux échanges.</p>
+      <div class="f-name" data-i18n="fmt2-name">Talk long</div>
+      <p class="f-desc" data-i18n="fmt2-desc">Un sujet complexe, un REX de transformation, une comparaison d'approches. Pour aller plus loin et laisser du temps aux échanges.</p>
     </div>
     <div class="format-card">
       <div class="f-duration">1h–2h</div>
-      <div class="f-name">Atelier pratique</div>
-      <p class="f-desc">Une session hands-on avec manipulation en direct. Places limitées, inscription requise. Laptop ouvert, on apprend en faisant.</p>
+      <div class="f-name" data-i18n="fmt3-name">Atelier pratique</div>
+      <p class="f-desc" data-i18n="fmt3-desc">Une session hands-on avec manipulation en direct. Places limitées, inscription requise. Laptop ouvert, on apprend en faisant.</p>
     </div>
   </div>
 </section>
@@ -447,57 +396,55 @@
 <!-- ───── PROCESSUS DE SÉLECTION ───── -->
 <div class="sp-section-alt">
 <section class="sp-section">
-  <div class="sp-eyebrow">Sélection</div>
-  <h2 class="sp-h2">Un processus<br><em>transparent.</em></h2>
-  <p class="sp-lead" style="margin-top:12px;">Le Call for Papers est ouvert à tous : clients, partenaires, freelances, employés SAP, étudiants.</p>
+  <div class="sp-eyebrow" data-i18n="sel-eyebrow">Sélection</div>
+  <h2 class="sp-h2" data-i18n-html="sel-h2">Un processus<br><em>transparent.</em></h2>
+  <p class="sp-lead" style="margin-top:12px;" data-i18n="sel-lead">Le Call for Papers est ouvert à tous : clients, partenaires, freelances, employés SAP, étudiants.</p>
 
   <div class="process-steps">
     <div class="process-step">
       <div class="step-num">01</div>
       <div class="step-body">
-        <strong>Concret</strong>
-        <span>Le contenu est-il ancré dans une expérience réelle ?</span>
+        <strong data-i18n="sel-1-title">Concret</strong>
+        <span data-i18n="sel-1-desc">Le contenu est-il ancré dans une expérience réelle ?</span>
       </div>
     </div>
     <div class="process-step">
       <div class="step-num">02</div>
       <div class="step-body">
-        <strong>Actionnable</strong>
-        <span>Est-ce que les participants peuvent en faire quelque chose dès la semaine suivante ?</span>
+        <strong data-i18n="sel-2-title">Actionnable</strong>
+        <span data-i18n="sel-2-desc">Est-ce que les participants peuvent en faire quelque chose dès la semaine suivante ?</span>
       </div>
     </div>
     <div class="process-step">
       <div class="step-num">03</div>
       <div class="step-body">
-        <strong>Sans marketing</strong>
-        <span>Le talk respecte-t-il la ligne éditoriale de l'événement ?</span>
+        <strong data-i18n="sel-3-title">Sans marketing</strong>
+        <span data-i18n="sel-3-desc">Le talk respecte-t-il la ligne éditoriale de l'événement ?</span>
       </div>
     </div>
   </div>
-  <p style="margin-top: 28px; font-size: 14px; color: var(--muted); line-height: 1.65;">
-    Les propositions sélectionnées recevront un retour individualisé. Les propositions non retenues aussi — on explique pourquoi, et on peut suggérer des ajustements pour une prochaine édition.
-  </p>
+  <p style="margin-top:28px; font-size:14px; color:var(--muted); line-height:1.65;" data-i18n="sel-note">Les propositions sélectionnées recevront un retour individualisé. Les propositions non retenues aussi — on explique pourquoi, et on peut suggérer des ajustements pour une prochaine édition.</p>
 </section>
 </div>
 
 <!-- ───── CE QUE VOUS OBTENEZ ───── -->
 <section class="sp-section">
-  <div class="sp-eyebrow">Avantages speakers</div>
-  <h2 class="sp-h2">Ce que vous obtenez<br><em>en tant que speaker.</em></h2>
-  <p class="sp-lead" style="margin-top:12px;">La participation en tant que speaker est <strong>gratuite</strong>. Les frais d'inscription sont offerts.</p>
+  <div class="sp-eyebrow" data-i18n="ben-eyebrow">Avantages speakers</div>
+  <h2 class="sp-h2" data-i18n-html="ben-h2">Ce que vous obtenez<br><em>en tant que speaker.</em></h2>
+  <p class="sp-lead" style="margin-top:12px;" data-i18n-html="ben-lead">La participation en tant que speaker est <strong>gratuite</strong>. Les frais d'inscription sont offerts.</p>
 
   <div class="benefits-grid">
     <div class="benefit-card">
-      <span class="benefit-phase">// AVANT L'ÉVÉNEMENT</span>
-      <p>Accompagnement sur le cadrage du talk si besoin, relecture du plan de présentation par l'équipe SAP Community Paris.</p>
+      <span class="benefit-phase" data-i18n="ben-before-phase">// AVANT L'ÉVÉNEMENT</span>
+      <p data-i18n="ben-before-p">Accompagnement sur le cadrage du talk si besoin, relecture du plan de présentation par l'équipe SAP Community Paris.</p>
     </div>
     <div class="benefit-card">
-      <span class="benefit-phase">// LE JOUR J</span>
-      <p>Place réservée, accès à la salle en avance pour test technique, introduction par l'animateur devant l'audience.</p>
+      <span class="benefit-phase" data-i18n="ben-during-phase">// LE JOUR J</span>
+      <p data-i18n="ben-during-p">Place réservée, accès à la salle en avance pour test technique, introduction par l'animateur devant l'audience.</p>
     </div>
     <div class="benefit-card">
-      <span class="benefit-phase">// APRÈS L'ÉVÉNEMENT</span>
-      <p>Enregistrement vidéo de votre session publié sur YouTube, visibilité sur les supports de communication de l'événement.</p>
+      <span class="benefit-phase" data-i18n="ben-after-phase">// APRÈS L'ÉVÉNEMENT</span>
+      <p data-i18n="ben-after-p">Enregistrement vidéo de votre session publié sur YouTube, visibilité sur les supports de communication de l'événement.</p>
     </div>
   </div>
 </section>
@@ -506,13 +453,22 @@
 <div style="padding: 0 var(--pad); max-width: 1100px; margin: 0 auto;">
   <div class="sp-cta-block">
     <div class="sp-cta-inner">
-      <h2>Prêt·e à<br><em>soumettre ?</em></h2>
-      <p>Soumettez votre talk via Sessionize. On revient vers vous sous 2 semaines avec un retour individualisé, quelle que soit la décision.</p>
-      <a href="https://sessionize.com/sit-paris-2026" target="_blank" rel="noopener" class="btn btn-primary btn-lg">📣 Soumettre un talk →</a>
+      <h2 data-i18n-html="cta-h2">Prêt·e à<br><em>soumettre ?</em></h2>
+      <p data-i18n="cta-p">Soumettez votre talk via Sessionize. On revient vers vous sous 2 semaines avec un retour individualisé, quelle que soit la décision.</p>
+      <a href="https://sessionize.com/sit-paris-2026" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-i18n="cta-btn">📣 Soumettre un talk →</a>
       <div class="sp-dates">
-        <div class="sp-date"><strong>Date limite CFP</strong>10 juillet 2026</div>
-        <div class="sp-date"><strong>Notification speakers</strong>À confirmer</div>
-        <div class="sp-date"><strong>Événement</strong>25 septembre 2026</div>
+        <div class="sp-date">
+          <strong data-i18n="cta-d1-label">Date limite CFP</strong>
+          <span data-i18n="cta-d1-val">10 juillet 2026</span>
+        </div>
+        <div class="sp-date">
+          <strong data-i18n="cta-d2-label">Notification speakers</strong>
+          <span data-i18n="cta-d2-val">À confirmer</span>
+        </div>
+        <div class="sp-date">
+          <strong data-i18n="cta-d3-label">Événement</strong>
+          <span data-i18n="cta-d3-val">25 septembre 2026</span>
+        </div>
       </div>
     </div>
   </div>
@@ -521,48 +477,48 @@
 <!-- ───── FAQ ───── -->
 <div class="sp-section-alt">
 <section class="sp-section">
-  <div class="sp-eyebrow">Questions fréquentes</div>
-  <h2 class="sp-h2">FAQ <em>speakers.</em></h2>
+  <div class="sp-eyebrow" data-i18n="faq-eyebrow">Questions fréquentes</div>
+  <h2 class="sp-h2" data-i18n-html="faq-h2">FAQ <em>speakers.</em></h2>
 
-  <div class="faq-list" style="margin-top: 40px;">
+  <div class="faq-list" style="margin-top:40px;">
     <details class="faq-item">
       <summary>
-        <span><span class="num">01</span>Je n'ai jamais parlé en public. Est-ce que c'est pour moi ?</span>
+        <span><span class="num">01</span><span data-i18n="faq-q1">Je n'ai jamais parlé en public. Est-ce que c'est pour moi ?</span></span>
         <span class="plus">+</span>
       </summary>
-      <div class="ans">SAP Inside Track est exactement le bon endroit pour une première. L'audience est bienveillante, composée de praticiens qui viennent apprendre — pas juger. On peut aussi vous accompagner sur la préparation si besoin.</div>
+      <div class="ans" data-i18n="faq-a1">SAP Inside Track est exactement le bon endroit pour une première. L'audience est bienveillante, composée de praticiens qui viennent apprendre — pas juger. On peut aussi vous accompagner sur la préparation si besoin.</div>
     </details>
 
     <details class="faq-item">
       <summary>
-        <span><span class="num">02</span>Mon projet est sous NDA. Puis-je quand même soumettre ?</span>
+        <span><span class="num">02</span><span data-i18n="faq-q2">Mon projet est sous NDA. Puis-je quand même soumettre ?</span></span>
         <span class="plus">+</span>
       </summary>
-      <div class="ans">Oui, à condition de pouvoir parler du sujet de manière suffisamment concrète sans nommer le client ou exposer des informations confidentielles. Beaucoup de bons talks fonctionnent ainsi : on partage la logique, les contraintes et les décisions sans identifier qui est derrière.</div>
+      <div class="ans" data-i18n="faq-a2">Oui, à condition de pouvoir parler du sujet de manière suffisamment concrète sans nommer le client ou exposer des informations confidentielles. Beaucoup de bons talks fonctionnent ainsi : on partage la logique, les contraintes et les décisions sans identifier qui est derrière.</div>
     </details>
 
     <details class="faq-item">
       <summary>
-        <span><span class="num">03</span>Je travaille pour un partenaire ou un sponsor. Puis-je soumettre ?</span>
+        <span><span class="num">03</span><span data-i18n="faq-q3">Je travaille pour un partenaire ou un sponsor. Puis-je soumettre ?</span></span>
         <span class="plus">+</span>
       </summary>
-      <div class="ans">Oui. Le processus de sélection est identique pour tout le monde. Un talk soumis par un sponsor passe par le même CFP et peut être refusé si le contenu ne respecte pas la ligne éditoriale. Ce que vous ne pouvez pas faire : parler de votre produit ou de votre offre commerciale.</div>
+      <div class="ans" data-i18n="faq-a3">Oui. Le processus de sélection est identique pour tout le monde. Un talk soumis par un sponsor passe par le même CFP et peut être refusé si le contenu ne respecte pas la ligne éditoriale. Ce que vous ne pouvez pas faire : parler de votre produit ou de votre offre commerciale.</div>
     </details>
 
     <details class="faq-item">
       <summary>
-        <span><span class="num">04</span>Peut-on soumettre à plusieurs ?</span>
+        <span><span class="num">04</span><span data-i18n="faq-q4">Peut-on soumettre à plusieurs ?</span></span>
         <span class="plus">+</span>
       </summary>
-      <div class="ans">Oui, les co-présentations sont les bienvenues. Elles fonctionnent bien quand deux profils complémentaires (client + partenaire, fonctionnel + technique) partagent un même retour d'expérience.</div>
+      <div class="ans" data-i18n="faq-a4">Oui, les co-présentations sont les bienvenues. Elles fonctionnent bien quand deux profils complémentaires (client + partenaire, fonctionnel + technique) partagent un même retour d'expérience.</div>
     </details>
 
     <details class="faq-item">
       <summary>
-        <span><span class="num">05</span>En quelle langue dois-je présenter ?</span>
+        <span><span class="num">05</span><span data-i18n="faq-q5">En quelle langue dois-je présenter ?</span></span>
         <span class="plus">+</span>
       </summary>
-      <div class="ans">Français ou anglais, selon votre préférence. Si vous êtes à l'aise dans les deux, le français sera souvent préféré pour faciliter les échanges avec le public — mais rien n'est imposé.</div>
+      <div class="ans" data-i18n="faq-a5">Français ou anglais, selon votre préférence. Si vous êtes à l'aise dans les deux, le français sera souvent préféré pour faciliter les échanges avec le public — mais rien n'est imposé.</div>
     </details>
   </div>
 </section>
@@ -573,19 +529,19 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="../assets/sit-paris-logo.png" alt="SIT Paris">
-      <p>SAP Inside Track Paris · Édition n°01<br>Vendredi 25 septembre 2026 · Levallois-Perret.</p>
+      <p data-i18n-html="footer-desc">SAP Inside Track Paris · Édition n°01<br>Vendredi 25 septembre 2026 · Levallois-Perret.</p>
     </div>
     <div>
-      <h4>NAVIGATION</h4>
+      <h4 data-i18n="footer-nav-label">NAVIGATION</h4>
       <ul>
-        <li><a href="../#about">À propos</a></li>
-        <li><a href="../#tracks">Programme</a></li>
-        <li><a href="../#speakers">Speakers</a></li>
-        <li><a href="../#venue">Lieu &amp; accès</a></li>
+        <li><a href="../#about"    data-i18n="footer-nav-about">À propos</a></li>
+        <li><a href="../#tracks"   data-i18n="footer-nav-tracks">Programme</a></li>
+        <li><a href="../#speakers" data-i18n="footer-nav-speakers">Speakers</a></li>
+        <li><a href="../#venue"    data-i18n="footer-nav-venue">Lieu &amp; accès</a></li>
       </ul>
     </div>
     <div>
-      <h4>COMMUNAUTÉ</h4>
+      <h4 data-i18n="footer-community">COMMUNAUTÉ</h4>
       <ul>
         <li><a href="#">#SITParis</a></li>
         <li><a href="https://www.linkedin.com/groups/12720183/">LinkedIn</a></li>
@@ -593,19 +549,48 @@
       </ul>
     </div>
     <div>
-      <h4>CONTACT</h4>
+      <h4 data-i18n="footer-contact">CONTACT</h4>
       <ul>
         <li><a href="mailto:sapcommunityparis@gmail.com">sapcommunityparis@gmail.com</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 SAP Inside Track Paris · Organisé par la communauté</span>
-    <span>Hébergé sur GitHub Pages · Ouvert &amp; bénévole</span>
+    <span data-i18n="footer-copyright">© 2026 SAP Inside Track Paris · Organisé par la communauté</span>
+    <span data-i18n="footer-hosting">Hébergé sur GitHub Pages · Ouvert &amp; bénévole</span>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
+// ── Language switching ──
+let currentLang = localStorage.getItem('sit-lang') || 'fr';
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = i18nSpeaker[lang];
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = t[el.dataset.i18n];
+    if (val !== undefined) el.textContent = val;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const val = t[el.dataset.i18nHtml];
+    if (val !== undefined) el.innerHTML = val;
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.documentElement.lang = lang;
+  localStorage.setItem('sit-lang', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+
+setLang(currentLang);
+
 // ── Theme toggle ──
 (function () {
   const btn  = document.getElementById('themeToggle');
