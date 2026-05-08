@@ -817,3 +817,122 @@ img.speaker-avatar {
   font-family: var(--mono); font-size: 12px;
   color: var(--gold); letter-spacing: 0.4em;
 }
+
+/* ───── dark mode toggle button ───── */
+.theme-toggle {
+  background: none;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: var(--muted);
+  transition: color .15s, border-color .15s, background .15s;
+  flex-shrink: 0;
+  padding: 0;
+}
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: var(--paper-2);
+}
+.theme-toggle svg { width: 14px; height: 14px; pointer-events: none; }
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* ───── dark mode ───── */
+[data-theme="dark"] {
+  --ink:       #cdd9f0;
+  --ink-2:     #8aaed8;
+  --paper:     #0b1929;
+  --paper-2:   #0e1f34;
+  --stripe:    #142035;
+  --gold:      #f0a020;
+  --gold-soft: #2a1a00;
+  --muted:     #6d84a8;
+  --line:      rgba(200, 220, 255, 0.1);
+}
+
+/* Nav backdrop */
+[data-theme="dark"] .nav {
+  background: rgba(11, 25, 41, 0.92);
+}
+[data-theme="dark"] .nav-links {
+  background: rgba(11, 25, 41, 0.98);
+}
+
+/* "Dark" sections that use --ink as bg → keep them deep navy,
+   and restore light text since --paper is now dark in dark mode */
+[data-theme="dark"] .hero-strip { background: #060f1e; }
+[data-theme="dark"] .stats      { background: #060f1e; border-bottom-color: #060f1e; color: #cdd9f0; }
+[data-theme="dark"] .cfp        { background: #060f1e; border-top-color: #060f1e;    color: #cdd9f0; }
+[data-theme="dark"] .terminal   { background: #060f1e; color: #cdd9f0; }
+[data-theme="dark"] .footer     { background: #060f1e; color: #cdd9f0; }
+
+/* Stat sublabels */
+[data-theme="dark"] .stat .l { color: rgba(200, 220, 255, 0.45); }
+
+/* Countdown cells: keep subtle border visible on very dark bg */
+[data-theme="dark"] .cd-cell {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(200,220,255,0.12);
+}
+
+/* Decorative star before strip spans — make it gold so it reads */
+[data-theme="dark"] .hero-strip-track span::before { color: var(--gold); }
+
+/* CFP sub text */
+[data-theme="dark"] .cfp-sub { opacity: 0.8; }
+
+/* Footer links */
+[data-theme="dark"] .footer ul a { color: #cdd9f0; }
+[data-theme="dark"] .footer-brand p { color: rgba(200,220,255,0.65); }
+
+/* Primary button: use gold on dark bg instead of light-blue-on-dark */
+[data-theme="dark"] .btn-primary {
+  background: var(--gold);
+  color: #060f1e;
+  border-color: var(--gold);
+}
+[data-theme="dark"] .btn-primary:hover {
+  background: #fff;
+  color: #060f1e;
+  border-color: #fff;
+}
+
+/* Sponsor logos: brighten greyscale so they're readable on dark */
+[data-theme="dark"] .sponsor-slot img {
+  filter: grayscale(100%) brightness(1.8) opacity(0.55);
+}
+[data-theme="dark"] .sponsor-slot:hover img {
+  filter: grayscale(0%) brightness(1.1) opacity(1);
+}
+
+/* Skyline watermark: invert so it reads as light on dark bg */
+[data-theme="dark"] .about::after {
+  filter: invert(1) brightness(1.8);
+  opacity: 0.07;
+}
+
+/* Nav logo → blanc en dark mode */
+[data-theme="dark"] .nav-logo img {
+  filter: brightness(0) invert(1) drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+/* Icônes LinkedIn → blanc/gris visible sur fond sombre */
+[data-theme="dark"] .speaker-linkedin {
+  color: #fff;
+  opacity: 0.55;
+}
+[data-theme="dark"] .speaker-cell:hover .speaker-linkedin {
+  opacity: 1;
+}
+
+/* Carte "+ Toi ?" → texte très sombre sur fond gold pour le contraste */
+[data-theme="dark"] .speaker-cta,
+[data-theme="dark"] .speaker-cta-title,
+[data-theme="dark"] .speaker-cta-sub {
+  color: #060f1e;
+}

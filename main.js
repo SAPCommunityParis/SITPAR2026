@@ -1,3 +1,26 @@
+// ── Theme toggle ──
+(function () {
+  const btn  = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  /* Restore persisted theme (also applied before paint via inline <head> script) */
+  if (localStorage.getItem('sit-theme') === 'dark') {
+    root.setAttribute('data-theme', 'dark');
+  }
+
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('sit-theme', 'light');
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      localStorage.setItem('sit-theme', 'dark');
+    }
+  });
+})();
+
 // ── Hamburger menu ──
 (function () {
   const burger = document.querySelector('.nav-burger');
