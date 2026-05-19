@@ -87,6 +87,10 @@ const i18n = {
     'sponsors-desc':    'Merci aux partenaires qui rendent cette première édition possible.',
     'sponsors-cta':     '→ Devenir sponsor',
 
+    'team-eyebrow': 'Organisateurs',
+    'team-title':   'L\'équipe derrière<br><em>l\'événement.</em>',
+    'team-sub':     'Bénévoles, membres de la communauté SAP francophone — organisateurs de la première édition.',
+
     'faq-title':   'FAQ.',
     'faq-eyebrow': 'Questions fréquentes',
     'faq-contact': 'Une autre question ? sapcommunityparis@gmail.com',
@@ -205,6 +209,10 @@ const i18n = {
     'sponsors-title':   'They make it <em>possible.</em>',
     'sponsors-desc':    'Thank you to the partners who make this first edition possible.',
     'sponsors-cta':     '→ Become a sponsor',
+
+    'team-eyebrow': 'Organizers',
+    'team-title':   'The team behind<br><em>the event.</em>',
+    'team-sub':     'Volunteers, members of the French-speaking SAP community — organizing the first edition.',
 
     'faq-title':   'FAQ.',
     'faq-eyebrow': 'Frequently asked questions',
