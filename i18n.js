@@ -93,7 +93,7 @@ const i18n = {
 
     'faq-title':   'FAQ.',
     'faq-eyebrow': 'Questions fréquentes',
-    'faq-contact': 'Une autre question ? sapcommunityparis@gmail.com',
+    'faq-contact': 'Une autre question ? contact@sit.paris',
     'faq-q1': 'C\'est quoi exactement, un SAP Inside Track ?',
     'faq-a1': 'Un événement organisé par la communauté, pour la communauté. Pas de marketing, pas de pitch produit : des retours d\'expérience, des démos, des ateliers techniques, et beaucoup d\'échanges entre pairs.',
     'faq-q2': 'Pourquoi « première édition » en 2026 ?',
@@ -216,7 +216,7 @@ const i18n = {
 
     'faq-title':   'FAQ.',
     'faq-eyebrow': 'Frequently asked questions',
-    'faq-contact': 'Another question? sapcommunityparis@gmail.com',
+    'faq-contact': 'Another question? contact@sit.paris',
     'faq-q1': 'What exactly is a SAP Inside Track?',
     'faq-a1': 'A community-organized event, by and for the community. No marketing, no product pitch: experience reports, demos, technical workshops, and plenty of peer-to-peer discussion.',
     'faq-q2': 'Why a "first edition" in 2026?',
