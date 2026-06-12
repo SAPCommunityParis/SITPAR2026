@@ -69,6 +69,7 @@ const i18n = {
     'preevent-date':     'Thursday, September 24, 2026',
     'preevent-place':    'Hosted at VINCI Energies',
     'preevent-format':   'Hands-on workshop · laptop open',
+    'preevent-instructor': 'Instructor: DJ Adams (SAP Developer Advocate)',
     'preevent-seats':    'Limited seats · registration required',
     'preevent-desc':     'A hands-on session, laptop open, to explore development with CAP (Cloud Application Programming Model) and CDS: data modeling, services, and Clean Core best practices. We code together, at your own pace. No advanced prerequisites, just the urge to get your hands dirty.',
     'preevent-cta':      '✉️ Notify me',
