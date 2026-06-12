@@ -125,9 +125,10 @@ setLang(currentLang);
 
 // ── Register modal (waitlist — tickets not open yet) ──
 (function () {
-  const openBtn = document.getElementById('registerBtn');
   const modal   = document.getElementById('registerModal');
-  if (!openBtn || !modal) return;
+  if (!modal) return;
+  const triggers = document.querySelectorAll('#registerBtn, [data-open-register]');
+  if (!triggers.length) return;
 
   const closeEls = modal.querySelectorAll('#registerModalClose, #registerModalDismiss');
   let lastFocus = null;
@@ -148,7 +149,7 @@ setLang(currentLang);
     if (lastFocus) lastFocus.focus();
   }
 
-  openBtn.addEventListener('click', open);
+  triggers.forEach(t => t.addEventListener('click', open));
   closeEls.forEach(el => el.addEventListener('click', close));
   modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
   document.addEventListener('keydown', (e) => {
