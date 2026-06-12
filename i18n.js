@@ -23,6 +23,11 @@ const i18n = {
     'hero-tagline':       'The French SAP community finally comes home. One day  four tracks  one place. <strong>Friday, September 25, 2026,<br>at SAP France.</strong>',
     'hero-cta1':          '→ Register for opening',
     'hero-cta2':          '📣 Submit a talk',
+
+    'modal-reg-title':    'Registration opens soon',
+    'modal-reg-text':     'Ticketing is not open yet. Leave us your email and we will let you know the moment registration goes live, you will be among the first to hear.',
+    'modal-reg-cta':      '✉️ Notify me',
+    'modal-reg-dismiss':  'Later',
     'terminal-edition':   'first edition',
     'terminal-soon':      'SOON',
 

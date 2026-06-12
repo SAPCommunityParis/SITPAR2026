@@ -122,3 +122,36 @@ setLang(currentLang);
   tick();
   setInterval(tick, 1000);
 })();
+
+// ── Register modal (waitlist — tickets not open yet) ──
+(function () {
+  const openBtn = document.getElementById('registerBtn');
+  const modal   = document.getElementById('registerModal');
+  if (!openBtn || !modal) return;
+
+  const closeEls = modal.querySelectorAll('#registerModalClose, #registerModalDismiss');
+  let lastFocus = null;
+
+  function open() {
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+    const closeBtn = modal.querySelector('#registerModalClose');
+    if (closeBtn) closeBtn.focus();
+  }
+  function close() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    const onEnd = () => { modal.hidden = true; modal.removeEventListener('transitionend', onEnd); };
+    modal.addEventListener('transitionend', onEnd);
+    if (lastFocus) lastFocus.focus();
+  }
+
+  openBtn.addEventListener('click', open);
+  closeEls.forEach(el => el.addEventListener('click', close));
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
+})();

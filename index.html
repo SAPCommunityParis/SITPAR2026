@@ -156,7 +156,7 @@
         <strong>Vendredi 25 septembre 2026, chez SAP France.</strong>
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="#register" data-i18n="hero-cta1">→ M'inscrire à l'ouverture</a>
+        <button type="button" class="btn btn-primary btn-lg" id="registerBtn" data-i18n="hero-cta1">→ M'inscrire à l'ouverture</button>
         <a class="btn btn-lg" href="speaker/" data-i18n="hero-cta2">📣 Soumettre un talk</a>
       </div>
     </div>
@@ -588,6 +588,20 @@
     <span data-i18n="footer-hosting">Hébergé sur GitHub Pages · Ouvert &amp; bénévole</span>
   </div>
 </footer>
+
+<!-- ───── REGISTER MODAL ───── -->
+<div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerModalTitle" hidden>
+  <div class="modal-card">
+    <button type="button" class="modal-close" id="registerModalClose" aria-label="Fermer">&times;</button>
+    <div class="modal-icon">🗓️</div>
+    <h3 class="modal-title" id="registerModalTitle" data-i18n="modal-reg-title">Les inscriptions ouvrent bientôt</h3>
+    <p class="modal-text" data-i18n="modal-reg-text">La billetterie n'est pas encore ouverte. Laisse-nous ton email et on te prévient dès que les inscriptions sont en ligne, tu seras dans les premiers informés.</p>
+    <div class="modal-actions">
+      <a class="btn btn-primary" href="mailto:contact@sit.paris?subject=Inscription%20SAP%20Inside%20Track%20Paris%202026&body=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20de%20l%27ouverture%20des%20inscriptions." data-i18n="modal-reg-cta">✉️ Être prévenu·e</a>
+      <button type="button" class="btn modal-dismiss" id="registerModalDismiss" data-i18n="modal-reg-dismiss">Plus tard</button>
+    </div>
+  </div>
+</div>
 
 <script src="i18n.js"></script>
 <script src="main.js"></script>

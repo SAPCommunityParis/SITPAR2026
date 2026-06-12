@@ -952,6 +952,60 @@ img.speaker-avatar {
   opacity: 1;
 }
 
+/* ───── register modal ───── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  background: rgba(15, 42, 82, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0; transition: opacity .2s ease;
+}
+.modal-overlay[hidden] { display: none; }
+.modal-overlay.open { opacity: 1; }
+.modal-card {
+  position: relative;
+  width: 100%; max-width: 440px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 40px 32px 32px;
+  text-align: center;
+  box-shadow: 0 24px 60px -12px rgba(15, 42, 82, 0.35);
+  transform: translateY(12px) scale(0.98);
+  transition: transform .2s ease;
+}
+.modal-overlay.open .modal-card { transform: translateY(0) scale(1); }
+.modal-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; cursor: pointer;
+  font-size: 26px; line-height: 1; color: var(--muted);
+  width: 36px; height: 36px; border-radius: 999px;
+  transition: background .15s, color .15s;
+}
+.modal-close:hover { background: var(--stripe); color: var(--ink); }
+.modal-icon { font-size: 40px; margin-bottom: 12px; }
+.modal-title {
+  font-size: 22px; font-weight: 800; letter-spacing: -0.02em;
+  margin: 0 0 12px; color: var(--ink);
+}
+.modal-text {
+  font-size: 15px; line-height: 1.55; color: var(--muted);
+  margin: 0 auto 24px; max-width: 360px;
+}
+.modal-actions {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+}
+.modal-dismiss { color: var(--muted); }
+
+[data-theme="dark"] .modal-overlay { background: rgba(2, 8, 18, 0.7); }
+[data-theme="dark"] .modal-card {
+  background: var(--paper-2);
+  border-color: rgba(200, 220, 255, 0.12);
+}
+[data-theme="dark"] .modal-close:hover { background: rgba(255,255,255,0.08); }
+
 /* Carte "+ Toi ?" → texte très sombre sur fond gold pour le contraste */
 [data-theme="dark"] .speaker-cta,
 [data-theme="dark"] .speaker-cta-title,
