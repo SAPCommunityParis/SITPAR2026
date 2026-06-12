@@ -15,7 +15,18 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Call for Speakers · SAP Inside Track Paris 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta name="description" content="Call for Speakers — SAP Inside Track Paris 2026. Partagez votre retour d'expérience terrain. Pas de pitch produit, pas de slides marketing : du concret.">
+<meta property="og:title" content="Call for Speakers · SAP Inside Track Paris 2026">
+<meta property="og:description" content="Partagez votre retour d'expérience terrain. Soumettez un talk pour la première édition française.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sit.paris/speaker/">
+<meta property="og:image" content="https://sit.paris/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sit.paris/assets/og-card.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png">
 <link rel="apple-touch-icon" href="../assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -276,6 +287,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#sp-main" data-i18n="skip-link">Aller au contenu</a>
+
 <!-- ───── NAV ───── -->
 <nav class="nav">
   <div class="nav-inner">
@@ -308,7 +321,7 @@
 </nav>
 
 <!-- ───── HERO ───── -->
-<section class="sp-hero">
+<section class="sp-hero" id="sp-main">
   <div class="sp-hero-inner">
     <div class="sp-hero-eyebrow" data-i18n="hero-eyebrow">★ CALL FOR SPEAKERS · SAP INSIDE TRACK PARIS 2026 ★</div>
     <h1 data-i18n-html="hero-h1">Parlez-nous de<br><em>votre terrain.</em></h1>
@@ -565,24 +578,52 @@
 <script src="i18n.js"></script>
 <script>
 // ── Language switching ──
+// The HTML is the FR source of truth. i18n.js only holds EN overrides.
 let currentLang = 'fr';
+
+const i18nFallback = { text: {}, html: {} };
+document.querySelectorAll('[data-i18n]').forEach(el => {
+  const k = el.dataset.i18n;
+  if (!(k in i18nFallback.text)) i18nFallback.text[k] = el.textContent;
+});
+document.querySelectorAll('[data-i18n-html]').forEach(el => {
+  const k = el.dataset.i18nHtml;
+  if (!(k in i18nFallback.html)) i18nFallback.html[k] = el.innerHTML;
+});
+
+const themeLabels = {
+  fr: { toDark: 'Activer le mode sombre', toLight: 'Activer le mode clair' },
+  en: { toDark: 'Switch to dark mode',    toLight: 'Switch to light mode' },
+};
+function updateThemeLabel() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const l = themeLabels[currentLang] || themeLabels.fr;
+  btn.setAttribute('aria-label', isDark ? l.toLight : l.toDark);
+  btn.setAttribute('aria-pressed', String(isDark));
+}
 
 function setLang(lang) {
   currentLang = lang;
-  const t = i18nSpeaker[lang];
+  const dict = (lang === 'fr') ? null
+             : (typeof i18nSpeaker !== 'undefined' ? i18nSpeaker[lang] : null);
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const val = t[el.dataset.i18n];
+    const k = el.dataset.i18n;
+    const val = dict ? dict[k] : i18nFallback.text[k];
     if (val !== undefined) el.textContent = val;
   });
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const val = t[el.dataset.i18nHtml];
+    const k = el.dataset.i18nHtml;
+    const val = dict ? dict[k] : i18nFallback.html[k];
     if (val !== undefined) el.innerHTML = val;
   });
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
   document.documentElement.lang = lang;
+  updateThemeLabel();
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -602,6 +643,7 @@ setLang(currentLang);
     const isDark = root.getAttribute('data-theme') === 'dark';
     if (isDark) { root.removeAttribute('data-theme'); }
     else { root.setAttribute('data-theme', 'dark'); }
+    updateThemeLabel();
   });
 })();
 

@@ -13,29 +13,90 @@
 </script>
 
 <meta charset="utf-8">
-<title>SAP Inside Track Paris '26</title>
+<title>SAP Inside Track Paris 2026 · La communauté SAP francophone</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="SAP Inside Track Paris, Première édition française. Vendredi 25 septembre 2026, chez SAP FRANCE · LEVALLOIS-Perret. 4 tracks, 80 participants, 100% community-driven.">
-<meta property="og:title" content="SAP Inside Track Paris '26">
-<meta property="og:description" content="La communauté SAP francophone se retrouve enfin chez elle. Une journée, quatre tracks, un seul endroit.">
+<meta name="description" content="SAP Inside Track Paris, première édition française. Vendredi 25 septembre 2026, chez SAP France à Levallois-Perret. 4 tracks, 80 participants, 100% community-driven.">
+<link rel="canonical" href="https://sit.paris/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="SAP Inside Track Paris 2026">
+<meta property="og:description" content="La communauté SAP francophone se retrouve enfin chez elle. Une journée, quatre tracks, un seul endroit. Vendredi 25 septembre 2026, chez SAP France.">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:url" content="https://sit.paris/">
+<meta property="og:site_name" content="SAP Inside Track Paris">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://sit.paris/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SAP Inside Track Paris 2026 — Vendredi 25 septembre 2026, SAP France Levallois-Perret">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SAP Inside Track Paris 2026">
+<meta name="twitter:description" content="La communauté SAP francophone se retrouve enfin chez elle. Vendredi 25 septembre 2026, chez SAP France.">
+<meta name="twitter:image" content="https://sit.paris/assets/og-card.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Structured data: Event -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "SAP Inside Track Paris 2026",
+  "description": "Première édition française du SAP Inside Track. Un événement community-driven : retours d'expérience, démos, ateliers techniques. Par et pour la communauté SAP francophone.",
+  "startDate": "2026-09-25T09:00:00+02:00",
+  "endDate": "2026-09-25T18:00:00+02:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "image": "https://sit.paris/assets/og-card.png",
+  "url": "https://sit.paris/",
+  "location": {
+    "@type": "Place",
+    "name": "SAP France",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "35 rue d'Alsace",
+      "postalCode": "92300",
+      "addressLocality": "Levallois-Perret",
+      "addressCountry": "FR"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "SAP Community Paris",
+    "url": "https://sit.paris/",
+    "email": "contact@sit.paris"
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Participation",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://sit.paris/"
+  }
+}
+</script>
 </head>
-<body>
+<body id="top">
+
+<a class="skip-link" href="#about" data-i18n="skip-link">Aller au contenu</a>
 
 <!-- ───── NAV ───── -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="SAP Inside Track Paris">
+    <a href="#top" class="nav-logo" aria-label="SAP Inside Track Paris — haut de page">
       <img src="assets/sit-paris-logo.png" alt="SAP Inside Track Paris">
     </a>
     <div class="nav-links">
-      <a href="#about" data-i18n="nav-about">About</a>
+      <a href="#about" data-i18n="nav-about">À propos</a>
       <a href="#tracks" data-i18n="nav-tracks">Programme</a>
       <a href="#speakers" data-i18n="nav-speakers">Speakers</a>
       <a href="#venue" data-i18n="nav-venue">Lieu</a>
@@ -91,7 +152,7 @@
         <em>Paris 2026.</em>
       </h1>
       <p class="hero-tagline" data-i18n-html="hero-tagline">
-        La communauté SAP francophone se retrouve enfin chez elle. Une journée, quatre tracks, un seul endroit.<br>
+        La communauté SAP francophone se retrouve enfin chez elle.<br>Une journée, quatre tracks, un seul endroit.<br>
         <strong>Vendredi 25 septembre 2026, chez SAP France.</strong>
       </p>
       <div class="hero-actions">
@@ -268,21 +329,21 @@
 
     <div class="speakers-row" style="margin-top:48px;">
       <div class="speaker-cell">
-        <img class="speaker-avatar" src="assets/speakers/dj_adams_profile.png" alt="DJ Adams">
+        <img class="speaker-avatar" src="assets/speakers/dj_adams_profile.webp" alt="DJ Adams" width="96" height="96" loading="lazy">
         <div class="speaker-name">DJ Adams</div>
         <a href="https://www.linkedin.com/in/djadams/" target="_blank" rel="noopener" aria-label="LinkedIn DJ Adams">
           <svg class="speaker-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z"/></svg>
         </a>
       </div>
       <div class="speaker-cell">
-        <img class="speaker-avatar" src="assets/speakers/abdullah_galal_profile.jpg" alt="Abdullah Galal">
+        <img class="speaker-avatar" src="assets/speakers/abdullah_galal_profile.webp" alt="Abdullah Galal" width="96" height="96" loading="lazy">
         <div class="speaker-name">Abdullah Galal</div>
         <a href="https://fr.linkedin.com/in/galal" target="_blank" rel="noopener" aria-label="LinkedIn Abdullah Galal">
           <svg class="speaker-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z"/></svg>
         </a>
       </div>
       <div class="speaker-cell">
-        <img class="speaker-avatar" src="assets/speakers/Laura_schmitz_profile.jpg" alt="Laura Schmitz">
+        <img class="speaker-avatar" src="assets/speakers/Laura_schmitz_profile.webp" alt="Laura Schmitz" width="96" height="96" loading="lazy">
         <div class="speaker-name">Laura Schmitz</div>
         <a href="https://www.linkedin.com/in/laura-schmitz7" target="_blank" rel="noopener" aria-label="LinkedIn Laura Schmitz">
           <svg class="speaker-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z"/></svg>
@@ -367,7 +428,7 @@
     </div>
 
     <div class="sponsor-cta">
-      <a class="btn" href="#" data-i18n="sponsors-cta">→ Devenir sponsor</a>
+      <a class="btn" href="mailto:contact@sit.paris?subject=Sponsoring%20SAP%20Inside%20Track%20Paris%202026" data-i18n="sponsors-cta">→ Devenir sponsor</a>
     </div>
   </div>
 </section>
@@ -450,8 +511,9 @@
         <span class="plus">+</span>
       </summary>
       <div class="ans" data-i18n="faq-a4">
-        Une participation symbolique pour couvrir les frais de bouche (café, déjeuner, apéro de clôture). Le montant
-        sera annoncé à l'ouverture des inscriptions.
+        Quasi gratuit. On demande une participation symbolique de quelques euros, uniquement pour couvrir le café, le
+        déjeuner et l'apéro de clôture. L'événement lui-même ne coûte rien : ni location de salle, ni cachets, ni budget
+        marketing. Le montant exact sera annoncé à l'ouverture des inscriptions.
       </div>
     </details>
 
@@ -495,7 +557,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="assets/sit-paris-logo.png" alt="SIT Paris">
-      <p data-i18n-html="footer-desc">SAP Inside Track Paris · Édition n°01 · Vendredi 25 septembre 2026 · Levallois-Perret.</p>
+      <p data-i18n-html="footer-desc">SAP Inside Track Paris · Édition n°01<br>Vendredi 25 septembre 2026 · Levallois-Perret.</p>
     </div>
     <div>
       <h4 data-i18n="footer-nav-label">NAVIGATION</h4>

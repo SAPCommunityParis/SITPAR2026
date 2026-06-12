@@ -14,8 +14,23 @@
     } else {
       root.setAttribute('data-theme', 'dark');
     }
+    updateThemeLabel();
   });
 })();
+
+// ── Theme toggle accessible label (reflects state + language) ──
+const themeLabels = {
+  fr: { toDark: 'Activer le mode sombre', toLight: 'Activer le mode clair' },
+  en: { toDark: 'Switch to dark mode',    toLight: 'Switch to light mode' },
+};
+function updateThemeLabel() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const l = themeLabels[currentLang] || themeLabels.fr;
+  btn.setAttribute('aria-label', isDark ? l.toLight : l.toDark);
+  btn.setAttribute('aria-pressed', String(isDark));
+}
 
 // ── Hamburger menu ──
 (function () {
@@ -37,19 +52,36 @@
 })();
 
 // ── Language switching ──
+// The HTML is the FR source of truth. i18n.js only holds EN overrides.
+// We snapshot the rendered FR content once, then swap to EN and back.
 let currentLang = 'fr';
+
+const i18nFallback = { text: {}, html: {} };
+document.querySelectorAll('[data-i18n]').forEach(el => {
+  const k = el.dataset.i18n;
+  if (!(k in i18nFallback.text)) i18nFallback.text[k] = el.textContent;
+});
+document.querySelectorAll('[data-i18n-html]').forEach(el => {
+  const k = el.dataset.i18nHtml;
+  if (!(k in i18nFallback.html)) i18nFallback.html[k] = el.innerHTML;
+});
 
 function setLang(lang) {
   currentLang = lang;
+  // FR → restore the original HTML; other langs → use the overrides in i18n.js
+  const dict = (lang === 'fr') ? null
+             : (typeof i18n !== 'undefined' ? i18n[lang] : null);
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const t = i18n[lang][el.dataset.i18n];
-    if (t !== undefined) el.textContent = t;
+    const k = el.dataset.i18n;
+    const val = dict ? dict[k] : i18nFallback.text[k];
+    if (val !== undefined) el.textContent = val;
   });
 
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const t = i18n[lang][el.dataset.i18nHtml];
-    if (t !== undefined) el.innerHTML = t;
+    const k = el.dataset.i18nHtml;
+    const val = dict ? dict[k] : i18nFallback.html[k];
+    if (val !== undefined) el.innerHTML = val;
   });
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -57,6 +89,7 @@ function setLang(lang) {
   });
 
   document.documentElement.lang = lang;
+  updateThemeLabel();
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
