@@ -72,8 +72,8 @@ const i18n = {
     'preevent-instructor': 'Instructor: DJ Adams (SAP Developer Advocate)',
     'preevent-seats':    'Limited seats · registration required',
     'preevent-desc':     'A hands-on session, laptop open, to explore development with CAP (Cloud Application Programming Model) and CDS: data modeling, services, and Clean Core best practices. We code together, at your own pace. No advanced prerequisites, just the urge to get your hands dirty.',
-    'preevent-cta':      '✉️ Notify me',
-    'preevent-note':     'Details and registration when ticketing opens.',
+    'preevent-cta':      'Registration required →',
+    'preevent-note':     'Registration handled on SAP Community · limited seats.',
 
     'speakers-eyebrow':   '★ CALL FOR SPEAKERS ★',
     'speakers-title':     'Want to <em>speak?</em><br>We\'re waiting.',
