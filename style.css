@@ -723,14 +723,15 @@ img.speaker-avatar {
   border-bottom: 1px solid var(--line);
 }
 .sponsor-grid-flat {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   margin: 56px 0 40px;
 }
-@media (max-width: 900px) { .sponsor-grid-flat { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .sponsor-grid-flat { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) { .sponsor-slot { flex-basis: calc(50% - 10px); } }
 .sponsor-slot {
+  flex: 0 1 calc(25% - 15px);
   aspect-ratio: 16/9;
   border: 1px solid var(--line);
   border-radius: 14px;
