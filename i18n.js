@@ -71,7 +71,10 @@ const i18n = {
     'preevent-format':   'Hands-on workshop · laptop open',
     'preevent-instructor': 'Instructor: DJ Adams (SAP Developer Advocate)',
     'preevent-seats':    'Limited seats · registration required',
-    'preevent-desc':     'A hands-on session, laptop open, to explore development with CAP (Cloud Application Programming Model) and CDS: data modeling, services, and Clean Core best practices. We code together, at your own pace. No advanced prerequisites, just the urge to get your hands dirty.',
+    'preevent-desc':     'A hands-on session, laptop open, to explore development with CAP (Cloud Application Programming Model) and CDS: data modeling, services, and Clean Core best practices. We code together, at your own pace.',
+    'preevent-prereq-strong': 'Some prerequisites must be completed before you arrive.',
+    'preevent-prereq-text':   ' Install and set up your environment ahead of time.',
+    'preevent-prereq-link':   'View the prerequisites →',
     'preevent-cta':      'Registration required →',
     'preevent-note':     'Registration handled on SAP Community · limited seats.',
 
