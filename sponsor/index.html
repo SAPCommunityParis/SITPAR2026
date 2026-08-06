@@ -636,6 +636,29 @@
 
     .cta-email:hover { opacity: 0.82; }
 
+    .contact-reply {
+      margin-top: 13px;
+      font-size: 0.82rem;
+      opacity: 0.5;
+      text-align: center;
+    }
+
+    .contact-links {
+      margin-top: 17px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .contact-links a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(240,160,32,0.35);
+      padding-bottom: 1px;
+      transition: border-color 0.15s;
+    }
+
+    .contact-links a:hover { border-bottom-color: var(--gold); }
+
     /* ---- Responsive ---- */
     @media (max-width: 768px) {
       .slide { padding: 64px 20px 48px; }
@@ -712,10 +735,12 @@
       .budget-split__label { color: #444 !important; opacity: 1 !important; }
       .budget-track { border: 1px solid #c8c8c8 !important; }
 
-      .slide__sub, .s-card__desc, .deadline-box__note {
+      .slide__sub, .s-card__desc, .deadline-box__note, .contact-reply {
         color: #444 !important;
         opacity: 1 !important;
       }
+
+      .contact-links a { color: #8a5a0c !important; border-bottom-color: #8a5a0c !important; }
 
       /* Tailles calees sur la page, pas sur le viewport */
       .slide__title   { font-size: 20pt !important; }
@@ -1071,7 +1096,11 @@
           <div class="deadline-box__note" data-i18n="sp10-deadline-note">Merci de nous transmettre votre accord et votre logo vectoriel avant cette date, afin de garantir votre présence sur les supports imprimés.</div>
         </div>
         <a href="mailto:contact@sit.paris" class="cta-email">contact@sit.paris</a>
-        <p style="margin-top:24px; font-size:.8rem; opacity:.35; text-align:center;">
+        <p class="contact-reply" data-i18n="sp10-reply">Nous répondons sous 48 heures.</p>
+        <p class="contact-links">
+          <a href="https://www.linkedin.com/groups/12720183/" target="_blank" rel="noopener" data-i18n="sp10-community">Le groupe LinkedIn de la communauté</a>
+        </p>
+        <p style="margin-top:20px; font-size:.8rem; opacity:.35; text-align:center;">
           <a href="/" style="color:inherit; text-decoration:underline;" data-i18n="sp10-back">Retour au site principal</a>
         </p>
       </div>

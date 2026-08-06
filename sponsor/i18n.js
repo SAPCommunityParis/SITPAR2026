@@ -117,6 +117,8 @@ const i18nSponsor = {
     "sp10-deadline-label": "Confirmation deadline",
     "sp10-deadline-date":  "Friday, September 4, 2026",
     "sp10-deadline-note":  "Please send us your confirmation and vector logo before this date to guarantee your presence on printed materials.",
+    "sp10-reply":        "We reply within 48 hours.",
+    "sp10-community":    "The community's LinkedIn group",
     "sp10-back":         "Back to the main site",
   }
 };
