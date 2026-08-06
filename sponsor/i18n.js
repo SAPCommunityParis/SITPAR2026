@@ -85,17 +85,21 @@ const i18nSponsor = {
 
     /* Slide 9 - Budget */
     "sp8-eyebrow":       "Estimated Budget",
-    "sp8-sub":           "excl. tax per sponsor",
-    "sp8-note":          "The final amount depends on the total number of sponsors.",
-    "sp8-t1":            "Catering",
-    "sp8-t2":            "Badges",
-    "sp8-t3":            "Signage",
-    "sp8-t4":            "Goodies",
-    "sp8-t5":            "Video recording",
+    "sp8-sub":           "excl. tax, total event cost",
+    "sp8-b1":            "Catering",
+    "sp8-b2":            "Video recording",
+    "sp8-b3":            "Goodies",
+    "sp8-b4":            "Signage",
+    "sp8-b5":            "Badges & lanyards",
+    "sp8-split":         "Target: 6 financial sponsors",
+    "sp8-split-max":     "maximum",
+    "sp8-more":          "Every additional sponsor lowers everyone's share.",
+    "sp8-note":          "The September 24 CodeJam is out of scope, funded by Vinci Energies.",
 
     /* Slide 10 - Social proof */
     "sp-trust-eyebrow":  "They already support us",
-    "sp-trust-title":    "sponsors have already joined the first edition",
+    "sp-trust-title":    "companies are already backing us",
+    "sp-trust-kinds":    "Financial sponsors and partners: venue, content, logistics.",
     "sp-trust-sub":      "You will not be the first to trust us.",
 
     /* Slide 11 - Why sponsor */

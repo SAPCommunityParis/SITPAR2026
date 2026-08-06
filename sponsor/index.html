@@ -407,11 +407,73 @@
 
     /* ---- Big number ---- */
     .slide__bignum {
-      font-size: clamp(4.5rem, 14vw, 9rem);
+      font-size: clamp(3.2rem, 9vw, 5.4rem);
       font-weight: 800;
       color: var(--gold);
       line-height: 1;
       letter-spacing: -0.03em;
+    }
+
+    /* ---- Ventilation du budget ---- */
+    .budget-list {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      text-align: left;
+    }
+
+    .budget-row {
+      display: grid;
+      grid-template-columns: 152px 1fr 76px;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .budget-label {
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+
+    .budget-track {
+      height: 10px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.09);
+      overflow: hidden;
+    }
+
+    .budget-track > span {
+      display: block;
+      height: 100%;
+      border-radius: 5px;
+      background: var(--gold);
+    }
+
+    .budget-amount {
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-align: right;
+      color: var(--gold);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .budget-split {
+      margin-top: 22px;
+      padding-top: 17px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .budget-split__label { font-size: 0.9rem; opacity: 0.62; }
+
+    .budget-split__amount {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold);
     }
 
     /* ---- Tags ---- */
@@ -597,6 +659,9 @@
 
     @media (max-width: 480px) {
       .trust-card { flex: 0 1 calc(50% - 7px); }
+      .budget-row { grid-template-columns: 106px 1fr 64px; gap: 9px; }
+      .budget-label, .budget-amount { font-size: 0.75rem; }
+      .budget-split__label { font-size: 0.82rem; }
     }
 
     /* ---- Impression / export PDF ---- */
@@ -640,8 +705,12 @@
       .s-card__title, .s-card__label { color: #1a1a2e !important; }
 
       .slide__eyebrow, .gold, .stat-big, .slide__bignum,
-      .sit-card__name, .sit-card__url,
+      .sit-card__name, .sit-card__url, .budget-amount, .budget-split__amount,
       .deadline-box__label, .deadline-box__date { color: #8a5a0c !important; }
+
+      .budget-label { color: #1a1a2e !important; }
+      .budget-split__label { color: #444 !important; opacity: 1 !important; }
+      .budget-track { border: 1px solid #c8c8c8 !important; }
 
       .slide__sub, .s-card__desc, .deadline-box__note {
         color: #444 !important;
@@ -904,18 +973,45 @@
 
     <!-- ⑨ Budget -->
     <section class="slide slide--gold" data-slide="8">
-      <div class="slide-inner" style="max-width:600px;">
+      <div class="slide-inner" style="max-width:680px;">
         <p class="slide__eyebrow" data-i18n="sp8-eyebrow">Budget prévisionnel</p>
-        <p class="slide__bignum">~2 000 €</p>
-        <p class="slide__title" style="font-size:1.35rem; margin-top:10px; font-weight:500; opacity:.8;" data-i18n="sp8-sub">HT par sponsor</p>
-        <p class="slide__sub" style="margin-top:12px; font-size:.83rem; opacity:.5;" data-i18n="sp8-note">Le montant final dépendra du nombre total de sponsors.</p>
-        <div class="tag-cloud" style="margin-top:22px;">
-          <span class="tag" data-i18n="sp8-t1">Restauration</span>
-          <span class="tag" data-i18n="sp8-t2">Badges</span>
-          <span class="tag" data-i18n="sp8-t3">Signalétique</span>
-          <span class="tag" data-i18n="sp8-t4">Goodies</span>
-          <span class="tag" data-i18n="sp8-t5">Captation vidéo</span>
+        <p class="slide__bignum">~12 000 €</p>
+        <p class="slide__title" style="font-size:1.15rem; margin:6px 0 0; font-weight:500; opacity:.72;" data-i18n="sp8-sub">HT, coût total de l'événement</p>
+
+        <div class="budget-list">
+          <div class="budget-row">
+            <span class="budget-label" data-i18n="sp8-b1">Restauration</span>
+            <span class="budget-track"><span style="width:52.5%"></span></span>
+            <span class="budget-amount">6 300 €</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label" data-i18n="sp8-b2">Captation vidéo</span>
+            <span class="budget-track"><span style="width:20.8%"></span></span>
+            <span class="budget-amount">2 500 €</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label" data-i18n="sp8-b3">Goodies</span>
+            <span class="budget-track"><span style="width:15.0%"></span></span>
+            <span class="budget-amount">1 800 €</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label" data-i18n="sp8-b4">Signalétique</span>
+            <span class="budget-track"><span style="width:7.5%"></span></span>
+            <span class="budget-amount">900 €</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-label" data-i18n="sp8-b5">Badges et lanyards</span>
+            <span class="budget-track"><span style="width:4.2%"></span></span>
+            <span class="budget-amount">500 €</span>
+          </div>
         </div>
+
+        <div class="budget-split">
+          <span class="budget-split__label" data-i18n="sp8-split">Objectif : 6 sponsors financiers</span>
+          <span class="budget-split__amount">~2 000 € HT <span data-i18n="sp8-split-max">maximum</span></span>
+        </div>
+        <p class="slide__sub" style="margin-top:10px; font-size:.79rem; opacity:.55;" data-i18n="sp8-more">Chaque sponsor supplémentaire allège la part de tous.</p>
+        <p class="slide__sub" style="margin-top:5px; font-size:.75rem; opacity:.38;" data-i18n="sp8-note">Le CodeJam du 24 septembre est hors périmètre, pris en charge par Vinci Energies.</p>
       </div>
     </section>
 
@@ -925,9 +1021,10 @@
         <p class="slide__eyebrow" data-i18n="sp-trust-eyebrow">Ils nous soutiennent déjà</p>
         <h2 class="slide__title">
           <span class="gold stat-big" id="trustCount">7</span>
-          <span data-i18n="sp-trust-title">sponsors ont déjà rejoint la première édition</span>
+          <span data-i18n="sp-trust-title">entreprises nous accompagnent déjà</span>
         </h2>
-        <p class="slide__sub" data-i18n="sp-trust-sub">Vous ne serez pas le premier à nous faire confiance.</p>
+        <p class="slide__sub" data-i18n="sp-trust-kinds">Sponsors financiers et partenaires : lieu, contenu, logistique.</p>
+        <p class="slide__sub" style="margin-top:5px;" data-i18n="sp-trust-sub">Vous ne serez pas le premier à nous faire confiance.</p>
         <div class="trust-grid">
           <div class="trust-card"><img src="../assets/sponsors/sap_logo.png" alt="SAP"></div>
           <div class="trust-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
