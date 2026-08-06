@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Devenir Sponsor — SAP Inside Track Paris 2026</title>
+  <title>Devenir Sponsor · SAP Inside Track Paris 2026</title>
   <link rel="icon" type="image/png" href="../assets/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="../assets/favicon-32.png">
   <style>
@@ -107,6 +107,38 @@
       border-color: var(--gold);
       color: var(--navy);
       font-weight: 700;
+    }
+
+    .deck-print-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.45);
+      border-radius: 5px;
+      padding: 3px 9px;
+      font-family: inherit;
+      font-size: 0.73rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .deck-print-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .deck-print-btn svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     /* ---- Side dots ---- */
@@ -337,6 +369,42 @@
 
     .sit-card--wide { grid-column: span 2; }
 
+    /* ---- Sponsor logos (social proof) ---- */
+    .trust-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .trust-card {
+      flex: 0 1 calc(25% - 11px);
+      aspect-ratio: 16 / 9;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.10);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+    }
+
+    .trust-card img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* ---- Big inline stat ---- */
+    .stat-big {
+      font-size: clamp(4rem, 11vw, 7rem);
+      font-weight: 800;
+      display: block;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
     /* ---- Big number ---- */
     .slide__bignum {
       font-size: clamp(4.5rem, 14vw, 9rem);
@@ -416,6 +484,80 @@
       white-space: nowrap;
     }
 
+    /* ---- Overlay de generation PDF ---- */
+    .pdf-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(6,15,30,0.90);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .pdf-overlay.is-on { display: flex; }
+
+    .pdf-spinner {
+      width: 34px;
+      height: 34px;
+      margin: 0 auto 15px;
+      border: 3px solid rgba(240,160,32,0.25);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: pdfspin 0.8s linear infinite;
+    }
+
+    @keyframes pdfspin { to { transform: rotate(360deg); } }
+
+    .pdf-status {
+      color: #cdd9f0;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    .pdf-hint {
+      margin-top: 7px;
+      color: rgba(205,217,240,0.4);
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    /* ---- Deadline callout ---- */
+    .deadline-box {
+      margin-top: 28px;
+      background: rgba(240,160,32,0.10);
+      border: 1px solid rgba(240,160,32,0.35);
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .deadline-box__label {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.85;
+      margin-bottom: 6px;
+    }
+
+    .deadline-box__date {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 7px;
+    }
+
+    .deadline-box__note {
+      font-size: 0.79rem;
+      opacity: 0.55;
+      line-height: 1.55;
+    }
+
     /* ---- CTA button ---- */
     .cta-email {
       display: inline-block;
@@ -448,6 +590,104 @@
       .sit-grid { grid-template-columns: 1fr; }
       .sit-card--wide { grid-column: span 1; }
     }
+
+    @media (max-width: 768px) {
+      .trust-card { flex: 0 1 calc(33.333% - 10px); }
+    }
+
+    @media (max-width: 480px) {
+      .trust-card { flex: 0 1 calc(50% - 7px); }
+    }
+
+    /* ---- Impression / export PDF ---- */
+    @media print {
+      @page { size: A4 landscape; margin: 12mm; }
+
+      html, body {
+        height: auto !important;
+        overflow: visible !important;
+        background: #fff !important;
+        color: #1a1a2e !important;
+      }
+
+      /* Chrome de navigation : hors page */
+      .deck-topbar, .deck-dots, .deck-arrows,
+      .deck-progress, .scroll-hint, .pdf-overlay { display: none !important; }
+
+      .deck {
+        height: auto !important;
+        overflow: visible !important;
+        scroll-snap-type: none !important;
+      }
+
+      /* Une slide = une page */
+      .slide {
+        height: auto !important;
+        min-height: 0 !important;
+        display: block !important;
+        padding: 0 0 10mm !important;
+        background: #fff !important;
+        color: #1a1a2e !important;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .slide:last-child { break-after: auto; page-break-after: auto; }
+      .slide-inner { max-width: 100% !important; }
+
+      /* Tout passe en encre foncee : Chrome n'imprime pas les fonds par defaut */
+      .slide__title, .step-text,
+      .s-card__title, .s-card__label { color: #1a1a2e !important; }
+
+      .slide__eyebrow, .gold, .stat-big, .slide__bignum,
+      .sit-card__name, .sit-card__url,
+      .deadline-box__label, .deadline-box__date { color: #8a5a0c !important; }
+
+      .slide__sub, .s-card__desc, .deadline-box__note {
+        color: #444 !important;
+        opacity: 1 !important;
+      }
+
+      /* Tailles calees sur la page, pas sur le viewport */
+      .slide__title   { font-size: 20pt !important; }
+      .stat-big,
+      .slide__bignum  { font-size: 34pt !important; }
+      .slide__sub     { font-size: 10.5pt !important; }
+      .slide__eyebrow { font-size: 8pt !important; }
+
+      .s-card, a.sit-card, .deadline-box, .trust-card {
+        background: #fff !important;
+        border: 1px solid #c8c8c8 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .trust-card {
+        aspect-ratio: auto !important;
+        height: 24mm !important;
+      }
+
+      .tag {
+        background: #fff !important;
+        border: 1px solid #8a5a0c !important;
+        color: #8a5a0c !important;
+      }
+
+      .step-num {
+        background: #fff !important;
+        border: 1.5px solid #8a5a0c !important;
+        color: #8a5a0c !important;
+      }
+
+      .cta-email {
+        background: #fff !important;
+        border: 2px solid #8a5a0c !important;
+        color: #8a5a0c !important;
+        font-size: 12pt !important;
+      }
+
+      a { text-decoration: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -462,7 +702,16 @@
       <span class="deck-brand-name">SAP Inside Track Paris 2026</span>
     </a>
     <div class="deck-topbar-right">
-      <span class="deck-counter" id="deckCounter">1 / 11</span>
+      <span class="deck-counter" id="deckCounter">1 / 12</span>
+      <button class="deck-print-btn" id="printBtn" onclick="exportPdf()"
+              data-i18n-aria="sp-print-aria" aria-label="Télécharger le dossier en PDF">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 9V2h12v7"></path>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <path d="M6 14h12v8H6z"></path>
+        </svg>
+        <span data-i18n="sp-print">PDF</span>
+      </button>
       <div class="deck-lang">
         <button class="deck-lang-btn active" id="btnFr" onclick="setDeckLang('fr')">FR</button>
         <button class="deck-lang-btn"        id="btnEn" onclick="setDeckLang('en')">EN</button>
@@ -475,8 +724,8 @@
 
   <!-- Arrow navigation -->
   <div class="deck-arrows">
-    <button class="deck-arrow" id="prevBtn" onclick="navigate(-1)" aria-label="Précédent">&#8593;</button>
-    <button class="deck-arrow" id="nextBtn" onclick="navigate(1)"  aria-label="Suivant">&#8595;</button>
+    <button class="deck-arrow" id="prevBtn" onclick="navigate(-1)" data-i18n-aria="sp-nav-prev" aria-label="Précédent">&#8593;</button>
+    <button class="deck-arrow" id="nextBtn" onclick="navigate(1)"  data-i18n-aria="sp-nav-next" aria-label="Suivant">&#8595;</button>
   </div>
 
   <!-- ============ DECK ============ -->
@@ -492,7 +741,6 @@
         <p class="slide__sub" data-i18n="sp-cover-sub">25 Septembre 2026 · SAP France, Levallois-Perret</p>
         <div class="tag-cloud" style="margin-top:26px;">
           <span class="tag" data-i18n="sp-tag-community">Communauté SAP</span>
-
           <span class="tag" data-i18n="sp-tag-edition">1ère édition parisienne</span>
         </div>
       </div>
@@ -553,7 +801,7 @@
       <div class="slide-inner">
         <p class="slide__eyebrow" data-i18n="sp3-eyebrow">L'audience</p>
         <h2 class="slide__title">
-          <span class="gold" style="font-size:clamp(4rem,11vw,7rem); font-weight:800; display:block; line-height:1; letter-spacing:-0.03em;">~80</span>
+          <span class="gold stat-big">~80</span>
           <span data-i18n="sp3-title">participants attendus</span>
         </h2>
         <div class="slide-grid slide-grid--4">
@@ -671,8 +919,29 @@
       </div>
     </section>
 
-    <!-- ⑩ Pourquoi devenir sponsor? -->
+    <!-- ⑩ Ils nous soutiennent déjà -->
     <section class="slide slide--light" data-slide="9">
+      <div class="slide-inner" style="max-width:880px;">
+        <p class="slide__eyebrow" data-i18n="sp-trust-eyebrow">Ils nous soutiennent déjà</p>
+        <h2 class="slide__title">
+          <span class="gold stat-big" id="trustCount">7</span>
+          <span data-i18n="sp-trust-title">sponsors ont déjà rejoint la première édition</span>
+        </h2>
+        <p class="slide__sub" data-i18n="sp-trust-sub">Vous ne serez pas le premier à nous faire confiance.</p>
+        <div class="trust-grid">
+          <div class="trust-card"><img src="../assets/sponsors/sap_logo.png" alt="SAP"></div>
+          <div class="trust-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
+          <div class="trust-card"><img src="../assets/sponsors/hrc_logo.png" alt="HRC"></div>
+          <div class="trust-card"><img src="../assets/sponsors/sap-press_logo.png" alt="SAP Press"></div>
+          <div class="trust-card"><img src="../assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></div>
+          <div class="trust-card"><img src="../assets/sponsors/dexton_logo.png" alt="Dexton"></div>
+          <div class="trust-card"><img src="../assets/sponsors/malt_logo.png" alt="Malt"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑪ Pourquoi devenir sponsor? -->
+    <section class="slide slide--light" data-slide="10">
       <div class="slide-inner" style="max-width:780px;">
         <p class="slide__eyebrow" data-i18n="sp9-eyebrow">Pourquoi devenir sponsor ?</p>
         <h2 class="slide__title" data-i18n="sp9-title">Rejoignez la première édition</h2>
@@ -693,12 +962,17 @@
       </div>
     </section>
 
-    <!-- ⑪ Contact -->
-    <section class="slide slide--dark" data-slide="10">
+    <!-- ⑫ Contact -->
+    <section class="slide slide--dark" data-slide="11">
       <div class="slide-inner" style="max-width:560px;">
         <p class="slide__eyebrow" data-i18n="sp10-eyebrow">Intéressé ?</p>
         <h2 class="slide__title" data-i18n="sp10-title">Rejoignez l'aventure</h2>
         <p class="slide__sub" data-i18n="sp10-desc">Pour toute question ou pour rejoindre la liste des sponsors, contactez-nous directement.</p>
+        <div class="deadline-box">
+          <div class="deadline-box__label" data-i18n="sp10-deadline-label">Date limite de confirmation</div>
+          <div class="deadline-box__date" data-i18n="sp10-deadline-date">Vendredi 4 septembre 2026</div>
+          <div class="deadline-box__note" data-i18n="sp10-deadline-note">Merci de nous transmettre votre accord et votre logo vectoriel avant cette date, afin de garantir votre présence sur les supports imprimés.</div>
+        </div>
         <a href="mailto:contact@sit.paris" class="cta-email">contact@sit.paris</a>
         <p style="margin-top:24px; font-size:.8rem; opacity:.35; text-align:center;">
           <a href="/" style="color:inherit; text-decoration:underline;" data-i18n="sp10-back">Retour au site principal</a>
@@ -708,12 +982,24 @@
 
   </div><!-- /.deck -->
 
+  <!-- Overlay affiche pendant la generation du PDF -->
+  <div class="pdf-overlay" id="pdfOverlay" role="status" aria-live="polite">
+    <div>
+      <div class="pdf-spinner"></div>
+      <p class="pdf-status" id="pdfStatus"></p>
+      <p class="pdf-hint" id="pdfHint"></p>
+    </div>
+  </div>
+
   <script src="i18n.js?v=20260801"></script>
   <script>
     // ---- i18n ----
-    const i18nFallback = { text: {}, html: {} };
+    const i18nFallback = { text: {}, aria: {}, title: document.title };
     document.querySelectorAll('[data-i18n]').forEach(el => {
       i18nFallback.text[el.dataset.i18n] = el.textContent;
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      i18nFallback.aria[el.dataset.i18nAria] = el.getAttribute('aria-label');
     });
 
     let deckLang = 'fr';
@@ -730,6 +1016,15 @@
           ? dict[key]
           : (i18nFallback.text[key] ?? el.textContent);
       });
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.dataset.i18nAria;
+        el.setAttribute('aria-label', (dict && dict[key] != null)
+          ? dict[key]
+          : (i18nFallback.aria[key] ?? el.getAttribute('aria-label')));
+      });
+      document.title = (dict && dict['sp-page-title'] != null)
+        ? dict['sp-page-title']
+        : i18nFallback.title;
     }
 
     // ---- Deck navigation ----
@@ -776,14 +1071,116 @@
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          current = parseInt(entry.target.dataset.slide, 10);
+          current = slides.indexOf(entry.target);
           updateUI();
         }
       });
     }, { threshold: 0.6 });
 
     slides.forEach(s => io.observe(s));
+
+    // Keep the sponsor count in sync with the logos actually displayed
+    document.getElementById('trustCount').textContent =
+      document.querySelectorAll('.trust-card').length;
+
     updateUI();
+
+    // ---- Export PDF ----
+    // Chaque slide est capturee au format 16:9 puis assemblee en PDF, afin
+    // d'obtenir un rendu identique a l'ecran (fonds sombres compris), ce que
+    // le moteur d'impression du navigateur ne permet pas.
+    const PDF_W = 1600, PDF_H = 900;
+
+    const pdfLabels = {
+      fr: {
+        prep:  'Préparation…',
+        slide: (i, n) => 'Génération ' + i + ' / ' + n,
+        hint:  'Cela prend quelques secondes',
+        fail:  "La génération du PDF a échoué.\n\nLes librairies sont chargées depuis un CDN externe : "
+             + "un pare-feu d'entreprise peut les bloquer.\n\nSolution de repli : Ctrl+P puis « Enregistrer au format PDF »."
+      },
+      en: {
+        prep:  'Preparing…',
+        slide: (i, n) => 'Rendering ' + i + ' / ' + n,
+        hint:  'This takes a few seconds',
+        fail:  'PDF generation failed.\n\nThe libraries are loaded from an external CDN: '
+             + 'a corporate firewall may be blocking them.\n\nFallback: Ctrl+P then "Save as PDF".'
+      }
+    };
+
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.crossOrigin = 'anonymous';
+        s.onload = resolve;
+        s.onerror = () => reject(new Error('Chargement impossible : ' + src));
+        document.head.appendChild(s);
+      });
+    }
+
+    let pdfLibsReady = false;
+    async function ensurePdfLibs() {
+      if (pdfLibsReady) return;
+      await Promise.all([
+        loadScript('https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js'),
+        loadScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js')
+      ]);
+      pdfLibsReady = true;
+    }
+
+    async function exportPdf() {
+      const btn     = document.getElementById('printBtn');
+      const overlay = document.getElementById('pdfOverlay');
+      const status  = document.getElementById('pdfStatus');
+      const hint    = document.getElementById('pdfHint');
+      const L       = pdfLabels[deckLang] || pdfLabels.fr;
+
+      btn.disabled = true;
+      status.textContent = L.prep;
+      hint.textContent   = L.hint;
+      overlay.classList.add('is-on');
+
+      // Exclut les elements qui n'ont pas de sens sur une page imprimee
+      const skip = node => !(node.classList && node.classList.contains('scroll-hint'));
+
+      const shoot = slide => htmlToImage.toJpeg(slide, {
+        width: PDF_W, height: PDF_H,
+        style: { width: PDF_W + 'px', height: PDF_H + 'px' },
+        pixelRatio: 1.5,
+        quality: 0.92,
+        filter: skip
+      });
+
+      try {
+        await ensurePdfLibs();
+
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({
+          orientation: 'landscape', unit: 'px',
+          format: [PDF_W, PDF_H], compress: true
+        });
+
+        // Premier rendu jete : html-to-image renvoie parfois une image
+        // incomplete tant que les polices et images du clone ne sont pas pretes.
+        await shoot(slides[0]);
+
+        for (let i = 0; i < slides.length; i++) {
+          status.textContent = L.slide(i + 1, slides.length);
+          const img = await shoot(slides[i]);
+          if (i > 0) pdf.addPage([PDF_W, PDF_H], 'landscape');
+          pdf.addImage(img, 'JPEG', 0, 0, PDF_W, PDF_H);
+        }
+
+        pdf.save('SAP-Inside-Track-Paris-2026-Sponsors.pdf');
+      } catch (err) {
+        console.error(err);
+        alert(L.fail);
+      } finally {
+        overlay.classList.remove('is-on');
+        btn.disabled = false;
+      }
+    }
   </script>
 </body>
 </html>

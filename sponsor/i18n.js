@@ -1,10 +1,16 @@
 const i18nSponsor = {
   en: {
+    /* Page chrome */
+    "sp-page-title":     "Become a Sponsor · SAP Inside Track Paris 2026",
+    "sp-nav-prev":       "Previous",
+    "sp-nav-next":       "Next",
+    "sp-print":          "PDF",
+    "sp-print-aria":     "Download the deck as PDF",
+
     /* Slide 1 - Cover */
     "sp-eyebrow":        "Sponsor Deck",
     "sp-cover-sub":      "September 25, 2026 · SAP France, Levallois-Perret",
     "sp-tag-community":  "SAP Community",
-    "sp-tag-volunteers": "Volunteers",
     "sp-tag-edition":    "1st Paris Edition",
     "sp-nav-hint":       "Scroll to continue ↓",
 
@@ -67,8 +73,6 @@ const i18nSponsor = {
     "sp6-b1-desc":       "Logo on the website, participant emails, communication materials and event banners",
     "sp6-b2-title":      "Social media",
     "sp6-b2-desc":       "LinkedIn mentions before and after the event, with sponsor tag",
-    "sp6-b3-title":      "On-site presence",
-    "sp6-b3-desc":       "Booth during breaks, 5-minute speaking slot",
     "sp6-b4-title":      "Invitations & access",
     "sp6-b4-desc":       "3 invitations and access to video recordings",
 
@@ -89,7 +93,12 @@ const i18nSponsor = {
     "sp8-t4":            "Goodies",
     "sp8-t5":            "Video recording",
 
-    /* Slide 10 - Why sponsor */
+    /* Slide 10 - Social proof */
+    "sp-trust-eyebrow":  "They already support us",
+    "sp-trust-title":    "sponsors have already joined the first edition",
+    "sp-trust-sub":      "You will not be the first to trust us.",
+
+    /* Slide 11 - Why sponsor */
     "sp9-eyebrow":       "Why sponsor?",
     "sp9-title":         "Join the first edition",
     "sp9-r1":            "Contribute to the growth of the French SAP community",
@@ -97,10 +106,13 @@ const i18nSponsor = {
     "sp9-r3":            "Strengthen your visibility in the SAP ecosystem",
     "sp9-r4":            "Be part of launching what will become an annual event",
 
-    /* Slide 11 - Contact */
+    /* Slide 12 - Contact */
     "sp10-eyebrow":      "Interested?",
     "sp10-title":        "Join the adventure",
     "sp10-desc":         "For any questions or to join the sponsor list, contact us directly.",
+    "sp10-deadline-label": "Confirmation deadline",
+    "sp10-deadline-date":  "Friday, September 4, 2026",
+    "sp10-deadline-note":  "Please send us your confirmation and vector logo before this date to guarantee your presence on printed materials.",
     "sp10-back":         "Back to the main site",
   }
 };
