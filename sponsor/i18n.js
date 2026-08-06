@@ -77,7 +77,7 @@ const i18nSponsor = {
     "sp7-title":         "A simple, transparent model",
     "sp7-step1":         "Sponsors equally share the event costs.",
     "sp7-step2":         "Vendors invoice each sponsor directly for the most balanced distribution.",
-    "sp7-step3":         "The goal is not to make a profit — simply to deliver a quality event.",
+    "sp7-step3":         "The goal is not to make a profit, simply to deliver a quality event.",
 
     /* Slide 9 - Budget */
     "sp8-eyebrow":       "Estimated Budget",
