@@ -735,7 +735,7 @@ img.speaker-avatar {
 }
 @media (max-width: 900px) { .sponsor-slot { flex-basis: calc(50% - 10px); } }
 .sponsor-slot {
-  flex: 0 1 calc(25% - 15px);
+  flex: 0 1 calc(20% - 16px);
   aspect-ratio: 16/9;
   border: 1px solid var(--line);
   border-radius: 14px;
