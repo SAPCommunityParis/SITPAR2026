@@ -677,11 +677,13 @@
     }
 
     @media (max-width: 768px) {
-      .trust-card { flex: 0 1 calc(33.333% - 10px); }
+      .trust-grid { gap: 10px; margin-top: 18px; }
+      .trust-card { flex: 0 1 calc(33.333% - 7px); padding: 10px 12px; }
     }
 
     @media (max-width: 480px) {
-      .trust-card { flex: 0 1 calc(50% - 7px); }
+      .trust-grid { gap: 7px; margin-top: 14px; }
+      .trust-card { flex: 0 1 calc(33.333% - 5px); padding: 7px 9px; aspect-ratio: 16 / 10; }
       .budget-row { grid-template-columns: 106px 1fr 64px; gap: 9px; }
       .budget-label, .budget-amount { font-size: 0.75rem; }
       .budget-split__label { font-size: 0.82rem; }
@@ -1051,15 +1053,15 @@
         <p class="slide__sub" data-i18n="sp-trust-kinds">Sponsors financiers et partenaires : lieu, contenu, logistique.</p>
         <p class="slide__sub" style="margin-top:5px;" data-i18n="sp-trust-sub">Vous ne serez pas le premier à nous faire confiance.</p>
         <div class="trust-grid">
-          <div class="trust-card"><img src="../assets/sponsors/sap_logo.png" alt="SAP"></div>
-          <div class="trust-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
-          <div class="trust-card"><img src="../assets/sponsors/hrc_logo.png" alt="HRC"></div>
-          <div class="trust-card"><img src="../assets/sponsors/sap-press_logo.png" alt="SAP Press"></div>
-          <div class="trust-card"><img src="../assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></div>
           <div class="trust-card"><img src="../assets/sponsors/dexton_logo.png" alt="Dexton"></div>
+          <div class="trust-card"><img src="../assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></div>
+          <div class="trust-card"><img src="../assets/sponsors/hrc_logo.png" alt="HRC"></div>
           <div class="trust-card"><img src="../assets/sponsors/malt_logo.png" alt="Malt"></div>
-          <div class="trust-card"><img src="../assets/sponsors/wcomply_logo.png" alt="Wcomply"></div>
           <div class="trust-card"><img src="../assets/sponsors/moonbees_logo.png" alt="Moonbees"></div>
+          <div class="trust-card"><img src="../assets/sponsors/sap_logo.png" alt="SAP"></div>
+          <div class="trust-card"><img src="../assets/sponsors/sap-press_logo.png" alt="SAP Press"></div>
+          <div class="trust-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
+          <div class="trust-card"><img src="../assets/sponsors/wcomply_logo.png" alt="Wcomply"></div>
         </div>
       </div>
     </section>
