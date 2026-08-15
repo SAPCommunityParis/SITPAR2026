@@ -77,7 +77,7 @@ const i18nSpeaker = {
     "cta-p":        "Submit your talk via Sessionize. We'll get back to you within 2 weeks with individual feedback, whatever the decision.",
     "cta-btn":      "📣 Submit a talk →",
     "cta-d1-label": "CFP deadline",
-    "cta-d1-val":   "July 10, 2026",
+    "cta-d1-val":   "August 25, 2026",
     "cta-d2-label": "Speaker notification",
     "cta-d2-val":   "To be confirmed",
     "cta-d3-label": "Event",
