@@ -374,20 +374,20 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 14px;
-      margin-top: 26px;
+      gap: 8px;
+      margin-top: 2px;
     }
 
     .trust-card {
-      flex: 0 1 calc(25% - 11px);
-      aspect-ratio: 16 / 9;
+      flex: 0 1 calc(25% - 6px);
+      aspect-ratio: 16 / 5.5;
       background: #fff;
       border: 1px solid rgba(0,0,0,0.10);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 18px;
+      padding: 6px 14px;
     }
 
     .trust-card img {
@@ -677,13 +677,13 @@
     }
 
     @media (max-width: 768px) {
-      .trust-grid { gap: 10px; margin-top: 18px; }
-      .trust-card { flex: 0 1 calc(33.333% - 7px); padding: 10px 12px; }
+      .trust-grid { gap: 8px; margin-top: 10px; }
+      .trust-card { flex: 0 1 calc(33.333% - 6px); padding: 8px 10px; aspect-ratio: 16 / 8; }
     }
 
     @media (max-width: 480px) {
-      .trust-grid { gap: 7px; margin-top: 14px; }
-      .trust-card { flex: 0 1 calc(33.333% - 5px); padding: 7px 9px; aspect-ratio: 16 / 10; }
+      .trust-grid { gap: 6px; margin-top: 8px; }
+      .trust-card { flex: 0 1 calc(33.333% - 4px); padding: 6px 8px; aspect-ratio: 16 / 10; }
       .budget-row { grid-template-columns: 106px 1fr 64px; gap: 9px; }
       .budget-label, .budget-amount { font-size: 0.75rem; }
       .budget-split__label { font-size: 0.82rem; }
@@ -1045,8 +1045,8 @@
     <!-- ⑩ Ils nous soutiennent déjà -->
     <section class="slide slide--light" data-slide="9">
       <div class="slide-inner" style="max-width:880px;">
-        <p class="slide__eyebrow" data-i18n="sp-trust-eyebrow">Ils nous soutiennent déjà</p>
-        <h2 class="slide__title">
+        <p class="slide__eyebrow" style="margin-bottom:6px;" data-i18n="sp-trust-eyebrow">Ils nous soutiennent déjà</p>
+        <h2 class="slide__title" style="margin-bottom:10px;">
           <span class="gold stat-big" id="trustCount">7</span>
           <span data-i18n="sp-trust-title">entreprises nous accompagnent déjà</span>
         </h2>
@@ -1056,8 +1056,10 @@
           <div class="trust-card"><img src="../assets/sponsors/dexton_logo.png" alt="Dexton"></div>
           <div class="trust-card"><img src="../assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></div>
           <div class="trust-card"><img src="../assets/sponsors/hrc_logo.png" alt="HRC"></div>
+          <div class="trust-card"><img src="../assets/sponsors/hubl_logo.png" alt="Hubl"></div>
           <div class="trust-card"><img src="../assets/sponsors/malt_logo.png" alt="Malt"></div>
           <div class="trust-card"><img src="../assets/sponsors/moonbees_logo.png" alt="Moonbees"></div>
+          <div class="trust-card"><img src="../assets/sponsors/neptune_logo.png" alt="Neptune Software"></div>
           <div class="trust-card"><img src="../assets/sponsors/sap_logo.png" alt="SAP"></div>
           <div class="trust-card"><img src="../assets/sponsors/sap-press_logo.png" alt="SAP Press"></div>
           <div class="trust-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
