@@ -563,6 +563,41 @@ img.speaker-avatar {
 .speaker-cell:hover .speaker-linkedin {
   opacity: 1;
 }
+/* Talk-title reveal shown on hover/focus over a speaker's photo.
+   Rendered as an in-place circular overlay (not a floating bubble) so it
+   can never spill into a neighbouring row of the speaker grid. Colors are
+   fixed (not theme vars) so contrast holds in dark mode too, since --ink
+   flips to a light tone there. */
+.speaker-photo {
+  position: relative;
+  display: inline-flex;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.speaker-talk {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255,255,255,0.96);
+  color: #0f2a52;
+  font-size: 11px;
+  line-height: 1.32;
+  font-weight: 700;
+  padding: 14%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease;
+  z-index: 5;
+}
+.speaker-photo:hover .speaker-talk,
+.speaker-photo:focus-within .speaker-talk {
+  opacity: 1;
+  visibility: visible;
+}
 .speaker-cta {
   border-radius: 14px;
   background: var(--gold);
