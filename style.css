@@ -733,7 +733,6 @@ img.speaker-avatar {
   gap: 20px;
   margin: 56px 0 40px;
 }
-@media (max-width: 900px) { .sponsor-slot { flex-basis: calc(50% - 10px); } }
 .sponsor-slot {
   flex: 0 1 calc(20% - 16px);
   aspect-ratio: 16/9;
@@ -747,6 +746,17 @@ img.speaker-avatar {
 .sponsor-slot:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px -8px rgba(15,42,82,0.12);
+}
+/* Placed after the base rule so it actually wins at equal specificity —
+   a prior version of this override sat before .sponsor-slot and was
+   silently ignored on every screen size. */
+@media (max-width: 900px) {
+  .sponsor-grid-flat { gap: 14px; }
+  .sponsor-slot { flex-basis: calc(33.333% - 10px); }
+}
+@media (max-width: 600px) {
+  .sponsor-grid-flat { gap: 12px; }
+  .sponsor-slot { flex-basis: calc(50% - 6px); }
 }
 .sponsor-cta {
   margin-top: 40px;
