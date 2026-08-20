@@ -1154,7 +1154,24 @@
       document.title = (dict && dict['sp-page-title'] != null)
         ? dict['sp-page-title']
         : i18nFallback.title;
+      syncCrossPageLinks(lang);
     }
+
+    // Carries the current language back to the homepage so switching to EN
+    // here and clicking "Retour au site principal" doesn't drop you back
+    // into French.
+    function syncCrossPageLinks(lang) {
+      const suffix = (lang === 'fr') ? '' : ('?lang=' + lang);
+      document.querySelectorAll('a[href="/"]').forEach(a => {
+        a.setAttribute('href', '/' + suffix);
+      });
+    }
+
+    // A fresh visit always starts in FR — but a link clicked from the EN
+    // version of the homepage carries ?lang=en so this page opens in the
+    // same language.
+    const urlDeckLang = new URLSearchParams(location.search).get('lang');
+    if (urlDeckLang === 'en') setDeckLang('en');
 
     // ---- Deck navigation ----
     const deck    = document.getElementById('deck');

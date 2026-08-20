@@ -54,7 +54,11 @@ function updateThemeLabel() {
 // ── Language switching ──
 // The HTML is the FR source of truth. i18n.js only holds EN overrides.
 // We snapshot the rendered FR content once, then swap to EN and back.
-let currentLang = 'fr';
+// A fresh visit always starts in FR (no localStorage restore) — but a link
+// clicked from the EN version of this page or of speaker/sponsor carries
+// ?lang=en so the destination page opens in the same language.
+const urlLang = new URLSearchParams(location.search).get('lang');
+let currentLang = (urlLang === 'en') ? 'en' : 'fr';
 
 const i18nFallback = { text: {}, html: {} };
 document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -90,6 +94,16 @@ function setLang(lang) {
 
   document.documentElement.lang = lang;
   updateThemeLabel();
+  syncCrossPageLinks(lang);
+}
+
+// Carries the current language onto the speaker/sponsor sub-pages so a
+// visitor reading the site in English doesn't land back in French there.
+function syncCrossPageLinks(lang) {
+  const suffix = (lang === 'fr') ? '' : ('?lang=' + lang);
+  document.querySelectorAll('a[href="speaker/"], a[href="sponsor/"]').forEach(a => {
+    a.setAttribute('href', a.getAttribute('href').split('?')[0] + suffix);
+  });
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
