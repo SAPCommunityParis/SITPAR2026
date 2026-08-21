@@ -533,6 +533,11 @@ img { display: block; max-width: 100%; }
   text-align: center;
   letter-spacing: -0.01em;
 }
+.speaker-badge {
+  margin-left: 3px;
+  font-size: 12px;
+  vertical-align: 1px;
+}
 img.speaker-avatar {
   object-fit: cover;
   background: var(--paper);
