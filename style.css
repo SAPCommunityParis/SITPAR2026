@@ -803,6 +803,10 @@ img.speaker-avatar {
   display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
   justify-content: center;
 }
+.tracks-cta {
+  margin-top: 32px;
+  display: flex; justify-content: center;
+}
 
 /* ───── faq ───── */
 .faq-list { border-top: 1px solid var(--line); }

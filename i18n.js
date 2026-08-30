@@ -59,6 +59,7 @@ const i18n = {
     'track2-desc':    'Datasphere, Integration Suite, AI Core, Joule, observability, event-driven architecture. The bridges between SAP and the rest of the world.',
     'track3-desc':    'S/4HANA, Build Process Automation, Signavio, key user extensibility. The track for functional consultants and key users who keep the engine running.',
     'track4-desc':    '90-minute sessions, laptop open. We code, deploy, integrate, break things, and fix them. On-site registration, limited spots per session.',
+    'tracks-cta':     '→ View full schedule',
 
     'preevent-eyebrow':  'The day before',
     'preevent-title':    'Warm up<br><em>on Thursday.</em>',
