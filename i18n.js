@@ -22,7 +22,7 @@ const i18n = {
 
     'hero-tagline':       'The French SAP community finally comes home. One day  four tracks  one place. <strong>Friday, September 25, 2026,<br>at SAP France.</strong>',
     'hero-cta1':          '→ Register for opening',
-    'hero-cta2':          '📣 Submit a talk',
+    'hero-cta2':          '🔒 CFP closed',
 
     'modal-reg-title':    'Registration opens soon',
     'modal-reg-text':     'Ticketing is not open yet. Leave us your email and we will let you know the moment registration goes live, you will be among the first to hear.',
@@ -82,8 +82,8 @@ const i18n = {
     'speakers-eyebrow':   '★ CALL FOR SPEAKERS ★',
     'speakers-title':     'Want to <em>speak?</em><br>We\'re waiting.',
     'speakers-sub':       'First edition  line-up to be revealed progressively.',
-    'speakers-cta-title': '+ You?',
-    'speakers-cta-sub':   'Submit a talk →',
+    'speakers-cta-title': 'CFP closed',
+    'speakers-cta-sub':   'Thank you for your submissions',
 
     'cfp-title': 'Got something<br>to <em>share?</em>',
     'cfp-sub':   'This is the first French edition: we\'re looking for fresh voices, honest experience reports, demos that crash (and get fixed live), slightly wild ideas. No buzzwords, no slideware. If it\'s your first time speaking, this is the perfect moment.',

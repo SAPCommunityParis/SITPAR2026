@@ -12,7 +12,7 @@ const i18nSpeaker = {
     "hero-eyebrow": "★ CALL FOR SPEAKERS · SAP INSIDE TRACK PARIS 2026 ★",
     "hero-h1":      "Tell us about<br><em>your field experience.</em>",
     "hero-p":       "No political committee. No sponsor quotas. No marketing-approved slides. If you've lived through something interesting on an SAP project, that's exactly what we're looking for.",
-    "hero-cta":     "📣 Submit a talk →",
+    "hero-cta":     "🔒 CFP closed",
 
     "why-eyebrow":  "Why speak here",
     "why-h2":       "Contribute to something<br><em>rare.</em>",
@@ -75,7 +75,7 @@ const i18nSpeaker = {
 
     "cta-h2":       "Ready to<br><em>submit?</em>",
     "cta-p":        "Submit your talk via Sessionize. We'll get back to you within 2 weeks with individual feedback, whatever the decision.",
-    "cta-btn":      "📣 Submit a talk →",
+    "cta-btn":      "🔒 CFP closed",
     "cta-d1-label": "CFP deadline",
     "cta-d1-val":   "August 25, 2026",
     "cta-d2-label": "Speaker notification",

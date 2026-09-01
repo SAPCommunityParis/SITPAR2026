@@ -168,6 +168,17 @@ img { display: block; max-width: 100%; }
   background: var(--gold); color: var(--ink); border-color: var(--ink);
 }
 .btn-lg { padding: 14px 24px; font-size: 15px; }
+/* CFP closed state — reused on the hero, "+Toi ?" card and the CFP page's
+   own submit buttons once the call for speakers has closed. */
+.btn.is-closed,
+.speaker-cta.is-closed {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(60%);
+}
+.btn.is-closed:hover { transform: none; box-shadow: none; }
+.speaker-cta.is-closed:hover { transform: none; box-shadow: none; }
 .btn-sm { padding: 7px 14px; font-size: 12px; }
 
 /* ───── hero ───── */
