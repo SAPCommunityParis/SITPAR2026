@@ -22,7 +22,6 @@ const i18n = {
 
     'hero-tagline':       'The French SAP community finally comes home. One day  four tracks  one place. <strong>Friday, September 25, 2026,<br>at SAP France.</strong>',
     'hero-cta1':          '→ Register on Meetup',
-    'hero-cta2':          '🔒 CFP closed',
 
     'terminal-edition':   'first edition',
     'terminal-soon':      'SOON',
