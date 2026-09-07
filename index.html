@@ -42,7 +42,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260901">
+<link rel="stylesheet" href="style.css?v=20260903">
 
 <!-- Structured data: Event -->
 <script type="application/ld+json">
@@ -156,7 +156,7 @@
         <strong>Vendredi 25 septembre 2026, chez SAP France.</strong>
       </p>
       <div class="hero-actions">
-        <button type="button" class="btn btn-primary btn-lg" id="registerBtn" data-i18n="hero-cta1">→ M'inscrire à l'ouverture</button>
+        <a class="btn btn-primary btn-lg" href="https://www.meetup.com/fr-FR/sap-community-paris/events/316405524/" target="_blank" rel="noopener" data-i18n="hero-cta1">→ M'inscrire sur Meetup</a>
         <a class="btn btn-lg is-closed" aria-disabled="true" tabindex="-1" data-i18n="hero-cta2">🔒 CFP terminé</a>
       </div>
     </div>
@@ -811,21 +811,7 @@
   </div>
 </footer>
 
-<!-- ───── REGISTER MODAL ───── -->
-<div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerModalTitle" hidden>
-  <div class="modal-card">
-    <button type="button" class="modal-close" id="registerModalClose" aria-label="Fermer">&times;</button>
-    <div class="modal-icon">🗓️</div>
-    <h3 class="modal-title" id="registerModalTitle" data-i18n="modal-reg-title">Les inscriptions ouvrent bientôt</h3>
-    <p class="modal-text" data-i18n="modal-reg-text">La billetterie n'est pas encore ouverte. Laisse-nous ton email et on te prévient dès que les inscriptions sont en ligne, tu seras dans les premiers informés.</p>
-    <div class="modal-actions">
-      <a class="btn btn-primary" href="mailto:contact@sit.paris?subject=Inscription%20SAP%20Inside%20Track%20Paris%202026&body=Bonjour%2C%20je%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20de%20l%27ouverture%20des%20inscriptions." data-i18n="modal-reg-cta">✉️ Être prévenu·e</a>
-      <button type="button" class="btn modal-dismiss" id="registerModalDismiss" data-i18n="modal-reg-dismiss">Plus tard</button>
-    </div>
-  </div>
-</div>
-
-<script src="i18n.js?v=20260901"></script>
-<script src="main.js?v=20260820"></script>
+<script src="i18n.js?v=20260903"></script>
+<script src="main.js?v=20260903"></script>
 </body>
 </html>
