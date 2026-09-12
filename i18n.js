@@ -77,8 +77,6 @@ const i18n = {
     'speakers-eyebrow':   '★ CALL FOR SPEAKERS ★',
     'speakers-title':     'Want to <em>speak?</em><br>We\'re waiting.',
     'speakers-sub':       'First edition  line-up to be revealed progressively.',
-    'speakers-cta-title': 'CFP closed',
-    'speakers-cta-sub':   'Thank you for your submissions',
 
     'cfp-title': 'Got something<br>to <em>share?</em>',
     'cfp-sub':   'This is the first French edition: we\'re looking for fresh voices, honest experience reports, demos that crash (and get fixed live), slightly wild ideas. No buzzwords, no slideware. If it\'s your first time speaking, this is the perfect moment.',
