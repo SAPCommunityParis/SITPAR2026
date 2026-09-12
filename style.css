@@ -496,17 +496,22 @@ img { display: block; max-width: 100%; }
 
 /* ───── speakers wall ───── */
 .speakers-head .section-sub { font-style: italic; }
+/* Flexbox rather than CSS grid: with a fixed column count, a grid leaves
+   an incomplete last row stuck to the left. Flex-wrap + justify-content
+   centers it instead — same pattern already used for the sponsor grid. */
 .speakers-row {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 18px;
   align-items: start;
 }
-@media (max-width: 900px) { .speakers-row { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 540px) { .speakers-row { grid-template-columns: repeat(2, 1fr); } }
 .speaker-cell {
   display: flex; flex-direction: column; align-items: center; gap: 10px;
+  flex: 0 1 calc(16.6667% - 15px);
 }
+@media (max-width: 900px) { .speaker-cell { flex-basis: calc(33.333% - 12px); } }
+@media (max-width: 540px) { .speaker-cell { flex-basis: calc(50% - 9px); } }
 .speaker-avatar {
   width: clamp(100px, 14vw, 168px);
   height: clamp(100px, 14vw, 168px);
