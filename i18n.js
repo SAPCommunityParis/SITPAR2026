@@ -24,7 +24,7 @@ const i18n = {
     'hero-cta1':          '→ Register on Meetup',
 
     'terminal-edition':   'first edition',
-    'terminal-soon':      'SOON',
+    'terminal-soon':      'OPEN',
 
     'cd-d': 'DAYS',
     'cd-h': 'HOURS',
