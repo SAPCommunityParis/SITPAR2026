@@ -119,7 +119,7 @@ const i18n = {
     'faq-q3': 'Is this official? Is SAP organizing it?',
     'faq-a3': 'No  it\'s entirely organized by volunteers from the French SAP community. SAP France graciously hosts us on their premises, but does not control the schedule or content.',
     'faq-q4': 'How much does it cost?',
-    'faq-a4': 'We ask for a small symbolic contribution of a few euros, just to cover a small part of the costs: coffee, lunch, and closing drinks. The event itself costs nothing: no venue rental, no speaker fees, no marketing budget. The exact amount will be announced when registration opens.',
+    'faq-a4': '€15. We ask for a small symbolic contribution, just to cover a small part of the costs: coffee, lunch, and closing drinks. The event itself costs nothing: no venue rental, no speaker fees, no marketing budget.',
     'faq-q5': 'How can I become a speaker?',
     'faq-a5': 'The call for speakers is open. Three formats: talk (30 min), deep dive (60 min), hands-on workshop (90 min). Submit your topic and we\'ll get back to you within 2 weeks.',
     'faq-q6': 'I\'m a junior / student  is this for me?',
