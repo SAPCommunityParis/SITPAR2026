@@ -95,6 +95,7 @@ const i18nSponsor = {
     "sp8-split-max":     "maximum",
     "sp8-more":          "Every additional sponsor lowers everyone's share.",
     "sp8-note":          "The September 24 CodeJam is out of scope, funded by Vinci Energies.",
+    "sp8-inkind":        "An in-kind contribution is also possible (visibility or attendee perks), with a single slot and reduced benefits compared to a financial sponsor.",
 
     /* Slide 10 - Social proof */
     "sp-trust-eyebrow":  "They already support us",
