@@ -293,22 +293,6 @@ img { display: block; max-width: 100%; }
   display: inline-block;
 }
 
-/* countdown */
-.countdown {
-  display: flex; gap: 8px;
-  margin: 14px 0;
-}
-.cd-cell {
-  flex: 1;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(232,237,245,0.15);
-  border-radius: 8px;
-  padding: 10px 8px;
-  text-align: center;
-}
-.cd-cell .n { font-size: 28px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
-.cd-cell .l { font-size: 9px; opacity: 0.6; margin-top: 4px; letter-spacing: 0.15em; }
-
 /* ───── stats banner ───── */
 .stats {
   background: var(--ink);
@@ -1005,12 +989,6 @@ img.speaker-avatar {
 
 /* Stat sublabels */
 [data-theme="dark"] .stat .l { color: rgba(200, 220, 255, 0.45); }
-
-/* Countdown cells: keep subtle border visible on very dark bg */
-[data-theme="dark"] .cd-cell {
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(200,220,255,0.12);
-}
 
 /* Decorative star before strip spans — make it gold so it reads */
 [data-theme="dark"] .hero-strip-track span::before { color: var(--gold); }

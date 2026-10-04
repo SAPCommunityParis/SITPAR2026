@@ -147,28 +147,3 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 setLang(currentLang);
-
-// ── Live countdown to 2026-09-25 09:00 Paris time ──
-(function () {
-  const target = new Date('2026-09-25T09:00:00+02:00').getTime();
-  const pad = (n) => String(n).padStart(2, '0');
-  const cells = {
-    d: document.querySelector('[data-cd="d"]'),
-    h: document.querySelector('[data-cd="h"]'),
-    m: document.querySelector('[data-cd="m"]'),
-    s: document.querySelector('[data-cd="s"]'),
-  };
-  function tick() {
-    let remaining = Math.max(0, target - Date.now());
-    const days = Math.floor(remaining / 86400000); remaining -= days * 86400000;
-    const hrs  = Math.floor(remaining / 3600000);  remaining -= hrs * 3600000;
-    const min  = Math.floor(remaining / 60000);    remaining -= min * 60000;
-    const sec  = Math.floor(remaining / 1000);
-    cells.d.textContent = pad(days);
-    cells.h.textContent = pad(hrs);
-    cells.m.textContent = pad(min);
-    cells.s.textContent = pad(sec);
-  }
-  tick();
-  setInterval(tick, 1000);
-})();

@@ -31,10 +31,7 @@ const i18n = {
     'terminal-edition':   'first edition',
     'terminal-soon':      'CLOSED',
 
-    'cd-d': 'DAYS',
-    'cd-h': 'HOURS',
-    'cd-m': 'MIN',
-    'cd-s': 'SEC',
+    'terminal-status':    'completed · Sept. 25, 2026',
 
     'stat-1': 'FIRST EDITION',
     'stat-2': 'PARALLEL TRACKS',
