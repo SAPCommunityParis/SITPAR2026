@@ -77,7 +77,7 @@ const i18n = {
     'preevent-prereq-text':   ' Install and set up your environment ahead of time.',
     'preevent-prereq-link':   'View the prerequisites →',
     'preevent-cta':      'View the CodeJam page →',
-    'preevent-note':     'Registration handled on SAP Community · limited seats.',
+    'preevent-note':     'Registration handled on SAP Community.',
 
     'speakers-eyebrow':   '★ CALL FOR SPEAKERS ★',
     'speakers-title':     'Want to <em>speak?</em><br>We\'re waiting.',
