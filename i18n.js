@@ -29,7 +29,7 @@ const i18n = {
     'photos-cta':     '→ View the full album',
 
     'terminal-edition':   'first edition',
-    'terminal-soon':      'OPEN',
+    'terminal-soon':      'CLOSED',
 
     'cd-d': 'DAYS',
     'cd-h': 'HOURS',
