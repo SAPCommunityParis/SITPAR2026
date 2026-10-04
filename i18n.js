@@ -107,8 +107,7 @@ const i18n = {
     'sponsors-desc':    'Thank you to the partners who make this first edition possible.',
     'sponsors-fin-label':   'Financial sponsors',
     'sponsors-fin-sub':     'They fund the event',
-    'sponsors-perks-label': 'Community perks',
-    'sponsors-perks-sub':   'They offer perks to attendees',
+    'sponsors-perks-sub':   'And our Community perks partners, who offer perks to attendees',
     'sponsors-cta':     '→ Become a sponsor',
 
     'team-eyebrow': 'Organizers',

@@ -844,6 +844,16 @@ img.speaker-avatar {
   .sponsor-grid-flat { gap: 12px; }
   .sponsor-slot { flex-basis: calc(50% - 6px); }
 }
+.sponsor-group-label--sub p { font-size: 13px; }
+/* Community perks: ~70% of the main sponsor card size */
+.sponsor-grid-flat--perks { gap: 14px; }
+.sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(14% - 10px); border-radius: 12px; }
+@media (max-width: 900px) {
+  .sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(23.333% - 10px); }
+}
+@media (max-width: 600px) {
+  .sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(35% - 6px); }
+}
 .sponsor-cta {
   margin-top: 40px;
   display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
