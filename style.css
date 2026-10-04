@@ -806,6 +806,12 @@ img.speaker-avatar {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+.sponsor-group-label .section-eyebrow { margin-bottom: 6px; }
+.sponsor-group-label p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
 .sponsor-grid-flat {
   display: flex;
   flex-wrap: wrap;
