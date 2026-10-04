@@ -105,7 +105,7 @@ const i18n = {
     'sponsors-eyebrow': 'Sponsors',
     'sponsors-title':   'They make it <em>possible.</em>',
     'sponsors-desc':    'Thank you to the partners who make this first edition possible.',
-    'sponsors-fin-label':   'Financial sponsors',
+    'sponsors-fin-label':   'Main contributors',
     'sponsors-fin-sub':     'They fund the event',
     'sponsors-perks-sub':   'And our Community perks partners, who offer perks to attendees',
     'sponsors-cta':     '→ Become a sponsor',
