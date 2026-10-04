@@ -101,6 +101,8 @@ const i18nSponsor = {
     "sp-trust-eyebrow":  "They already support us",
     "sp-trust-title":    "companies are already backing us",
     "sp-trust-kinds":    "Financial sponsors and partners: venue, content, logistics.",
+    "sp-trust-fin":     "Main contributors",
+    "sp-trust-perks":   "And our Community perks partners, who offer perks to attendees",
     "sp-trust-sub":      "You will not be the first to trust us.",
 
     /* Slide 11 - Why sponsor */

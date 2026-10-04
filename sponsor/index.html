@@ -387,6 +387,12 @@
       padding: 6px 14px;
     }
 
+    .trust-label { margin: 8px 0 4px; }
+    .trust-label--sub { margin-top: 6px; font-size: 0.72rem; opacity: 0.6; }
+
+    /* Community perks: 80% of the main card size; capped on small screens so all 4 stay on one row */
+    .trust-grid--perks .trust-card { flex-basis: calc(20% - 5px); }
+
     .trust-card img {
       max-width: 100%;
       max-height: 100%;
@@ -676,11 +682,13 @@
     @media (max-width: 768px) {
       .trust-grid { gap: 8px; margin-top: 10px; }
       .trust-card { flex: 0 1 calc(33.333% - 6px); padding: 8px 10px; aspect-ratio: 16 / 8; }
+      .trust-grid--perks .trust-card { flex-basis: calc(24% - 7px); }
     }
 
     @media (max-width: 480px) {
       .trust-grid { gap: 6px; margin-top: 8px; }
       .trust-card { flex: 0 1 calc(33.333% - 4px); padding: 6px 8px; aspect-ratio: 16 / 10; }
+      .trust-grid--perks .trust-card { flex-basis: calc(24% - 5px); }
       .budget-row { grid-template-columns: 106px 1fr 64px; gap: 9px; }
       .budget-label, .budget-amount { font-size: 0.75rem; }
       .budget-split__label { font-size: 0.82rem; }
@@ -759,6 +767,7 @@
         aspect-ratio: auto !important;
         height: 24mm !important;
       }
+      .trust-grid--perks .trust-card { height: 19mm !important; }
 
       .tag {
         background: #fff !important;
@@ -1050,6 +1059,7 @@
         </h2>
         <p class="slide__sub" data-i18n="sp-trust-kinds">Sponsors financiers et partenaires : lieu, contenu, logistique.</p>
         <p class="slide__sub" style="margin-top:5px;" data-i18n="sp-trust-sub">Vous ne serez pas le premier à nous faire confiance.</p>
+        <p class="slide__eyebrow trust-label" data-i18n="sp-trust-fin">Principaux contributeurs</p>
         <div class="trust-grid">
           <div class="trust-card"><img src="../assets/sponsors/dexton_logo.png" alt="Dexton"></div>
           <div class="trust-card"><img src="../assets/sponsors/dremio_logo.svg" alt="Dremio"></div>
@@ -1061,7 +1071,8 @@
           <div class="trust-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
           <div class="trust-card"><img src="../assets/sponsors/wcomply_logo.png" alt="Wcomply"></div>
         </div>
-        <div class="trust-grid" style="margin-top:8px;">
+        <p class="slide__sub trust-label trust-label--sub" data-i18n="sp-trust-perks">Ainsi que nos partenaires Community perks, qui offrent des avantages aux participants</p>
+        <div class="trust-grid trust-grid--perks">
           <div class="trust-card"><img src="../assets/sponsors/devitjobs_logo.svg" alt="DevITjobs"></div>
           <div class="trust-card"><img src="../assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></div>
           <div class="trust-card"><img src="../assets/sponsors/hubl_logo.png" alt="Hubl"></div>
@@ -1125,7 +1136,7 @@
     </div>
   </div>
 
-  <script src="i18n.js?v=20260916"></script>
+  <script src="i18n.js?v=20261009"></script>
   <script>
     // ---- i18n ----
     const i18nFallback = { text: {}, aria: {}, title: document.title };
