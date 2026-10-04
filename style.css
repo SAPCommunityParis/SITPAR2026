@@ -845,14 +845,14 @@ img.speaker-avatar {
   .sponsor-slot { flex-basis: calc(50% - 6px); }
 }
 .sponsor-group-label--sub p { font-size: 13px; }
-/* Community perks: ~70% of the main sponsor card size */
+/* Community perks: ~80% of the main sponsor card size (desktop, mobile; tablet capped so all 4 stay on one row) */
 .sponsor-grid-flat--perks { gap: 14px; }
-.sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(14% - 10px); border-radius: 12px; }
+.sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(16% - 13px); border-radius: 12px; }
 @media (max-width: 900px) {
-  .sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(23.333% - 10px); }
+  .sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(24% - 9px); }
 }
 @media (max-width: 600px) {
-  .sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(35% - 6px); }
+  .sponsor-grid-flat--perks .sponsor-slot { flex-basis: calc(40% - 5px); }
 }
 .sponsor-cta {
   margin-top: 40px;
