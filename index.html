@@ -42,7 +42,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260912b">
+<link rel="stylesheet" href="style.css?v=20261004b">
 
 <!-- Structured data: Event -->
 <script type="application/ld+json">
@@ -156,7 +156,7 @@
         <strong>Vendredi 25 septembre 2026, chez SAP France.</strong>
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="https://photos.google.com/share/AF1QipNGi4O3wMPHom9nM3Tba6KVoOuAAnu4oKTctdTjqD59HQ6-j6v_E8WehEVJ7H6KAg?key=OENyMDRwZkNWaTl5WkNGSkd6TXc0NWNRekx0Y0F3" target="_blank" rel="noopener" data-i18n="hero-cta-photos">📸 Photos de l'édition</a>
+        <a class="btn btn-primary btn-lg" href="#photos" data-i18n="hero-cta-photos">📸 Photos de l'édition</a>
       </div>
     </div>
 
@@ -196,6 +196,44 @@
     <div class="stat"><div class="n">80</div><div class="l" data-i18n="stat-3">PARTICIPANTS MAX</div></div>
     <div class="stat"><div class="n">100%</div><div class="l" data-i18n="stat-4">COMMUNITY-DRIVEN</div></div>
   </div>
+</section>
+
+<!-- ───── PHOTOS ───── -->
+<section class="section" id="photos">
+  <div class="section-head">
+    <div>
+      <div class="section-eyebrow" data-i18n="photos-eyebrow">Photos</div>
+      <h2 class="section-title" data-i18n-html="photos-title">Retour sur<br><em>l'édition.</em></h2>
+    </div>
+    <div class="section-sub" data-i18n="photos-sub">25 septembre 2026 · SAP France, Levallois-Perret</div>
+  </div>
+
+  <div class="photo-grid">
+      <button type="button" class="photo-thumb" data-full="assets/photos/01.webp"><img src="assets/photos/01-thumb.webp" alt="SAP Inside Track Paris 2026, photo 1" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/02.webp"><img src="assets/photos/02-thumb.webp" alt="SAP Inside Track Paris 2026, photo 2" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/03.webp"><img src="assets/photos/03-thumb.webp" alt="SAP Inside Track Paris 2026, photo 3" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/04.webp"><img src="assets/photos/04-thumb.webp" alt="SAP Inside Track Paris 2026, photo 4" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/05.webp"><img src="assets/photos/05-thumb.webp" alt="SAP Inside Track Paris 2026, photo 5" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/06.webp"><img src="assets/photos/06-thumb.webp" alt="SAP Inside Track Paris 2026, photo 6" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/07.webp"><img src="assets/photos/07-thumb.webp" alt="SAP Inside Track Paris 2026, photo 7" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/08.webp"><img src="assets/photos/08-thumb.webp" alt="SAP Inside Track Paris 2026, photo 8" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/09.webp"><img src="assets/photos/09-thumb.webp" alt="SAP Inside Track Paris 2026, photo 9" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/10.webp"><img src="assets/photos/10-thumb.webp" alt="SAP Inside Track Paris 2026, photo 10" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/11.webp"><img src="assets/photos/11-thumb.webp" alt="SAP Inside Track Paris 2026, photo 11" width="600" height="400" loading="lazy"></button>
+      <button type="button" class="photo-thumb" data-full="assets/photos/12.webp"><img src="assets/photos/12-thumb.webp" alt="SAP Inside Track Paris 2026, photo 12" width="600" height="400" loading="lazy"></button>
+  </div>
+
+  <div class="photo-more">
+    <a class="btn btn-primary btn-lg" href="https://photos.google.com/share/AF1QipNGi4O3wMPHom9nM3Tba6KVoOuAAnu4oKTctdTjqD59HQ6-j6v_E8WehEVJ7H6KAg?key=OENyMDRwZkNWaTl5WkNGSkd6TXc0NWNRekx0Y0F3" target="_blank" rel="noopener" data-i18n="photos-cta">→ Accéder à l'album complet</a>
+  </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photos">
+    <button type="button" class="lightbox-btn lightbox-close" data-lb="close">✕</button>
+    <button type="button" class="lightbox-btn lightbox-prev" data-lb="prev">‹</button>
+    <img src="" alt="">
+    <button type="button" class="lightbox-btn lightbox-next" data-lb="next">›</button>
+    <div class="lightbox-count" aria-live="polite"></div>
+  </dialog>
 </section>
 
 <!-- ───── ABOUT ───── -->
@@ -868,7 +906,7 @@
   </div>
 </footer>
 
-<script src="i18n.js?v=20260927b"></script>
-<script src="main.js?v=20260903"></script>
+<script src="i18n.js?v=20261004"></script>
+<script src="main.js?v=20261004"></script>
 </body>
 </html>

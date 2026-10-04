@@ -23,6 +23,11 @@ const i18n = {
     'hero-tagline':       'The French SAP community finally comes home. One day  four tracks  one place. <strong>Friday, September 25, 2026,<br>at SAP France.</strong>',
     'hero-cta-photos':    '📸 Event photos',
 
+    'photos-eyebrow': 'Photos',
+    'photos-title':   'Looking back at<br><em>the event.</em>',
+    'photos-sub':     'September 25, 2026 · SAP France, Levallois-Perret',
+    'photos-cta':     '→ View the full album',
+
     'terminal-edition':   'first edition',
     'terminal-soon':      'OPEN',
 

@@ -32,6 +32,42 @@ function updateThemeLabel() {
   btn.setAttribute('aria-pressed', String(isDark));
 }
 
+// ── Photo lightbox ──
+const lightboxLabels = {
+  fr: { close: 'Fermer', prev: 'Photo précédente', next: 'Photo suivante' },
+  en: { close: 'Close',  prev: 'Previous photo',   next: 'Next photo' },
+};
+(function () {
+  const dlg    = document.getElementById('lightbox');
+  const thumbs = [...document.querySelectorAll('.photo-thumb')];
+  if (!dlg || !thumbs.length) return;
+  const img   = dlg.querySelector('img');
+  const count = dlg.querySelector('.lightbox-count');
+  let index = 0;
+
+  function show(i) {
+    index = (i + thumbs.length) % thumbs.length;
+    const t = thumbs[index];
+    img.src = t.dataset.full;
+    img.alt = t.querySelector('img').alt;
+    count.textContent = (index + 1) + ' / ' + thumbs.length;
+    const l = lightboxLabels[currentLang] || lightboxLabels.fr;
+    dlg.querySelector('[data-lb="close"]').setAttribute('aria-label', l.close);
+    dlg.querySelector('[data-lb="prev"]').setAttribute('aria-label', l.prev);
+    dlg.querySelector('[data-lb="next"]').setAttribute('aria-label', l.next);
+  }
+
+  thumbs.forEach((t, i) => t.addEventListener('click', () => { show(i); dlg.showModal(); }));
+  dlg.querySelector('[data-lb="close"]').addEventListener('click', () => dlg.close());
+  dlg.querySelector('[data-lb="prev"]').addEventListener('click', () => show(index - 1));
+  dlg.querySelector('[data-lb="next"]').addEventListener('click', () => show(index + 1));
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  show(index - 1);
+    if (e.key === 'ArrowRight') show(index + 1);
+  });
+})();
+
 // ── Hamburger menu ──
 (function () {
   const burger = document.querySelector('.nav-burger');

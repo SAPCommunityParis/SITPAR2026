@@ -379,6 +379,78 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.04em;
 }
 
+/* ───── photos ───── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+@media (max-width: 900px) { .photo-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 540px) { .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
+.photo-thumb {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--paper-2);
+  aspect-ratio: 3 / 2;
+  cursor: zoom-in;
+}
+.photo-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .25s;
+}
+.photo-thumb:hover img { transform: scale(1.04); }
+.photo-thumb:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.photo-more { text-align: center; margin-top: 36px; }
+#photos { scroll-margin-top: 72px; }
+
+.lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+.lightbox[open] { display: flex; align-items: center; justify-content: center; }
+.lightbox::backdrop { background: rgba(8, 20, 40, 0.92); }
+.lightbox img {
+  max-width: 92vw;
+  max-height: 84vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.lightbox-btn {
+  position: absolute;
+  width: 44px; height: 44px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: rgba(8, 20, 40, 0.6);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox-btn:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.lightbox-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.lightbox-close { top: 16px; right: 16px; }
+.lightbox-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 16px; top: 50%; transform: translateY(-50%); }
+.lightbox-count {
+  position: absolute;
+  bottom: 14px; left: 0; right: 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* ───── about ───── */
 .about {
   background: var(--paper-2);
