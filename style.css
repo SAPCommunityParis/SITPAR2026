@@ -1,9 +1,7 @@
 :root {
   --ink: #0f2a52;
-  --ink-2: #1a4b8c;
   --paper: #fbfaf6;
   --paper-2: #f3eedf;
-  --stripe: #e8e0c8;
   --gold: #f0a020;
   --gold-soft: #fde8b8;
   --muted: #6b7a92;
@@ -950,10 +948,8 @@ img.speaker-avatar {
 /* ───── dark mode ───── */
 [data-theme="dark"] {
   --ink:       #cdd9f0;
-  --ink-2:     #8aaed8;
   --paper:     #0b1929;
   --paper-2:   #0e1f34;
-  --stripe:    #142035;
   --gold:      #f0a020;
   --gold-soft: #2a1a00;
   --muted:     #6d84a8;

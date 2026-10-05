@@ -296,9 +296,7 @@
       text-align: center;
     }
 
-    .slide--dark  .s-card,
-    .slide--navy2 .s-card,
-    .slide--gold  .s-card {
+    .slide--dark .s-card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.08);
     }
@@ -366,8 +364,6 @@
       color: var(--gold);
       opacity: 0.75;
     }
-
-    .sit-card--wide { grid-column: span 2; }
 
     /* ---- Sponsor logos (social proof) ---- */
     .sponsor-grid {
@@ -667,7 +663,6 @@
       .slide { padding: 64px 20px 48px; }
       .slide-grid--3, .slide-grid--4 { grid-template-columns: repeat(2, 1fr); }
       .sit-grid { grid-template-columns: 1fr 1fr; }
-      .sit-card--wide { grid-column: span 2; }
       .deck-dots { display: none; }
       .deck-brand-name { display: none; }
     }
@@ -676,7 +671,6 @@
       .slide-grid--2 { grid-template-columns: 1fr 1fr; }
       .slide-grid--3, .slide-grid--4 { grid-template-columns: repeat(2, 1fr); }
       .sit-grid { grid-template-columns: 1fr; }
-      .sit-card--wide { grid-column: span 1; }
     }
 
     @media (max-width: 768px) {
