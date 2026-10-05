@@ -42,7 +42,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261010">
+<link rel="stylesheet" href="style.css?v=20261011">
 
 <!-- Structured data: Event -->
 <script type="application/ld+json">
@@ -123,21 +123,21 @@
 </nav>
 
 <!-- ───── HERO ───── -->
-<section class="hero" id="register">
+<section class="hero" id="hero">
   <div class="hero-strip">
     <div class="hero-strip-track">
-      <span data-i18n="strip-1">PREMIÈRE ÉDITION FRANCE</span>
-      <span data-i18n="strip-2">25 SEPT. 2026</span>
-      <span data-i18n="strip-3">SAP FRANCE · LEVALLOIS</span>
-      <span data-i18n="strip-4">80 PLACES</span>
-      <span data-i18n="strip-5">4 TRACKS</span>
-      <span data-i18n="strip-6">BY THE COMMUNITY, FOR THE COMMUNITY</span>
-      <span data-i18n="strip-1">PREMIÈRE ÉDITION FRANCE</span>
-      <span data-i18n="strip-2">25 SEPT. 2026</span>
-      <span data-i18n="strip-3">SAP FRANCE · LEVALLOIS</span>
-      <span data-i18n="strip-4">80 PLACES</span>
-      <span data-i18n="strip-5">4 TRACKS</span>
-      <span data-i18n="strip-6">BY THE COMMUNITY, FOR THE COMMUNITY</span>
+      <span data-i18n="strip-edition">PREMIÈRE ÉDITION FRANCE</span>
+      <span data-i18n="strip-date">25 SEPT. 2026</span>
+      <span data-i18n="strip-venue">SAP FRANCE · LEVALLOIS</span>
+      <span data-i18n="strip-seats">80 PLACES</span>
+      <span data-i18n="strip-tracks">4 TRACKS</span>
+      <span data-i18n="strip-motto">BY THE COMMUNITY, FOR THE COMMUNITY</span>
+      <span data-i18n="strip-edition">PREMIÈRE ÉDITION FRANCE</span>
+      <span data-i18n="strip-date">25 SEPT. 2026</span>
+      <span data-i18n="strip-venue">SAP FRANCE · LEVALLOIS</span>
+      <span data-i18n="strip-seats">80 PLACES</span>
+      <span data-i18n="strip-tracks">4 TRACKS</span>
+      <span data-i18n="strip-motto">BY THE COMMUNITY, FOR THE COMMUNITY</span>
     </div>
   </div>
 
@@ -178,7 +178,7 @@
         <div><span class="arr">›</span> 03 Business Processes</div>
         <div><span class="arr">›</span> 04 Hands-on Labs</div>
       </div>
-      <div style="margin-top:10px"><span class="prompt">$</span> register <span class="badge" data-i18n="terminal-soon">CLOSED</span></div>
+      <div style="margin-top:10px"><span class="prompt">$</span> register <span class="badge" data-i18n="terminal-register-status">CLOSED</span></div>
     </div>
   </div>
 </section>
@@ -186,10 +186,10 @@
 <!-- ───── STATS BAR ───── -->
 <section class="stats">
   <div class="stats-inner">
-    <div class="stat"><div class="n">01</div><div class="l" data-i18n="stat-1">PREMIÈRE ÉDITION</div></div>
-    <div class="stat"><div class="n">04</div><div class="l" data-i18n="stat-2">TRACKS PARALLÈLES</div></div>
-    <div class="stat"><div class="n">80</div><div class="l" data-i18n="stat-3">PARTICIPANTS MAX</div></div>
-    <div class="stat"><div class="n">100%</div><div class="l" data-i18n="stat-4">COMMUNITY-DRIVEN</div></div>
+    <div><div class="stat-value">01</div><div class="stat-label" data-i18n="stat-edition">PREMIÈRE ÉDITION</div></div>
+    <div><div class="stat-value">04</div><div class="stat-label" data-i18n="stat-tracks">TRACKS PARALLÈLES</div></div>
+    <div><div class="stat-value">80</div><div class="stat-label" data-i18n="stat-attendees">PARTICIPANTS MAX</div></div>
+    <div><div class="stat-value">100%</div><div class="stat-label" data-i18n="stat-community">COMMUNITY-DRIVEN</div></div>
   </div>
 </section>
 
@@ -416,11 +416,11 @@
 </section>
 
 <!-- ───── SPEAKERS & CFP ───── -->
-<section class="cfp" id="speakers">
-  <div class="cfp-inner">
-    <div class="cfp-eyebrow" data-i18n="speakers-eyebrow">★ CALL FOR SPEAKERS ★</div>
-    <h2 class="cfp-title" data-i18n-html="speakers-title">Tu veux <em>parler ?</em><br>On t'attend.</h2>
-    <p class="cfp-sub" data-i18n="cfp-sub">
+<section class="speakers" id="speakers">
+  <div class="speakers-inner">
+    <div class="speakers-eyebrow" data-i18n="speakers-eyebrow">★ CALL FOR SPEAKERS ★</div>
+    <h2 class="speakers-title" data-i18n-html="speakers-title">Tu veux <em>parler ?</em><br>On t'attend.</h2>
+    <p class="speakers-sub" data-i18n="speakers-sub">
       C'est la première édition française : on cherche des voix nouvelles, des retours d'expérience honnêtes,
       des démos qui plantent (et qu'on répare en live), des idées un peu folles. Pas de buzzwords, pas de slideware.
       Si c'est ta première prise de parole, c'est le moment idéal.
@@ -669,10 +669,10 @@
       </div>
     </div>
 
-    <div class="cfp-formats">
-      <div class="fmt"><div class="d">30 min</div><div class="l">TALK</div></div>
-      <div class="fmt"><div class="d">60 min</div><div class="l">DEEP DIVE</div></div>
-      <div class="fmt"><div class="d">90 min</div><div class="l">HANDS-ON</div></div>
+    <div class="speakers-formats">
+      <div class="talk-format"><div class="talk-format-duration">30 min</div><div class="talk-format-label">TALK</div></div>
+      <div class="talk-format"><div class="talk-format-duration">60 min</div><div class="talk-format-label">DEEP DIVE</div></div>
+      <div class="talk-format"><div class="talk-format-duration">90 min</div><div class="talk-format-label">HANDS-ON</div></div>
     </div>
   </div>
 </section>
@@ -726,25 +726,25 @@
       <div class="section-eyebrow" data-i18n="sponsors-fin-label">Principaux contributeurs</div>
       <p data-i18n="sponsors-fin-sub">Ils financent l'événement</p>
     </div>
-    <div class="sponsor-grid-flat" style="margin:20px 0 0;">
-      <div class="sponsor-slot"><a href="https://dextonconsulting.com/" target="_blank" rel="noopener"><img src="assets/sponsors/dexton_logo.png" alt="Dexton"></a></div>
-      <div class="sponsor-slot"><a href="https://www.dremio.com" target="_blank" rel="noopener"><img src="assets/sponsors/dremio_logo.svg" alt="Dremio"></a></div>
-      <div class="sponsor-slot"><a href="https://hrc-consulting.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/hrc_logo.png" alt="HRC"></a></div>
-      <div class="sponsor-slot"><a href="https://www.malt.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/malt_logo.png" alt="Malt"></a></div>
-      <div class="sponsor-slot"><a href="https://www.linkedin.com/in/mounia-h-nini/" target="_blank" rel="noopener"><img src="assets/sponsors/moonbees_logo.png" alt="Moonbees"></a></div>
-      <div class="sponsor-slot"><a href="https://neptune-software.com/" target="_blank" rel="noopener"><img src="assets/sponsors/neptune_logo.png" alt="Neptune Software"></a></div>
-      <div class="sponsor-slot"><a href="https://www.sap.com/france/index.html" target="_blank" rel="noopener"><img src="assets/sponsors/sap_logo.png" alt="SAP"></a></div>
-      <div class="sponsor-slot"><a href="https://www.vinci-energies.com/" target="_blank" rel="noopener"><img src="assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></a></div>
-      <div class="sponsor-slot"><a href="https://www.wcomply.com/" target="_blank" rel="noopener"><img src="assets/sponsors/wcomply_logo.png" alt="Wcomply"></a></div>
+    <div class="sponsor-grid" style="margin:20px 0 0;">
+      <div class="sponsor-card"><a href="https://dextonconsulting.com/" target="_blank" rel="noopener"><img src="assets/sponsors/dexton_logo.png" alt="Dexton"></a></div>
+      <div class="sponsor-card"><a href="https://www.dremio.com" target="_blank" rel="noopener"><img src="assets/sponsors/dremio_logo.svg" alt="Dremio"></a></div>
+      <div class="sponsor-card"><a href="https://hrc-consulting.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/hrc_logo.png" alt="HRC"></a></div>
+      <div class="sponsor-card"><a href="https://www.malt.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/malt_logo.png" alt="Malt"></a></div>
+      <div class="sponsor-card"><a href="https://www.linkedin.com/in/mounia-h-nini/" target="_blank" rel="noopener"><img src="assets/sponsors/moonbees_logo.png" alt="Moonbees"></a></div>
+      <div class="sponsor-card"><a href="https://neptune-software.com/" target="_blank" rel="noopener"><img src="assets/sponsors/neptune_logo.png" alt="Neptune Software"></a></div>
+      <div class="sponsor-card"><a href="https://www.sap.com/france/index.html" target="_blank" rel="noopener"><img src="assets/sponsors/sap_logo.png" alt="SAP"></a></div>
+      <div class="sponsor-card"><a href="https://www.vinci-energies.com/" target="_blank" rel="noopener"><img src="assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></a></div>
+      <div class="sponsor-card"><a href="https://www.wcomply.com/" target="_blank" rel="noopener"><img src="assets/sponsors/wcomply_logo.png" alt="Wcomply"></a></div>
     </div>
     <div class="sponsor-group-label sponsor-group-label--sub" style="margin-top:48px;">
       <p data-i18n="sponsors-perks-sub">Ainsi que nos partenaires Community perks, qui offrent des avantages aux participants</p>
     </div>
-    <div class="sponsor-grid-flat sponsor-grid-flat--perks" style="margin:20px 0 40px;">
-      <div class="sponsor-slot"><a href="https://devitjobs.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/devitjobs_logo.svg" alt="DevITjobs"></a></div>
-      <div class="sponsor-slot"><a href="https://www.espresso-tutorials.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></a></div>
-      <div class="sponsor-slot"><a href="https://www.hubl.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/hubl_logo.png" alt="Hubl"></a></div>
-      <div class="sponsor-slot"><a href="https://www.sap-press.com/" target="_blank" rel="noopener"><img src="assets/sponsors/sap-press_logo.png" alt="SAP Press"></a></div>
+    <div class="sponsor-grid sponsor-grid--perks" style="margin:20px 0 40px;">
+      <div class="sponsor-card"><a href="https://devitjobs.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/devitjobs_logo.svg" alt="DevITjobs"></a></div>
+      <div class="sponsor-card"><a href="https://www.espresso-tutorials.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></a></div>
+      <div class="sponsor-card"><a href="https://www.hubl.fr/" target="_blank" rel="noopener"><img src="assets/sponsors/hubl_logo.png" alt="Hubl"></a></div>
+      <div class="sponsor-card"><a href="https://www.sap-press.com/" target="_blank" rel="noopener"><img src="assets/sponsors/sap-press_logo.png" alt="SAP Press"></a></div>
     </div>
 
     <div class="sponsor-cta">
@@ -856,7 +856,7 @@
       <ul>
         <li><a href="#about" data-i18n="footer-nav-about">À propos</a></li>
         <li><a href="#tracks" data-i18n="footer-nav-tracks">Programme</a></li>
-        <li><a href="#speakers" data-i18n="footer-nav-cfp">Call for Speakers</a></li>
+        <li><a href="#speakers" data-i18n="footer-nav-speakers">Call for Speakers</a></li>
         <li><a href="#venue" data-i18n="footer-nav-venue">Lieu &amp; accès</a></li>
       </ul>
     </div>
@@ -880,7 +880,7 @@
   </div>
 </footer>
 
-<script src="i18n.js?v=20261010"></script>
-<script src="main.js?v=20261005"></script>
+<script src="translations.js?v=20261011"></script>
+<script src="main.js?v=20261011"></script>
 </body>
 </html>

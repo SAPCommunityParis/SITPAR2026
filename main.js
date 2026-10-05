@@ -88,7 +88,7 @@ const lightboxLabels = {
 })();
 
 // ── Language switching ──
-// The HTML is the FR source of truth. i18n.js only holds EN overrides.
+// The HTML is the FR source of truth. translations.js only holds EN overrides.
 // We snapshot the rendered FR content once, then swap to EN and back.
 // A fresh visit always starts in FR (no localStorage restore) — but a link
 // clicked from the EN version of this page or of speaker/sponsor carries
@@ -108,9 +108,9 @@ document.querySelectorAll('[data-i18n-html]').forEach(el => {
 
 function setLang(lang) {
   currentLang = lang;
-  // FR → restore the original HTML; other langs → use the overrides in i18n.js
+  // FR → restore the original HTML; other langs → use the overrides in translations.js
   const dict = (lang === 'fr') ? null
-             : (typeof i18n !== 'undefined' ? i18n[lang] : null);
+             : (typeof homeTranslations !== 'undefined' ? homeTranslations[lang] : null);
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const k = el.dataset.i18n;

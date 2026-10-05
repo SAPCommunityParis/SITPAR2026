@@ -1,4 +1,4 @@
-const i18n = {
+const homeTranslations = {
   en: {
     'skip-link':        'Skip to content',
     'nav-about':        'About',
@@ -11,12 +11,12 @@ const i18n = {
     'hero-meta':   'EDITION N°01 · COMMUNITY-DRIVEN · BY SAP PEOPLE FOR SAP PEOPLE',
     'hero-title':  'SAP Inside Track<br><em>Paris 2026.</em>',
 
-    'strip-1': 'FIRST FRENCH EDITION',
-    'strip-2': 'SEPT. 25, 2026',
-    'strip-3': 'SAP FRANCE · LEVALLOIS',
-    'strip-4': '80 SPOTS',
-    'strip-5': '4 TRACKS',
-    'strip-6': 'BY THE COMMUNITY, FOR THE COMMUNITY',
+    'strip-edition': 'FIRST FRENCH EDITION',
+    'strip-date': 'SEPT. 25, 2026',
+    'strip-venue': 'SAP FRANCE · LEVALLOIS',
+    'strip-seats': '80 SPOTS',
+    'strip-tracks': '4 TRACKS',
+    'strip-motto': 'BY THE COMMUNITY, FOR THE COMMUNITY',
 
     'hero-tagline':       'The French SAP community finally comes home. One day  four tracks  one place. <strong>Friday, September 25, 2026,<br>at SAP France.</strong>',
     'hero-cta-photos':    '📸 Event photos',
@@ -27,14 +27,14 @@ const i18n = {
     'photos-cta':     '→ View the full album',
 
     'terminal-edition':   'first edition',
-    'terminal-soon':      'CLOSED',
+    'terminal-register-status':      'CLOSED',
 
     'terminal-status':    'completed · Sept. 25, 2026',
 
-    'stat-1': 'FIRST EDITION',
-    'stat-2': 'PARALLEL TRACKS',
-    'stat-3': 'MAX ATTENDEES',
-    'stat-4': 'COMMUNITY-DRIVEN',
+    'stat-edition': 'FIRST EDITION',
+    'stat-tracks': 'PARALLEL TRACKS',
+    'stat-attendees': 'MAX ATTENDEES',
+    'stat-community': 'COMMUNITY-DRIVEN',
 
     'about-eyebrow': 'About',
     'about-title':   'What\'s an<br><em>Inside Track?</em>',
@@ -77,7 +77,7 @@ const i18n = {
     'speakers-eyebrow':   '★ CALL FOR SPEAKERS ★',
     'speakers-title':     'Want to <em>speak?</em><br>We\'re waiting.',
 
-    'cfp-sub':   'This is the first French edition: we\'re looking for fresh voices, honest experience reports, demos that crash (and get fixed live), slightly wild ideas. No buzzwords, no slideware. If it\'s your first time speaking, this is the perfect moment.',
+    'speakers-sub':   'This is the first French edition: we\'re looking for fresh voices, honest experience reports, demos that crash (and get fixed live), slightly wild ideas. No buzzwords, no slideware. If it\'s your first time speaking, this is the perfect moment.',
 
     'venue-eyebrow':      'Venue',
     'venue-title':        '<em>SAP</em>&nbsp;France.',
@@ -129,7 +129,7 @@ const i18n = {
     'footer-desc':        'SAP Inside Track Paris 2026 · Edition n°01<br>Friday, September 25, 2026 · Levallois-Perret.',
     'footer-nav-about':   'About',
     'footer-nav-tracks':  'Schedule',
-    'footer-nav-cfp':     'Call for Speakers',
+    'footer-nav-speakers':     'Call for Speakers',
     'footer-nav-venue':   'Venue & directions',
     'footer-community':   'COMMUNITY',
     'footer-copyright':   '© 2026 SAP Inside Track Paris · Organized by the community',

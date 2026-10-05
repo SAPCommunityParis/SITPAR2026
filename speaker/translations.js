@@ -1,4 +1,4 @@
-const i18nSpeaker = {
+const speakerTranslations = {
   en: {
     "skip-link":    "Skip to content",
     "nav-about":    "About",

@@ -370,7 +370,7 @@
     .sit-card--wide { grid-column: span 2; }
 
     /* ---- Sponsor logos (social proof) ---- */
-    .trust-grid {
+    .sponsor-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -378,7 +378,7 @@
       margin-top: 2px;
     }
 
-    .trust-card {
+    .sponsor-card {
       flex: 0 1 calc(25% - 6px);
       aspect-ratio: 16 / 5.5;
       display: flex;
@@ -387,13 +387,13 @@
       padding: 6px 14px;
     }
 
-    .trust-label { margin: 8px 0 4px; }
-    .trust-label--sub { margin-top: 6px; font-size: 0.72rem; opacity: 0.6; }
+    .sponsor-group-label { margin: 8px 0 4px; }
+    .sponsor-group-label--sub { margin-top: 6px; font-size: 0.72rem; opacity: 0.6; }
 
     /* Community perks: 80% of the main card size; capped on small screens so all 4 stay on one row */
-    .trust-grid--perks .trust-card { flex-basis: calc(20% - 5px); }
+    .sponsor-grid--perks .sponsor-card { flex-basis: calc(20% - 5px); }
 
-    .trust-card img {
+    .sponsor-card img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
@@ -680,15 +680,15 @@
     }
 
     @media (max-width: 768px) {
-      .trust-grid { gap: 8px; margin-top: 10px; }
-      .trust-card { flex: 0 1 calc(33.333% - 6px); padding: 8px 10px; aspect-ratio: 16 / 8; }
-      .trust-grid--perks .trust-card { flex-basis: calc(24% - 7px); }
+      .sponsor-grid { gap: 8px; margin-top: 10px; }
+      .sponsor-card { flex: 0 1 calc(33.333% - 6px); padding: 8px 10px; aspect-ratio: 16 / 8; }
+      .sponsor-grid--perks .sponsor-card { flex-basis: calc(24% - 7px); }
     }
 
     @media (max-width: 480px) {
-      .trust-grid { gap: 6px; margin-top: 8px; }
-      .trust-card { flex: 0 1 calc(33.333% - 4px); padding: 6px 8px; aspect-ratio: 16 / 10; }
-      .trust-grid--perks .trust-card { flex-basis: calc(24% - 5px); }
+      .sponsor-grid { gap: 6px; margin-top: 8px; }
+      .sponsor-card { flex: 0 1 calc(33.333% - 4px); padding: 6px 8px; aspect-ratio: 16 / 10; }
+      .sponsor-grid--perks .sponsor-card { flex-basis: calc(24% - 5px); }
       .budget-row { grid-template-columns: 106px 1fr 64px; gap: 9px; }
       .budget-label, .budget-amount { font-size: 0.75rem; }
       .budget-split__label { font-size: 0.82rem; }
@@ -756,18 +756,18 @@
       .slide__sub     { font-size: 10.5pt !important; }
       .slide__eyebrow { font-size: 8pt !important; }
 
-      .s-card, a.sit-card, .deadline-box, .trust-card {
+      .s-card, a.sit-card, .deadline-box, .sponsor-card {
         background: #fff !important;
         border: 1px solid #c8c8c8 !important;
         break-inside: avoid;
         page-break-inside: avoid;
       }
 
-      .trust-card {
+      .sponsor-card {
         aspect-ratio: auto !important;
         height: 24mm !important;
       }
-      .trust-grid--perks .trust-card { height: 19mm !important; }
+      .sponsor-grid--perks .sponsor-card { height: 19mm !important; }
 
       .tag {
         background: #fff !important;
@@ -888,33 +888,33 @@
     <!-- ③ L'événement -->
     <section class="slide slide--navy2" data-slide="2">
       <div class="slide-inner" style="max-width:720px;">
-        <p class="slide__eyebrow" data-i18n="sp2-eyebrow">L'événement</p>
+        <p class="slide__eyebrow" data-i18n="sp-event-eyebrow">L'événement</p>
         <h2 class="slide__title">
-          <span data-i18n="sp2-title-main">Un événement de la communauté,</span><br>
-          <span class="gold" data-i18n="sp2-title-accent">pour la communauté</span>
+          <span data-i18n="sp-event-title-main">Un événement de la communauté,</span><br>
+          <span class="gold" data-i18n="sp-event-title-accent">pour la communauté</span>
         </h2>
-        <p class="slide__sub" data-i18n="sp2-desc">Le SAP Inside Track est un événement international organisé par la communauté SAP, pour la communauté. La première édition parisienne se tiendra le 25 septembre 2026, au siège de SAP France, avec une journée complète de conférences, démonstrations et retours d'expérience.</p>
-        <p class="slide__sub" style="margin-top:14px; font-style:italic; opacity:.5;" data-i18n="sp2-note">Entièrement porté par des bénévoles, avec le soutien de SAP France.</p>
+        <p class="slide__sub" data-i18n="sp-event-desc">Le SAP Inside Track est un événement international organisé par la communauté SAP, pour la communauté. La première édition parisienne se tiendra le 25 septembre 2026, au siège de SAP France, avec une journée complète de conférences, démonstrations et retours d'expérience.</p>
+        <p class="slide__sub" style="margin-top:14px; font-style:italic; opacity:.5;" data-i18n="sp-event-note">Entièrement porté par des bénévoles, avec le soutien de SAP France.</p>
       </div>
     </section>
 
     <!-- ④ Participants -->
     <section class="slide slide--light" data-slide="3">
       <div class="slide-inner">
-        <p class="slide__eyebrow" data-i18n="sp3-eyebrow">L'audience</p>
+        <p class="slide__eyebrow" data-i18n="sp-audience-eyebrow">L'audience</p>
         <h2 class="slide__title">
           <span class="gold stat-big">~80</span>
-          <span data-i18n="sp3-title">participants attendus</span>
+          <span data-i18n="sp-audience-title">participants attendus</span>
         </h2>
         <div class="slide-grid slide-grid--4">
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p1">Clients SAP</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p2">Intégrateurs</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p3">Partenaires</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p4">SAP</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p5">Développeurs</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p6">Architectes</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p7">Consultants</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp3-p8">Managers</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p1">Clients SAP</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p2">Intégrateurs</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p3">Partenaires</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p4">SAP</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p5">Développeurs</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p6">Architectes</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p7">Consultants</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-audience-p8">Managers</div></div>
         </div>
       </div>
     </section>
@@ -922,8 +922,8 @@
     <!-- ⑤ Programme -->
     <section class="slide slide--dark" data-slide="4">
       <div class="slide-inner">
-        <p class="slide__eyebrow" data-i18n="sp4-eyebrow">Le programme</p>
-        <h2 class="slide__title" data-i18n="sp4-title">Une journée, différents thèmes</h2>
+        <p class="slide__eyebrow" data-i18n="sp-program-eyebrow">Le programme</p>
+        <h2 class="slide__title" data-i18n="sp-program-title">Une journée, différents thèmes</h2>
         <div class="tag-cloud">
           <span class="tag">Application Development</span>
           <span class="tag">Clean Core</span>
@@ -933,27 +933,27 @@
           <span class="tag">Business Processes</span>
         </div>
         <div class="slide-grid slide-grid--4" style="max-width:680px; margin:22px auto 0;">
-          <div class="s-card"><div class="s-card__label" data-i18n="sp4-f1">Conférences</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp4-f2">Démonstrations</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp4-f3">Retours d'expérience</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp4-f4">Ateliers</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-program-f1">Conférences</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-program-f2">Démonstrations</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-program-f3">Retours d'expérience</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-program-f4">Ateliers</div></div>
         </div>
-        <p class="slide__sub" style="margin-top:20px; font-size:.83rem; opacity:.5;" data-i18n="sp4-bonus">La veille : SAP CodeJam hands-on animé par DJ Adams (SAP Developer Advocate)</p>
+        <p class="slide__sub" style="margin-top:20px; font-size:.83rem; opacity:.5;" data-i18n="sp-program-bonus">La veille : SAP CodeJam hands-on animé par DJ Adams (SAP Developer Advocate)</p>
       </div>
     </section>
 
     <!-- ⑥ Speakers -->
     <section class="slide slide--light" data-slide="5">
       <div class="slide-inner" style="max-width:740px;">
-        <p class="slide__eyebrow" data-i18n="sp5-eyebrow">Les speakers</p>
-        <h2 class="slide__title" data-i18n="sp5-title">Des experts reconnus dans l'écosystème SAP</h2>
+        <p class="slide__eyebrow" data-i18n="sp-speakers-eyebrow">Les speakers</p>
+        <h2 class="slide__title" data-i18n="sp-speakers-title">Des experts reconnus dans l'écosystème SAP</h2>
         <div class="slide-grid slide-grid--3">
-          <div class="s-card"><div class="s-card__label" data-i18n="sp5-s1">SAP Champions</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp5-s2">SAP Developer Advocates</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp5-s3">Experts SAP</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp5-s4">Partenaires</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp5-s5">Clients</div></div>
-          <div class="s-card"><div class="s-card__label" data-i18n="sp5-s6">Intervenants FR &amp; internationaux</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-speakers-s1">SAP Champions</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-speakers-s2">SAP Developer Advocates</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-speakers-s3">Experts SAP</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-speakers-s4">Partenaires</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-speakers-s5">Clients</div></div>
+          <div class="s-card"><div class="s-card__label" data-i18n="sp-speakers-s6">Intervenants FR &amp; internationaux</div></div>
         </div>
       </div>
     </section>
@@ -961,22 +961,22 @@
     <!-- ⑦ Contreparties -->
     <section class="slide slide--dark" data-slide="6">
       <div class="slide-inner" style="max-width:740px;">
-        <p class="slide__eyebrow" data-i18n="sp6-eyebrow">Contreparties</p>
-        <h2 class="slide__title" data-i18n="sp6-title">Ce que vous obtenez</h2>
-        <p class="slide__sub" data-i18n="sp6-sub">Chaque sponsor bénéficie des mêmes contreparties.</p>
-        <p class="slide__sub" style="margin-top:6px;" data-i18n="sp6-sub2">Pas de niveaux Bronze / Silver / Gold.</p>
+        <p class="slide__eyebrow" data-i18n="sp-benefits-eyebrow">Contreparties</p>
+        <h2 class="slide__title" data-i18n="sp-benefits-title">Ce que vous obtenez</h2>
+        <p class="slide__sub" data-i18n="sp-benefits-sub">Chaque sponsor bénéficie des mêmes contreparties.</p>
+        <p class="slide__sub" style="margin-top:6px;" data-i18n="sp-benefits-sub2">Pas de niveaux Bronze / Silver / Gold.</p>
         <div class="slide-grid slide-grid--3" style="margin-top:22px;">
           <div class="s-card" style="text-align:left; padding:20px 18px;">
-            <div class="s-card__title" data-i18n="sp6-b1-title">Visibilité</div>
-            <div class="s-card__desc" data-i18n="sp6-b1-desc">Logo sur le site, les emails participants, les supports de communication et les kakémonos</div>
+            <div class="s-card__title" data-i18n="sp-benefits-b1-title">Visibilité</div>
+            <div class="s-card__desc" data-i18n="sp-benefits-b1-desc">Logo sur le site, les emails participants, les supports de communication et les kakémonos</div>
           </div>
           <div class="s-card" style="text-align:left; padding:20px 18px;">
-            <div class="s-card__title" data-i18n="sp6-b2-title">Réseaux sociaux</div>
-            <div class="s-card__desc" data-i18n="sp6-b2-desc">Mentions LinkedIn avant et après l'événement, avec tag du sponsor</div>
+            <div class="s-card__title" data-i18n="sp-benefits-b2-title">Réseaux sociaux</div>
+            <div class="s-card__desc" data-i18n="sp-benefits-b2-desc">Mentions LinkedIn avant et après l'événement, avec tag du sponsor</div>
           </div>
           <div class="s-card" style="text-align:left; padding:20px 18px;">
-            <div class="s-card__title" data-i18n="sp6-b4-title">Invitations &amp; accès</div>
-            <div class="s-card__desc" data-i18n="sp6-b4-desc">3 invitations et accès aux enregistrements vidéo</div>
+            <div class="s-card__title" data-i18n="sp-benefits-b4-title">Invitations &amp; accès</div>
+            <div class="s-card__desc" data-i18n="sp-benefits-b4-desc">3 invitations et accès aux enregistrements vidéo</div>
           </div>
         </div>
       </div>
@@ -985,20 +985,20 @@
     <!-- ⑧ Notre approche -->
     <section class="slide slide--light" data-slide="7">
       <div class="slide-inner" style="max-width:620px;">
-        <p class="slide__eyebrow" data-i18n="sp7-eyebrow">Notre approche</p>
-        <h2 class="slide__title" data-i18n="sp7-title">Un modèle simple et transparent</h2>
+        <p class="slide__eyebrow" data-i18n="sp-approach-eyebrow">Notre approche</p>
+        <h2 class="slide__title" data-i18n="sp-approach-title">Un modèle simple et transparent</h2>
         <div class="step-list">
           <div class="step-item">
             <div class="step-num">1</div>
-            <p class="step-text" data-i18n="sp7-step1">Les sponsors se répartissent les dépenses de l'événement à parts égales.</p>
+            <p class="step-text" data-i18n="sp-approach-step1">Les sponsors se répartissent les dépenses de l'événement à parts égales.</p>
           </div>
           <div class="step-item">
             <div class="step-num">2</div>
-            <p class="step-text" data-i18n="sp7-step2">Les fournisseurs facturent directement chaque sponsor pour une répartition équilibrée.</p>
+            <p class="step-text" data-i18n="sp-approach-step2">Les fournisseurs facturent directement chaque sponsor pour une répartition équilibrée.</p>
           </div>
           <div class="step-item">
             <div class="step-num">3</div>
-            <p class="step-text" data-i18n="sp7-step3">L'objectif n'est pas de générer un bénéfice, seulement de proposer un événement de qualité.</p>
+            <p class="step-text" data-i18n="sp-approach-step3">L'objectif n'est pas de générer un bénéfice, seulement de proposer un événement de qualité.</p>
           </div>
         </div>
       </div>
@@ -1007,76 +1007,76 @@
     <!-- ⑨ Budget -->
     <section class="slide slide--gold" data-slide="8">
       <div class="slide-inner" style="max-width:680px;">
-        <p class="slide__eyebrow" data-i18n="sp8-eyebrow">Budget prévisionnel</p>
+        <p class="slide__eyebrow" data-i18n="sp-budget-eyebrow">Budget prévisionnel</p>
         <p class="slide__bignum">~12 000 €</p>
-        <p class="slide__title" style="font-size:1.15rem; margin:6px 0 0; font-weight:500; opacity:.72;" data-i18n="sp8-sub">HT, coût total de l'événement</p>
+        <p class="slide__title" style="font-size:1.15rem; margin:6px 0 0; font-weight:500; opacity:.72;" data-i18n="sp-budget-sub">HT, coût total de l'événement</p>
 
         <div class="budget-list">
           <div class="budget-row">
-            <span class="budget-label" data-i18n="sp8-b1">Restauration</span>
+            <span class="budget-label" data-i18n="sp-budget-b1">Restauration</span>
             <span class="budget-track"><span style="width:52.5%"></span></span>
             <span class="budget-amount">6 300 €</span>
           </div>
           <div class="budget-row">
-            <span class="budget-label" data-i18n="sp8-b2">Captation vidéo</span>
+            <span class="budget-label" data-i18n="sp-budget-b2">Captation vidéo</span>
             <span class="budget-track"><span style="width:20.8%"></span></span>
             <span class="budget-amount">2 500 €</span>
           </div>
           <div class="budget-row">
-            <span class="budget-label" data-i18n="sp8-b3">Goodies</span>
+            <span class="budget-label" data-i18n="sp-budget-b3">Goodies</span>
             <span class="budget-track"><span style="width:15.0%"></span></span>
             <span class="budget-amount">1 800 €</span>
           </div>
           <div class="budget-row">
-            <span class="budget-label" data-i18n="sp8-b4">Signalétique</span>
+            <span class="budget-label" data-i18n="sp-budget-b4">Signalétique</span>
             <span class="budget-track"><span style="width:7.5%"></span></span>
             <span class="budget-amount">900 €</span>
           </div>
           <div class="budget-row">
-            <span class="budget-label" data-i18n="sp8-b5">Badges et lanyards</span>
+            <span class="budget-label" data-i18n="sp-budget-b5">Badges et lanyards</span>
             <span class="budget-track"><span style="width:4.2%"></span></span>
             <span class="budget-amount">500 €</span>
           </div>
         </div>
 
         <div class="budget-split">
-          <span class="budget-split__label" data-i18n="sp8-split">Objectif : 6 sponsors financiers</span>
-          <span class="budget-split__amount">~2 000 € HT <span data-i18n="sp8-split-max">maximum</span></span>
+          <span class="budget-split__label" data-i18n="sp-budget-split">Objectif : 6 sponsors financiers</span>
+          <span class="budget-split__amount">~2 000 € HT <span data-i18n="sp-budget-split-max">maximum</span></span>
         </div>
-        <p class="slide__sub" style="margin-top:10px; font-size:.79rem; opacity:.55;" data-i18n="sp8-more">Chaque sponsor supplémentaire allège la part de tous.</p>
-        <p class="slide__sub" style="margin-top:5px; font-size:.75rem; opacity:.38;" data-i18n="sp8-note">Le CodeJam du 24 septembre est hors périmètre, pris en charge par Vinci Energies.</p>
-        <p class="slide__sub" style="margin-top:5px; font-size:.75rem; opacity:.38;" data-i18n="sp8-inkind">Une contribution en nature est aussi possible (visibilité ou avantages participants), avec une place unique et des contreparties réduites par rapport à un sponsoring financier.</p>
+        <p class="slide__sub" style="margin-top:10px; font-size:.79rem; opacity:.55;" data-i18n="sp-budget-more">Chaque sponsor supplémentaire allège la part de tous.</p>
+        <p class="slide__sub" style="margin-top:5px; font-size:.75rem; opacity:.38;" data-i18n="sp-budget-note">Le CodeJam du 24 septembre est hors périmètre, pris en charge par Vinci Energies.</p>
+        <p class="slide__sub" style="margin-top:5px; font-size:.75rem; opacity:.38;" data-i18n="sp-budget-inkind">Une contribution en nature est aussi possible (visibilité ou avantages participants), avec une place unique et des contreparties réduites par rapport à un sponsoring financier.</p>
       </div>
     </section>
 
     <!-- ⑩ Ils nous soutiennent déjà -->
     <section class="slide slide--light" data-slide="9">
       <div class="slide-inner" style="max-width:880px;">
-        <p class="slide__eyebrow" style="margin-bottom:6px;" data-i18n="sp-trust-eyebrow">Ils nous soutiennent déjà</p>
+        <p class="slide__eyebrow" style="margin-bottom:6px;" data-i18n="sp-sponsors-eyebrow">Ils nous soutiennent déjà</p>
         <h2 class="slide__title" style="margin-bottom:10px;">
-          <span class="gold stat-big" id="trustCount">7</span>
-          <span data-i18n="sp-trust-title">entreprises nous accompagnent déjà</span>
+          <span class="gold stat-big" id="sponsorCount">7</span>
+          <span data-i18n="sp-sponsors-title">entreprises nous accompagnent déjà</span>
         </h2>
-        <p class="slide__sub" data-i18n="sp-trust-kinds">Sponsors financiers et partenaires : lieu, contenu, logistique.</p>
-        <p class="slide__sub" style="margin-top:5px;" data-i18n="sp-trust-sub">Vous ne serez pas le premier à nous faire confiance.</p>
-        <p class="slide__eyebrow trust-label" data-i18n="sp-trust-fin">Principaux contributeurs</p>
-        <div class="trust-grid">
-          <div class="trust-card"><img src="../assets/sponsors/dexton_logo.png" alt="Dexton"></div>
-          <div class="trust-card"><img src="../assets/sponsors/dremio_logo.svg" alt="Dremio"></div>
-          <div class="trust-card"><img src="../assets/sponsors/hrc_logo.png" alt="HRC"></div>
-          <div class="trust-card"><img src="../assets/sponsors/malt_logo.png" alt="Malt"></div>
-          <div class="trust-card"><img src="../assets/sponsors/moonbees_logo.png" alt="Moonbees"></div>
-          <div class="trust-card"><img src="../assets/sponsors/neptune_logo.png" alt="Neptune Software"></div>
-          <div class="trust-card"><img src="../assets/sponsors/sap_logo.png" alt="SAP"></div>
-          <div class="trust-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
-          <div class="trust-card"><img src="../assets/sponsors/wcomply_logo.png" alt="Wcomply"></div>
+        <p class="slide__sub" data-i18n="sp-sponsors-kinds">Sponsors financiers et partenaires : lieu, contenu, logistique.</p>
+        <p class="slide__sub" style="margin-top:5px;" data-i18n="sp-sponsors-sub">Vous ne serez pas le premier à nous faire confiance.</p>
+        <p class="slide__eyebrow sponsor-group-label" data-i18n="sp-sponsors-fin">Principaux contributeurs</p>
+        <div class="sponsor-grid">
+          <div class="sponsor-card"><img src="../assets/sponsors/dexton_logo.png" alt="Dexton"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/dremio_logo.svg" alt="Dremio"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/hrc_logo.png" alt="HRC"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/malt_logo.png" alt="Malt"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/moonbees_logo.png" alt="Moonbees"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/neptune_logo.png" alt="Neptune Software"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/sap_logo.png" alt="SAP"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/vinci_energies_logo.png" alt="Vinci Energies"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/wcomply_logo.png" alt="Wcomply"></div>
         </div>
-        <p class="slide__sub trust-label trust-label--sub" data-i18n="sp-trust-perks">Ainsi que nos partenaires Community perks, qui offrent des avantages aux participants</p>
-        <div class="trust-grid trust-grid--perks">
-          <div class="trust-card"><img src="../assets/sponsors/devitjobs_logo.svg" alt="DevITjobs"></div>
-          <div class="trust-card"><img src="../assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></div>
-          <div class="trust-card"><img src="../assets/sponsors/hubl_logo.png" alt="Hubl"></div>
-          <div class="trust-card"><img src="../assets/sponsors/sap-press_logo.png" alt="SAP Press"></div>
+        <p class="slide__sub sponsor-group-label sponsor-group-label--sub" data-i18n="sp-sponsors-perks">Ainsi que nos partenaires Community perks, qui offrent des avantages aux participants</p>
+        <div class="sponsor-grid sponsor-grid--perks">
+          <div class="sponsor-card"><img src="../assets/sponsors/devitjobs_logo.svg" alt="DevITjobs"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/espresso-tutorials_logo.png" alt="Espresso Tutorials"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/hubl_logo.png" alt="Hubl"></div>
+          <div class="sponsor-card"><img src="../assets/sponsors/sap-press_logo.png" alt="SAP Press"></div>
         </div>
       </div>
     </section>
@@ -1084,20 +1084,20 @@
     <!-- ⑪ Pourquoi devenir sponsor? -->
     <section class="slide slide--light" data-slide="10">
       <div class="slide-inner" style="max-width:780px;">
-        <p class="slide__eyebrow" data-i18n="sp9-eyebrow">Pourquoi devenir sponsor ?</p>
-        <h2 class="slide__title" data-i18n="sp9-title">Rejoignez la première édition</h2>
+        <p class="slide__eyebrow" data-i18n="sp-why-eyebrow">Pourquoi devenir sponsor ?</p>
+        <h2 class="slide__title" data-i18n="sp-why-title">Rejoignez la première édition</h2>
         <div class="slide-grid slide-grid--2" style="margin-top:24px;">
           <div class="s-card" style="text-align:left; padding:20px 18px;">
-            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp9-r1">Contribuez au développement de la communauté SAP française</div>
+            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp-why-r1">Contribuez au développement de la communauté SAP française</div>
           </div>
           <div class="s-card" style="text-align:left; padding:20px 18px;">
-            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp9-r2">Valorisez votre expertise auprès d'un public qualifié</div>
+            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp-why-r2">Valorisez votre expertise auprès d'un public qualifié</div>
           </div>
           <div class="s-card" style="text-align:left; padding:20px 18px;">
-            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp9-r3">Renforcez votre visibilité dans l'écosystème SAP</div>
+            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp-why-r3">Renforcez votre visibilité dans l'écosystème SAP</div>
           </div>
           <div class="s-card" style="text-align:left; padding:20px 18px;">
-            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp9-r4">Participez au lancement d'un événement annuel</div>
+            <div class="s-card__label" style="font-size:.95rem; line-height:1.6;" data-i18n="sp-why-r4">Participez au lancement d'un événement annuel</div>
           </div>
         </div>
       </div>
@@ -1106,21 +1106,21 @@
     <!-- ⑫ Contact -->
     <section class="slide slide--dark" data-slide="11">
       <div class="slide-inner" style="max-width:560px;">
-        <p class="slide__eyebrow" data-i18n="sp10-eyebrow">Intéressé ?</p>
-        <h2 class="slide__title" data-i18n="sp10-title">Rejoignez l'aventure</h2>
-        <p class="slide__sub" data-i18n="sp10-desc">Pour toute question ou pour rejoindre la liste des sponsors, contactez-nous directement.</p>
+        <p class="slide__eyebrow" data-i18n="sp-contact-eyebrow">Intéressé ?</p>
+        <h2 class="slide__title" data-i18n="sp-contact-title">Rejoignez l'aventure</h2>
+        <p class="slide__sub" data-i18n="sp-contact-desc">Pour toute question ou pour rejoindre la liste des sponsors, contactez-nous directement.</p>
         <div class="deadline-box">
-          <div class="deadline-box__label" data-i18n="sp10-deadline-label">Date limite de confirmation</div>
-          <div class="deadline-box__date" data-i18n="sp10-deadline-date">Vendredi 4 septembre 2026</div>
-          <div class="deadline-box__note" data-i18n="sp10-deadline-note">Merci de nous transmettre votre accord et votre logo vectoriel avant cette date, afin de garantir votre présence sur les supports imprimés.</div>
+          <div class="deadline-box__label" data-i18n="sp-contact-deadline-label">Date limite de confirmation</div>
+          <div class="deadline-box__date" data-i18n="sp-contact-deadline-date">Vendredi 4 septembre 2026</div>
+          <div class="deadline-box__note" data-i18n="sp-contact-deadline-note">Merci de nous transmettre votre accord et votre logo vectoriel avant cette date, afin de garantir votre présence sur les supports imprimés.</div>
         </div>
         <a href="mailto:contact@sit.paris" class="cta-email">contact@sit.paris</a>
-        <p class="contact-reply" data-i18n="sp10-reply">Nous répondons sous 48 heures.</p>
+        <p class="contact-reply" data-i18n="sp-contact-reply">Nous répondons sous 48 heures.</p>
         <p class="contact-links">
-          <a href="https://www.linkedin.com/company/sap-inside-track-paris" target="_blank" rel="noopener" data-i18n="sp10-community">La page LinkedIn de la communauté</a>
+          <a href="https://www.linkedin.com/company/sap-inside-track-paris" target="_blank" rel="noopener" data-i18n="sp-contact-community">La page LinkedIn de la communauté</a>
         </p>
         <p style="margin-top:20px; font-size:.8rem; opacity:.35; text-align:center;">
-          <a href="/" style="color:inherit; text-decoration:underline;" data-i18n="sp10-back">Retour au site principal</a>
+          <a href="/" style="color:inherit; text-decoration:underline;" data-i18n="sp-contact-back">Retour au site principal</a>
         </p>
       </div>
     </section>
@@ -1136,7 +1136,7 @@
     </div>
   </div>
 
-  <script src="i18n.js?v=20261010"></script>
+  <script src="translations.js?v=20261011"></script>
   <script>
     // ---- i18n ----
     const i18nFallback = { text: {}, aria: {}, title: document.title };
@@ -1154,7 +1154,7 @@
       document.documentElement.lang = lang;
       document.getElementById('btnFr').classList.toggle('active', lang === 'fr');
       document.getElementById('btnEn').classList.toggle('active', lang === 'en');
-      const dict = lang === 'en' ? i18nSponsor.en : null;
+      const dict = lang === 'en' ? sponsorTranslations.en : null;
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         el.textContent = (dict && dict[key] != null)
@@ -1242,8 +1242,8 @@
     slides.forEach(s => io.observe(s));
 
     // Keep the sponsor count in sync with the logos actually displayed
-    document.getElementById('trustCount').textContent =
-      document.querySelectorAll('.trust-card').length;
+    document.getElementById('sponsorCount').textContent =
+      document.querySelectorAll('.sponsor-card').length;
 
     updateUI();
 
