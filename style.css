@@ -164,9 +164,6 @@ img { display: block; max-width: 100%; }
   background: var(--ink); color: var(--paper);
 }
 .btn-primary:hover { background: var(--gold); color: var(--ink); border-color: var(--ink); }
-.btn-gold {
-  background: var(--gold); color: var(--ink); border-color: var(--ink);
-}
 .btn-lg { padding: 14px 24px; font-size: 15px; }
 /* CFP closed state — reused on the CFP page's own submit buttons. */
 .btn.is-closed {
@@ -176,7 +173,6 @@ img { display: block; max-width: 100%; }
   filter: grayscale(60%);
 }
 .btn.is-closed:hover { transform: none; box-shadow: none; }
-.btn-sm { padding: 7px 14px; font-size: 12px; }
 
 /* ───── hero ───── */
 .hero {
@@ -551,7 +547,6 @@ img { display: block; max-width: 100%; }
 }
 
 /* ───── speakers wall ───── */
-.speakers-head .section-sub { font-style: italic; }
 /* Flexbox rather than CSS grid: with a fixed column count, a grid leaves
    an incomplete last row stuck to the left. Flex-wrap + justify-content
    centers it instead — same pattern already used for the sponsor grid. */
@@ -587,13 +582,6 @@ img { display: block; max-width: 100%; }
 .speaker-cell:hover .speaker-avatar {
   transform: scale(1.04);
   border-color: var(--ink);
-}
-.speaker-name-stub {
-  width: 60%;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--muted);
-  opacity: 0.4;
 }
 .speaker-name {
   font-size: 13px;
@@ -771,21 +759,6 @@ img.speaker-avatar {
   display: block;
   filter: saturate(1.05);
 }
-.venue-img-cap {
-  position: absolute;
-  left: 12px;
-  bottom: 12px;
-  background: var(--paper);
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink);
-  letter-spacing: 0.04em;
-  display: inline-flex; align-items: center; gap: 6px;
-}
-.venue-img-cap .pin { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
 .venue-info dl {
   display: grid;
   grid-template-columns: 100px 1fr;

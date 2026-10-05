@@ -7,7 +7,6 @@ const i18nSpeaker = {
     "nav-venue":    "Venue",
     "nav-sponsors": "Sponsors",
     "nav-faq":      "FAQ",
-    "nav-cta":      "📣 Submit a talk",
 
     "hero-eyebrow": "★ CALL FOR SPEAKERS · SAP INSIDE TRACK PARIS 2026 ★",
     "hero-h1":      "Tell us about<br><em>your field experience.</em>",

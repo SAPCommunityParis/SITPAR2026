@@ -4,11 +4,9 @@ const i18n = {
     'nav-about':        'About',
     'nav-tracks':       'Schedule',
     'nav-speakers':     'Speakers',
-    'nav-cfp':          'Call for Speakers',
     'nav-venue':        'Venue',
     'nav-sponsors':     'Sponsors',
     'nav-faq':          'FAQ',
-    'nav-register':     'Register →',
 
     'hero-meta':   'EDITION N°01 · COMMUNITY-DRIVEN · BY SAP PEOPLE FOR SAP PEOPLE',
     'hero-title':  'SAP Inside Track<br><em>Paris 2026.</em>',
@@ -78,16 +76,12 @@ const i18n = {
 
     'speakers-eyebrow':   '★ CALL FOR SPEAKERS ★',
     'speakers-title':     'Want to <em>speak?</em><br>We\'re waiting.',
-    'speakers-sub':       'First edition  line-up to be revealed progressively.',
 
-    'cfp-title': 'Got something<br>to <em>share?</em>',
     'cfp-sub':   'This is the first French edition: we\'re looking for fresh voices, honest experience reports, demos that crash (and get fixed live), slightly wild ideas. No buzzwords, no slideware. If it\'s your first time speaking, this is the perfect moment.',
-    'cfp-cta':   '→ Submit a talk',
 
     'venue-eyebrow':      'Venue',
     'venue-title':        '<em>SAP</em>&nbsp;France.',
     'venue-sub':          'Levallois-Perret · Greater Paris',
-    'venue-map-link':     'View on Google Maps →',
     'venue-desc':         'SAP France opens the doors of its campus: a main auditorium, three breakout rooms, a large networking area, and a terrace for the lunch break. Everything on-site, easily accessible by public transport.',
     'venue-dt-address':   'Address',
     'venue-dd-address':   '35 rue d\'Alsace, 92300 Levallois-Perret',
@@ -110,9 +104,6 @@ const i18n = {
     'sponsors-perks-sub':   'And our Community perks partners, who offer perks to attendees',
     'sponsors-cta':     '→ Become a sponsor',
 
-    'team-eyebrow': 'Organizers',
-    'team-title':   'The team behind<br><em>the event.</em>',
-    'team-sub':     'Volunteers, members of the French-speaking SAP community — organizing the first edition.',
 
     'faq-title':   'FAQ.',
     'faq-eyebrow': 'Frequently asked questions',
