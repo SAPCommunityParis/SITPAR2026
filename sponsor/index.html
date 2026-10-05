@@ -799,13 +799,13 @@
 
   <!-- Topbar -->
   <header class="deck-topbar">
-    <a class="deck-brand" href="/">
+    <a class="deck-brand" href="/" data-keep-lang>
       <img src="../assets/favicon-32.png" alt="" width="22" height="22">
       <span class="deck-brand-name">SAP Inside Track Paris 2026</span>
     </a>
     <div class="deck-topbar-right">
       <span class="deck-counter" id="deckCounter">1 / 12</span>
-      <button class="deck-print-btn" id="printBtn" onclick="exportPdf()"
+      <button class="deck-print-btn" id="printBtn"
               data-i18n-aria="sp-print-aria" aria-label="Télécharger le dossier en PDF">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6 9V2h12v7"></path>
@@ -815,8 +815,8 @@
         <span data-i18n="sp-print">PDF</span>
       </button>
       <div class="deck-lang">
-        <button class="deck-lang-btn active" id="btnFr" onclick="setDeckLang('fr')">FR</button>
-        <button class="deck-lang-btn"        id="btnEn" onclick="setDeckLang('en')">EN</button>
+        <button class="deck-lang-btn active" data-lang="fr">FR</button>
+        <button class="deck-lang-btn" data-lang="en">EN</button>
       </div>
     </div>
   </header>
@@ -826,8 +826,8 @@
 
   <!-- Arrow navigation -->
   <div class="deck-arrows">
-    <button class="deck-arrow" id="prevBtn" onclick="navigate(-1)" data-i18n-aria="sp-nav-prev" aria-label="Précédent">&#8593;</button>
-    <button class="deck-arrow" id="nextBtn" onclick="navigate(1)"  data-i18n-aria="sp-nav-next" aria-label="Suivant">&#8595;</button>
+    <button class="deck-arrow" id="prevBtn" data-i18n-aria="sp-nav-prev" aria-label="Précédent">&#8593;</button>
+    <button class="deck-arrow" id="nextBtn" data-i18n-aria="sp-nav-next" aria-label="Suivant">&#8595;</button>
   </div>
 
   <!-- ============ DECK ============ -->
@@ -1120,7 +1120,7 @@
           <a href="https://www.linkedin.com/company/sap-inside-track-paris" target="_blank" rel="noopener" data-i18n="sp-contact-community">La page LinkedIn de la communauté</a>
         </p>
         <p style="margin-top:20px; font-size:.8rem; opacity:.35; text-align:center;">
-          <a href="/" style="color:inherit; text-decoration:underline;" data-i18n="sp-contact-back">Retour au site principal</a>
+          <a href="/" data-keep-lang style="color:inherit; text-decoration:underline;" data-i18n="sp-contact-back">Retour au site principal</a>
         </p>
       </div>
     </section>
@@ -1136,213 +1136,9 @@
     </div>
   </div>
 
-  <script src="translations.js?v=20261011"></script>
-  <script>
-    // ---- i18n ----
-    const i18nFallback = { text: {}, aria: {}, title: document.title };
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      i18nFallback.text[el.dataset.i18n] = el.textContent;
-    });
-    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
-      i18nFallback.aria[el.dataset.i18nAria] = el.getAttribute('aria-label');
-    });
-
-    let deckLang = 'fr';
-
-    function setDeckLang(lang) {
-      deckLang = lang;
-      document.documentElement.lang = lang;
-      document.getElementById('btnFr').classList.toggle('active', lang === 'fr');
-      document.getElementById('btnEn').classList.toggle('active', lang === 'en');
-      const dict = lang === 'en' ? sponsorTranslations.en : null;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.dataset.i18n;
-        el.textContent = (dict && dict[key] != null)
-          ? dict[key]
-          : (i18nFallback.text[key] ?? el.textContent);
-      });
-      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
-        const key = el.dataset.i18nAria;
-        el.setAttribute('aria-label', (dict && dict[key] != null)
-          ? dict[key]
-          : (i18nFallback.aria[key] ?? el.getAttribute('aria-label')));
-      });
-      document.title = (dict && dict['sp-page-title'] != null)
-        ? dict['sp-page-title']
-        : i18nFallback.title;
-      syncCrossPageLinks(lang);
-    }
-
-    // Carries the current language back to the homepage so switching to EN
-    // here and clicking "Retour au site principal" doesn't drop you back
-    // into French.
-    function syncCrossPageLinks(lang) {
-      const suffix = (lang === 'fr') ? '' : ('?lang=' + lang);
-      document.querySelectorAll('a[href="/"]').forEach(a => {
-        a.setAttribute('href', '/' + suffix);
-      });
-    }
-
-    // A fresh visit always starts in FR — but a link clicked from the EN
-    // version of the homepage carries ?lang=en so this page opens in the
-    // same language.
-    const urlDeckLang = new URLSearchParams(location.search).get('lang');
-    if (urlDeckLang === 'en') setDeckLang('en');
-
-    // ---- Deck navigation ----
-    const deck    = document.getElementById('deck');
-    const slides  = Array.from(deck.querySelectorAll('.slide'));
-    const progBar = document.getElementById('deckProgress');
-    const counter = document.getElementById('deckCounter');
-    const dotsEl  = document.getElementById('deckDots');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let current   = 0;
-    const total   = slides.length;
-
-    slides.forEach((_, i) => {
-      const btn = document.createElement('button');
-      btn.className = 'deck-dot' + (i === 0 ? ' active' : '');
-      btn.setAttribute('aria-label', 'Slide ' + (i + 1));
-      btn.addEventListener('click', () => goTo(i));
-      dotsEl.appendChild(btn);
-    });
-
-    function updateUI() {
-      dotsEl.querySelectorAll('.deck-dot').forEach((d, i) =>
-        d.classList.toggle('active', i === current));
-      progBar.style.width = ((current + 1) / total * 100) + '%';
-      counter.textContent = (current + 1) + ' / ' + total;
-      prevBtn.disabled = current === 0;
-      nextBtn.disabled = current === total - 1;
-    }
-
-    function goTo(index) {
-      current = Math.max(0, Math.min(total - 1, index));
-      slides[current].scrollIntoView({ behavior: 'smooth' });
-      updateUI();
-    }
-
-    function navigate(dir) { goTo(current + dir); }
-
-    document.addEventListener('keydown', e => {
-      if (['ArrowDown', 'PageDown', 'ArrowRight', ' '].includes(e.key)) { e.preventDefault(); navigate(1); }
-      if (['ArrowUp', 'PageUp', 'ArrowLeft'].includes(e.key))           { e.preventDefault(); navigate(-1); }
-    });
-
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          current = slides.indexOf(entry.target);
-          updateUI();
-        }
-      });
-    }, { threshold: 0.6 });
-
-    slides.forEach(s => io.observe(s));
-
-    // Keep the sponsor count in sync with the logos actually displayed
-    document.getElementById('sponsorCount').textContent =
-      document.querySelectorAll('.sponsor-card').length;
-
-    updateUI();
-
-    // ---- Export PDF ----
-    // Chaque slide est capturee au format 16:9 puis assemblee en PDF, afin
-    // d'obtenir un rendu identique a l'ecran (fonds sombres compris), ce que
-    // le moteur d'impression du navigateur ne permet pas.
-    const PDF_W = 1600, PDF_H = 900;
-
-    const pdfLabels = {
-      fr: {
-        prep:  'Préparation…',
-        slide: (i, n) => 'Génération ' + i + ' / ' + n,
-        hint:  'Cela prend quelques secondes',
-        fail:  "La génération du PDF a échoué.\n\nLes librairies sont chargées depuis un CDN externe : "
-             + "un pare-feu d'entreprise peut les bloquer.\n\nSolution de repli : Ctrl+P puis « Enregistrer au format PDF »."
-      },
-      en: {
-        prep:  'Preparing…',
-        slide: (i, n) => 'Rendering ' + i + ' / ' + n,
-        hint:  'This takes a few seconds',
-        fail:  'PDF generation failed.\n\nThe libraries are loaded from an external CDN: '
-             + 'a corporate firewall may be blocking them.\n\nFallback: Ctrl+P then "Save as PDF".'
-      }
-    };
-
-    function loadScript(src) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement('script');
-        s.src = src;
-        s.crossOrigin = 'anonymous';
-        s.onload = resolve;
-        s.onerror = () => reject(new Error('Chargement impossible : ' + src));
-        document.head.appendChild(s);
-      });
-    }
-
-    let pdfLibsReady = false;
-    async function ensurePdfLibs() {
-      if (pdfLibsReady) return;
-      await Promise.all([
-        loadScript('https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js'),
-        loadScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js')
-      ]);
-      pdfLibsReady = true;
-    }
-
-    async function exportPdf() {
-      const btn     = document.getElementById('printBtn');
-      const overlay = document.getElementById('pdfOverlay');
-      const status  = document.getElementById('pdfStatus');
-      const hint    = document.getElementById('pdfHint');
-      const L       = pdfLabels[deckLang] || pdfLabels.fr;
-
-      btn.disabled = true;
-      status.textContent = L.prep;
-      hint.textContent   = L.hint;
-      overlay.classList.add('is-on');
-
-      // Exclut les elements qui n'ont pas de sens sur une page imprimee
-      const skip = node => !(node.classList && node.classList.contains('scroll-hint'));
-
-      const shoot = slide => htmlToImage.toJpeg(slide, {
-        width: PDF_W, height: PDF_H,
-        style: { width: PDF_W + 'px', height: PDF_H + 'px' },
-        pixelRatio: 1.5,
-        quality: 0.92,
-        filter: skip
-      });
-
-      try {
-        await ensurePdfLibs();
-
-        const { jsPDF } = window.jspdf;
-        const pdf = new jsPDF({
-          orientation: 'landscape', unit: 'px',
-          format: [PDF_W, PDF_H], compress: true
-        });
-
-        // Premier rendu jete : html-to-image renvoie parfois une image
-        // incomplete tant que les polices et images du clone ne sont pas pretes.
-        await shoot(slides[0]);
-
-        for (let i = 0; i < slides.length; i++) {
-          status.textContent = L.slide(i + 1, slides.length);
-          const img = await shoot(slides[i]);
-          if (i > 0) pdf.addPage([PDF_W, PDF_H], 'landscape');
-          pdf.addImage(img, 'JPEG', 0, 0, PDF_W, PDF_H);
-        }
-
-        pdf.save('SAP-Inside-Track-Paris-2026-Sponsors.pdf');
-      } catch (err) {
-        console.error(err);
-        alert(L.fail);
-      } finally {
-        overlay.classList.remove('is-on');
-        btn.disabled = false;
-      }
-    }
-  </script>
+  <script src="translations.js?v=20261012"></script>
+  <script src="../site.js?v=20261012"></script>
+  <script src="deck.js?v=20261012"></script>
+  <script src="pdf-export.js?v=20261012"></script>
 </body>
 </html>

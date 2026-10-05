@@ -23,7 +23,7 @@ for (const page of pages) {
   const dictionarySet = new Set(dictionaryKeys);
   for (const key of duplicates) errors.push(`${page.dictionary}: duplicate key "${key}"`);
   for (const key of htmlKeys) if (!dictionarySet.has(key)) errors.push(`${page.html}: "${key}" has no English translation`);
-  for (const key of dictionarySet) if (!htmlKeys.has(key) && key !== 'sp-page-title') errors.push(`${page.dictionary}: "${key}" is not used in ${page.html}`);
+  for (const key of dictionarySet) if (!htmlKeys.has(key) && key !== 'page-title') errors.push(`${page.dictionary}: "${key}" is not used in ${page.html}`);
 
   // Local files referenced by the page exist.
   for (const ref of all(html, /(?:src|href)="([^"]+)"/g)) {

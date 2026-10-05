@@ -1,4 +1,4 @@
-const homeTranslations = {
+const translations = {
   en: {
     'skip-link':        'Skip to content',
     'nav-about':        'About',

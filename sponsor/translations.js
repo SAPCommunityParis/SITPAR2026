@@ -1,7 +1,7 @@
-const sponsorTranslations = {
+const translations = {
   en: {
     /* Page chrome */
-    "sp-page-title":     "Become a Sponsor · SAP Inside Track Paris 2026",
+    "page-title":     "Become a Sponsor · SAP Inside Track Paris 2026",
     "sp-nav-prev":       "Previous",
     "sp-nav-next":       "Next",
     "sp-print":          "PDF",
