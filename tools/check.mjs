@@ -1,17 +1,20 @@
-// Static consistency checks. Run: node check.mjs
+// Static consistency checks. Run from anywhere: node tools/check.mjs
 import { readFileSync, existsSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const pages = [
-  { html: 'index.html', dictionary: 'translations.js', css: ['style.css'] },
-  { html: 'speaker/index.html', dictionary: 'speaker/translations.js', css: ['style.css'] },
-  { html: 'sponsor/index.html', dictionary: 'sponsor/translations.js', css: [] },
+  { html: 'index.html', dictionary: 'lang/home.js', css: ['css/style.css'] },
+  { html: 'speaker/index.html', dictionary: 'lang/speaker.js', css: ['css/style.css'] },
+  { html: 'sponsor/index.html', dictionary: 'lang/sponsor.js', css: [] },
 ];
 
 const errors = [];
 const warnings = [];
-const read = (path) => readFileSync(path, 'utf8');
+const read = (path) => readFileSync(join(root, path), 'utf8');
 const all = (text, re) => [...text.matchAll(re)].map((m) => m[1]);
+const isLocalReference = (ref) => !/^(https?:|mailto:|tel:|data:|#|\/$)/.test(ref);
 
 for (const page of pages) {
   const html = read(page.html);
@@ -27,9 +30,10 @@ for (const page of pages) {
 
   // Local files referenced by the page exist.
   for (const ref of all(html, /(?:src|href)="([^"]+)"/g)) {
-    if (/^(https?:|mailto:|tel:|data:|#|\/$)/.test(ref)) continue;
-    const path = join(dirname(page.html), ref.split(/[?#]/)[0]);
-    if (ref.split(/[?#]/)[0] && !existsSync(path)) errors.push(`${page.html}: missing file "${ref}"`);
+    const file = ref.split(/[?#]/)[0];
+    if (isLocalReference(ref) && file && !existsSync(join(root, dirname(page.html), file))) {
+      errors.push(`${page.html}: missing file "${ref}"`);
+    }
   }
 
   // Classes used in the HTML are defined by the page's stylesheets or inline <style>.
@@ -37,6 +41,15 @@ for (const page of pages) {
   const defined = new Set(all(styles, /\.([a-zA-Z_][\w-]*)/g));
   const used = new Set(all(html, /class="([^"]+)"/g).flatMap((value) => value.split(/\s+/)));
   for (const name of used) if (name && !defined.has(name)) warnings.push(`${page.html}: class "${name}" has no CSS rule`);
+}
+
+// Files referenced by url() in stylesheets exist (paths are relative to the stylesheet).
+for (const stylesheet of new Set(pages.flatMap((page) => page.css))) {
+  for (const ref of all(read(stylesheet), /url\(\s*['"]?([^'")]+)['"]?\s*\)/g)) {
+    if (isLocalReference(ref) && !existsSync(join(root, dirname(stylesheet), ref))) {
+      errors.push(`${stylesheet}: missing file "${ref}"`);
+    }
+  }
 }
 
 for (const message of warnings) console.warn('warn  ' + message);

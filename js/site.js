@@ -1,8 +1,9 @@
 // Behaviour shared by every page: language switching, dark theme, mobile menu.
 //
-// The HTML is the French source of truth. Each page loads a translations.js
-// that defines `translations = { en: { key: 'text', ... } }`; this file swaps
-// the French content for those English overrides and back.
+// The HTML is the French source of truth. Each page loads its dictionary from
+// lang/ (home.js, speaker.js or sponsor.js), which defines
+// `translations = { en: { key: 'text', ... } }`; this file swaps the French
+// content for those English overrides and back.
 (function () {
   const root = document.documentElement;
 
