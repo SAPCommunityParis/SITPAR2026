@@ -443,7 +443,7 @@ img { display: block; max-width: 100%; }
   bottom: -5%; right: -4%;
   width: 72%;
   height: 90%;
-  background: url('assets/sit-paris-skyline.webp') center bottom / contain no-repeat;
+  background: url('assets/brand/sit-paris-skyline.webp') center bottom / contain no-repeat;
   opacity: 0.11;
   pointer-events: none;
   z-index: 0;
